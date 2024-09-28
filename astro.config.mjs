@@ -1,28 +1,28 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import Unocss from "unocss/astro"
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
+		Unocss({
+
+		}),
 		starlight({
-			title: 'My Docs',
+			title: 'Math with Code',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/xirf/mathwithcode',
 			},
 			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
+				],
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'Bahasa Indonesia',
+					lang: 'id',
+				}
+			}
 		}),
 	],
 });
