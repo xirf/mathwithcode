@@ -11,11 +11,20 @@ export default defineConfig({
 		}),
 		starlight({
 			title: 'Math with Code',
+			editLink: {
+				baseUrl: 'https://github.com/xirf/mathwithcode/edit/main/',
+			},
 			social: {
 				github: 'https://github.com/xirf/mathwithcode',
 			},
 			sidebar: [
-				],
+				{
+					label: 'Memulai',
+					autogenerate: {
+						directory: 'learn'
+					}
+				}
+			],
 			defaultLocale: 'root',
 			locales: {
 				root: {
