@@ -1,48 +1,33 @@
-import UnocssVitePlugin from 'unocss/vite'
 import { defineConfig } from 'vitepress'
-import { visualizer } from 'rollup-plugin-visualizer'
+import { sharedConfig } from './shared.config'
+import { id } from './id'
 
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Math W Code",
-  description: "Belajar matematika dengan barisan kode",
-  cleanUrls: true,
-  metaChunk: true,
-  markdown: {
-    math: true,
-  },
-  sitemap: {
-    hostname: "https://mathwcode.jamcoder.id",
-  },
-  themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
+  ...sharedConfig,
+  locales: {
+    root: {
+      label: 'Indonesia',
+      lang: 'id-ID',
+      description: 'Belajar matematika dengan barisan kode',
+      themeConfig: {
+        nav: [
+          { text: 'Belajar', link: '/guide' },
+        ],
+        sidebar: [
+          { text: 'Panduan', link: '/guide', }
+        ],
+        editLink: {
+          pattern: 'https://github.com/xirf/mathwithcode/edit/main/docs/:path',
+          text: 'Perbaiki halaman ini di GitHub'
+        },
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
+        footer: {
+          message: 'Dirilis di bawah lisensi MIT',
+          copyright: 'Copyright © 2024-present Anka Tama & Contributors'
+        }
       }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  },
-  vite: {
-    plugins: [
-      UnocssVitePlugin(),
-      visualizer({
-        open: true,
-        gzipSize: true,
-        brotliSize: true,
-      })
-    ]
+    },
   }
 })
