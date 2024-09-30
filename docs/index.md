@@ -14,8 +14,9 @@ hero:
           text: Belajar Sekarang
           link: /guide
         - theme: alt
-          text: API Examples
-          link: /api-examples
+          text: Beri Kontribusi
+          link: https://github.com/xirf/mathwithcode
+    
 
 # features:
 #     - title: Feature A

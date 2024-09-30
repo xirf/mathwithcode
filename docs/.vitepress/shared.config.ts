@@ -1,14 +1,19 @@
 import { defineConfig } from "vitepress";
 import { visualizer } from 'rollup-plugin-visualizer'
 import UnocssVitePlugin from 'unocss/vite'
+import { tabsMarkdownPlugin } from "vitepress-plugin-tabs"
 
 export const sharedConfig = defineConfig({
     title: "Math W Code",
     description: "Belajar matematika dengan barisan kode",
     cleanUrls: true,
     metaChunk: true,
-    markdown: { math: true, },
-    rewrites: { 'id/:rest': '/:rest', },
+    markdown: {
+        config(md) {
+            md.use(tabsMarkdownPlugin)
+        },
+        math: true,
+    },
     sitemap: { hostname: "https://mathwcode.jamcoder.id", },
     themeConfig: {
         search: {
@@ -16,7 +21,7 @@ export const sharedConfig = defineConfig({
         },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/xirf/mathwithcode' }
-        ]
+        ],
     },
     vite: {
         plugins: [
