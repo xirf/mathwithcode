@@ -151,3 +151,48 @@ val hasilModulus = 10 % 3 // 1
 ```cpp
 int hasilModulus = 10 % 3; // 1
 ```
+:::
+
+## Prioritas Operasi
+
+Di dalam matematika, ada aturan yang namanya prioritas operasi. Prioritas operasi ini menentukan urutan operasi mana yang harus dilakukan duluan. Di pemrograman, prioritas operasi ini juga berlaku dan sama dengan matematika biasa. Kalo di bahasa inggris ada yang namanya PEMDAS (Parentheses, Exponents, Multiplication and Division, Addition and Subtraction) jadi urutannya adalah
+
+1. Tanda Kurung $( )$
+2. Pangkat $x^y$ dan Akar $\sqrt{x}$
+3. Perkalian $x \times y$, Pembagian $x \div y$ dan Modulus $x \% y$
+4. Penjumlahan $x + y$ dan Pengurangan $x - y$
+
+contoh kalo pengen menghitung $6 + 3 * (2^3 + \sqrt{16})$ maka:
+
+1. **Tanda kurung**: Fokus pada bagian dalam kurung terlebih dahulu $2^3 + \sqrt{16}$.
+3. **Eksponen (pangkat)**: Hitung $2^3$.
+$$2^3 = 8$$
+5. **Akar**: Hitung $\sqrt{16}$.
+$$\sqrt{16} = 4$$
+7. **Penjumlahan dalam kurung**: Sekarang, selesaikan operasi dalam kurung $2^3 + \sqrt{16}$.
+$$8 + 4 = 12$$
+9. **Perkalian**: Lanjutkan ke operasi di luar kurung, yaitu $3 \times (2^3 + \sqrt{16})$.
+$$3 \times 12 = 36$$
+11. **Penjumlahan terakhir**: Terakhir, tambahkan $6 + 36$.
+$$6 + 36 = 42$$
+Jadi, hasil akhirnya adalah **42**.
+
+Kalo di pemrograman urutan operasi ini udah di tangani sama bahasanya jadi kamu gak perlu khawatir kalo salah urutan operasi. Kamu cukup teliti aja sama rumus yang akan kamu gunakan. Kalo rumus tadi kita masukkan ke kode maka akan jadi seperti ini.
+
+:::tabs
+== Javascript
+```js
+let hasil = 6 + 3 * (2 ** 3 + Math.sqrt(16)); // 42
+```
+== Kotlin
+```kt
+val hasil = 6 + 3 * (2.0.pow(3) + Math.sqrt(16.0)) // 42.0
+```
+
+== C++
+```cpp
+int hasil = 6 + 3 * (pow(2, 3) + sqrt(16)); // 42
+```
+:::
+
+## 

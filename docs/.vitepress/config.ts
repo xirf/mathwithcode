@@ -23,11 +23,12 @@ export default defineConfig({
             items: [
               { text: 'Bilangan', link: '/arithmetic/numbers' },
               { text: 'Operasi Bilangan', link: '/arithmetic/operation-on-number' },
+              { text: 'Faktor dan Kelipatan', link: '/arithmetic/factors' },
             ]
           },
         ],
         editLink: {
-          pattern: 'https://github.com/xirf/mathwithcode/edit/main/docs/:path',
+          pattern: 'https://github.com/xirf/mathwithcode/edit/master/docs/:path',
           text: 'Perbaiki halaman ini di GitHub'
         },
 
