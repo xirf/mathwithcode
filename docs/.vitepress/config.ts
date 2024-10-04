@@ -13,7 +13,15 @@ export default defineConfig({
       description: 'Belajar matematika dengan barisan kode',
       themeConfig: {
         nav: [
-          { text: 'Belajar', link: '/guide/' },
+          {
+            text: 'Belajar', link: '/guide/',
+          },
+          {
+            text: 'Kontribusi', link: 'https://github.com/xirf/mathwithcode'
+          },
+          {
+            text: 'Donasi', link: 'https://trakteer.id/xirf'
+          }
         ],
         sidebar: [
           { text: 'Panduan', link: '/guide/' },
@@ -24,6 +32,7 @@ export default defineConfig({
               { text: 'Bilangan', link: '/arithmetic/numbers' },
               { text: 'Operasi Bilangan', link: '/arithmetic/operation-on-number' },
               { text: 'Faktor dan Kelipatan', link: '/arithmetic/factors' },
+              { text: 'Persen', link: '/arithmetic/percent' },
             ]
           },
         ],

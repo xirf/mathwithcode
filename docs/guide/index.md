@@ -1,6 +1,4 @@
----
-title: Panduan
----
+# Panduan Belajar
 
 Sebelum memulai, ada beberapa hal penting yang perlu kamu ketahui. **Math W Code** adalah tempat belajar dan berbagi tentang matematika dengan bantuan bahasa pemrograman. Di sini, kamu bisa belajar sekaligus berkontribusi dalam mengembangkan ilmu matematika melalui kode!
 

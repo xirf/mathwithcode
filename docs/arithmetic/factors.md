@@ -44,24 +44,6 @@ Misalnya kita memiliki bilangan 100 maka pohon faktornya adalah seperti ini:
     <text x="104" y="215" style="font-size: 28px;" fill="#3a5998">5</text>
 </svg>
 
-<style>
-    #svg1 {
-        margin: 0 auto;
-        display: block;
-    }
-
-    #svg1 line
-    {
-        stroke: var(--vp-c-text-1) !important;
-        stroke-width: 2;
-    }
-
-    #svg1 text[fill="black"] {
-        font-family: Arial, sans-serif;
-        fill: var(--vp-c-brand-1) !important;
-    }
-</style>
-
 Dari pohon faktor diatas kita bisa lihat bahwa faktorisasi dari 100 adalah $2 \times 2 \times 5 \times 5$ atau $2^2 \times 5^2$. Kita bisa tulis faktorisasi dari 100 sebagai $2^2 \times 5^2$.
 
 Kalo di pemrograman kita bisa pake _loop_ dan [modulo](/arithmetic/operation-on-number#modulus) untuk mencari faktorisasi dari suatu bilangan. Berikut contoh implementasinya:
@@ -139,14 +121,86 @@ int main() {
 Btw diatas kita pakai `/=` itu sama aja dengan `bilangan = bilangan / faktor`, sama aja kaya `+= -= *=` yang biasa kita pakai.
 
 
-## Faktor Persekutuan Terbesar (FPB)
+## Kelipatan
 
-**Faktor Persekutuan Terbesar (FPB)** adalah angka terbesar yang bisa membagi dua bilangan tanpa sisa. FPB membantu kita menemukan kesamaan dari dua bilangan yang berbeda.
+Kelipatan adalah hasil dari perkalian suatu bilangan dengan bilangan lain. Misalnya kamu memiliki bilangan $a$ dan dikaikan dengan bilangan $n$ (positif, negatif, atau nol), maka hasilnya adalah kelipatan dari $a$.
 
-Misalnya, FPB dari 12 dan 18 adalah **6**, karena 6 adalah angka terbesar yang bisa membagi kedua bilangan tersebut.
+Misalnya lagi jika $a = 3$ maka kelipatan dari 3 adalah:
+- $3 \times 1 = 3$
+- $3 \times 2 = 6$
+- $3 \times 3 = 9$
+- dan seterusnya...
 
-Untuk mencari FPB, kita bisa menggunakan algoritma **Euclidean**. Berikut adalah contoh implementasinya dalam beberapa bahasa pemrograman:
+Jika kelipatan diimplementasikan dalam pemrograman, kita bisa menggunakan _loop_ untuk melakukan perkalian berulang. Contohnya seperti ini:
+:::tabs
+== Javascript
 
+```js
+function kelipatan(a, n) {
+    let kelipatan = [];
+    for (let i = 1; i <= n; i++) {
+        kelipatan.push(a * i);
+    }
+    return kelipatan;
+}
+
+let kelipatan3 = kelipatan(3, 5); // [3, 6, 9, 12, 15]
+```
+== Kotlin
+
+```kt
+fun kelipatan(a: Int, n: Int): List<Int> {
+    val kelipatan = mutableListOf<Int>()
+    for (i in 1..n) {
+        kelipatan.add(a * i)
+    }
+    return kelipatan
+}
+
+val kelipatan3 = kelipatan(3, 5) // [3, 6, 9, 12, 15]
+```
+== C++
+
+```cpp
+std::vector<int> kelipatan(int a, int n) {
+    std::vector<int> kelipatan;
+    for (int i = 1; i <= n; i++) {
+        kelipatan.push_back(a * i);
+    }
+    return kelipatan;
+}
+
+int main() {
+    std::vector<int> kelipatan3 = kelipatan(3, 5); // [3, 6, 9, 12, 15]
+    return 0;
+}
+```
+:::
+
+## Faktor Persekutuan Terbesar (FPB) 
+
+FPB itu angka terbesar yang bisa membagi dua bilangan tanpa sisa. FPB biasanya dipakai untuk mencari kesamaan dari dua bilangan yang berbeda.
+
+Nah untuk mencari FPB kita bisa mulai dengan mencari faktorisasi dari kedua bilangan tersebut, lalu kita cari faktor yang sama dari kedua bilangan tersebut. Contoh kalo kita mau cari FPB dari 12 dan 18 kita bisa lakukan seperti ini:
+
+$12 = 1,2,3,4,6,12$
+
+$18 = 1,2,3,6,9,18$
+
+Kita bisa lihat bahwa angka yang sama-sama ada di faktorisasi dari 12 dan 18 adalah $1, 2, 3, \text{dan } 6$. Nah dari angka-angka ini kita bisa ambil yang terbesar yaitu 6. Jadi FPB dari 12 dan 18 adalah **$6$**.
+
+Cara lainnya adalah dengan menggunakan algoritma Euclidean yang rumusnya adalah:
+
+$$\text{FPB}(a, b) = \text{FPB}(b, a \mod b)$$
+
+Cara ngitungnya kek gini:
+1. Ambil dua bilangan $a$ dan $b$.
+2. Bagi $a$ dengan $b$ dan simpan sisanya (modulus), misalnya $r = a \mod b$.
+3. Ganti $a$ dengan $b$ dan $b$ dengan $r$.
+4. Ulangi langkah 2 dan 3 sampai sisanya ($r$) menjadi 0.
+5. Kalo $r$ udah 0, maka FPB dari $a$ dan $b$ adalah $b$.
+
+Pusing? Tenang, mari jadiin kode aja biar lebih mudah dimengerti kek gini:
 :::tabs
 == Javascript
 
@@ -162,7 +216,6 @@ function fpb(a, b) {
 
 let fpb1218 = fpb(12, 18); // 6
 ```
-
 == Kotlin
 
 ```kotlin
@@ -179,13 +232,10 @@ fun fpb(a: Int, b: Int): Int {
 
 val fpb1218 = fpb(12, 18) // 6
 ```
-
 == C++
 
 ```cpp
-#include <iostream>
-
-int fpb(int a, int b) {
+std::vector<int> fpb(int a, int b) {
     while (b != 0) {
         int t = b;
         b = a % b;
@@ -201,14 +251,35 @@ int main() {
 ```
 :::
 
+
 ## Kelipatan Persekutuan Terkecil (KPK)
 
-**Kelipatan Persekutuan Terkecil (KPK)** adalah angka terkecil yang bisa dibagi oleh dua bilangan. KPK sering kita gunakan untuk menemukan kelipatan dari dua bilangan yang berbeda. 
+Kelipatan Persekutuan Terkecil (KPK) adalah angka terkecil yang bisa dibagi habis oleh dua bilangan. Misalnya, KPK dari 12 dan 18 adalah **$36$**, karena 36 adalah angka terkecil yang bisa dibagi habis oleh kedua bilangan tersebut.
 
-Contohnya, KPK dari 12 dan 18 adalah **36**, karena 36 adalah angka terkecil yang bisa dibagi oleh 12 dan 18.
+Gak percaya coba kita hitung $12 \times 3 = 36$ dan $18 \times 2 = 36$.
 
-Kita bisa mencari KPK dengan rumus berikut: **$KPK = (a × b) / FPB$**. Berikut adalah contoh implementasinya:
+Untuk mencari KPK, kita bisa pakai rumus ini:
 
+$$\text{KPK}(a, b) = \frac{a \times b}{\text{FPB}(a, b)}$$
+
+Kalo disimulasiin kek gini:
+
+1. kita punya FPB dari 12 dan 18 yaitu 6.
+2. $12 \times 18 = 216$ (gede banget)
+3. $216 \div 6 = 36$ (nah ini KPKnya)
+
+Atau kalo mau rada ribet, kita bisa hitung manual dengan cara mencari kelipatan dari kedua bilangan tersebut. Contoh kalo kita mau cari KPK dari 12 dan 18 kita bisa lakukan seperti ini:
+
+| Bilangan | Kelipatan 1 | Kelipatan 2 | Kelipatan 3 | Kelipatan $n$ |
+|----------|-------------|-------------|-------------|---------------|
+| 12       | 12          | 24          | 36          | ...           |
+| 18       | 18          | 36          | 54          | ...           |
+
+Dari tabel diatas kita bisa lihat bahwa kelipatan yang sama dari 12 dan 18 adalah 36. Jadi KPK dari 12 dan 18 adalah **$36$**.
+Kalian bebas sih pake yang mana, yang penting gak salah.
+
+
+Gampang kan? Mari kita jadiin kode biar lebih mudah dimengerti:
 :::tabs
 == Javascript
 
@@ -219,33 +290,20 @@ function kpk(a, b) {
 
 let kpk1218 = kpk(12, 18); // 36
 ```
-
 == Kotlin
 
 ```kotlin
 fun kpk(a: Int, b: Int): Int {
-    return a * b / fpb(a, b)
+    return (a * b) / fpb(a, b)
 }
 
 val kpk1218 = kpk(12, 18) // 36
 ```
-
 == C++
 
 ```cpp
-#include <iostream>
-
-int fpb(int a, int b) {
-    while (b != 0) {
-        int t = b;
-        b = a % b;
-        a = t;
-    }
-    return a;
-}
-
 int kpk(int a, int b) {
-    return a * b / fpb(a, b);
+    return (a * b) / fpb(a, b);
 }
 
 int main() {
@@ -255,3 +313,22 @@ int main() {
 ```
 :::
 
+<style>
+    #svg1 {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .__svg line,
+    #svg1 line
+    {
+        stroke: var(--vp-c-text-1) !important;
+        stroke-width: 2;
+    }
+
+    .__svg text[fill="black"],
+    #svg1 text[fill="black"] {
+        font-family: Arial, sans-serif;
+        fill: var(--vp-c-brand-1) !important;
+    }
+</style>
