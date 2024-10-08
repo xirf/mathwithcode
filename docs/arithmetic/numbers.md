@@ -26,11 +26,15 @@ val bilanganBulat: Int = 10
 ```cpp
 int bilanganBulat = 10;
 ```
+== Python
+```python
+bilanganBulat = 10
+```
 :::
 
 Meski kelihatannya sederhana, jangan lupa kalau di pemrograman, bilangan punya batasan! Contohnya, di Javascript, bilangan paling besar yang bisa kamu pakai adalah **`9,007,199,254,740,992`**. Itu setara dengan angka yang sangat besar seriously, aku aja bingung ngucapinnya.
 
-Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS (cuman `number` dan `BigInt`), batasan itu tergantung tipe data yang kamu pakai. Contoh kalo pake `short` di c++, kamu bisa mencapai angka **`32,767`** doang. contohnya kek dibawah ini
+Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS (cuman `number` dan `BigInt`), batasan itu tergantung tipe data yang kamu pakai. Contoh kalo pake `short` di c++, kamu bisa mencapai angka **`32,767`** terkecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya kek dibawah ini
 
 :::tabs
 == Javascript
@@ -82,6 +86,10 @@ Kita juga bisa menggunakan `double` untuk bilangan desimal yang memiliki angka d
 ```cpp
 double bilanganDesimal = 3.141592653589793F;
 ```
+== Python
+```python
+bilanganDesimal = 3.14
+```
 :::
 
 
@@ -102,6 +110,10 @@ val bilanganPecahan = 1/2 // Otomatis jadi float
 ```cpp
 float bilanganPecahan = 1/2;
 ```
+== Python
+```python
+bilanganPecahan = 1/2
+```
 :::
 
 > [!WARNING]  
@@ -120,6 +132,10 @@ val bilanganPecahanCampuran: Double = 1 + 1/2
 == C++
 ```cpp
 double bilanganPecahanCampuran = 1 + 1/2;
+```
+== Python
+```python
+bilanganPecahanCampuran = 1 + 1/2
 ```
 :::
 
