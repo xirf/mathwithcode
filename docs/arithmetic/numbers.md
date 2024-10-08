@@ -35,28 +35,27 @@ Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS 
 :::tabs
 == Javascript
 
-| Tipe Data | Ukuran (bits) | Minimal| Maksimal|
-|-----------|------------------|---------------|----|
-| Number    | 64               | -9,007,199,254,740,991<br /> (−2<sup>53</sup> - 1) | 9,007,199,254,740,992 <br /> (2<sup>53</sup> - 1 )  |
-| BigInt    | max 1,000,000,000               | `tergantung memori` | `tergantung memori`  |
-== C++
-| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      |
-|-----------|------------------|------------------------------------------------|-----------------------------------------------|
-| `short`     | 16               | -32,768                                       | 32,767                                        |
-| `int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |
-| `long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
-| `long long` | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
+| Tipe Data | Ukuran (bits) | Minimal| Maksimal| Maksimal (Secara Eksplisit) |
+|-----------|------------------|---------------|----|---------------------------|
+| Number    | 64             | -9,007,199,254,740,991<br /> (−2<sup>53</sup> - 1) | 9,007,199,254,740,992 <br /> (2<sup>53</sup> - 1 )  | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
+| BigInt    | max 1,000,000,000               | `tergantung memori` | `tergantung memori`  | `tergantung memori` |
+== C++ 
+| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      | Maksimal (Secara Eksplisit)
+|-----------|------------------|------------------------------------------------|-----------------------------------------------|---------------------------|
+| `short`     | 16              | -32,768                                       | 32,767                                        | 65,536 (2<sup>16</sup>) |
+| `int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           | 4,294,687,296 (2<sup>32</sup>) |
+| `long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
+| `long long` | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
 
 Banyak banget selengkapnya cek [sini aja ya](https://learn.microsoft.com/en-us/cpp/c-language/cpp-integer-limits?view=msvc-170#limits-on-integer-constants)
 == Kotlin
-| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      |
-|-----------|------------------|------------------------------------------------|-----------------------------------------------|
-| `Byte`      | 8                | -128                                           | 127                                           |
-| `Short`     | 16               | -32,768                                       | 32,767                                        |
-| `Int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |
-| `Long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
+| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      | Maksimal (Secara Eksplisit) |
+|-----------|------------------|------------------------------------------------|-----------------------------------------------|---------------------------|
+| `Byte`      | 8             | -128                                           | 127                                           | 256 (2<sup>8</sup>)
+| `Short`     | 16               | -32,768                                       | 32,767                                        | 65,536 (2<sup>16</sup>) |
+| `Int`       | 32              | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |  4,294,687,296 (2<sup>32</sup>) |
+| `Long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
 :::
-
 ## Bilangan Desimal (Floating Point)
 
 Bilangan desimal atau floating point adalah bilangan yang punya koma. Di pemrograman, bilangan desimal biasanya disebut dengan `float` atau `double`. Contoh bilangan desimal adalah 1.5, 2.3, 3.14, dan seterusnya. Untuk membuat bilangan desimal kamu bisa menggunakan kode seperti dibawah ini
