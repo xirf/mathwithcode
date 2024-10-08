@@ -115,6 +115,22 @@ int main() {
     return 0;
 }
 ```
+== Python
+```python
+def faktorisasi(bilangan):
+    faktor = 2
+    faktorisasi = []
+    while bilangan > 1:
+        if bilangan % faktor == 0:
+            faktorisasi.append(faktor)
+            bilangan /= faktor
+        else:
+            faktor += 1
+
+    return faktorisasi
+
+faktorisasi100 = faktorisasi(100) # [2, 2, 5, 5]
+```
 
 :::
 
@@ -174,6 +190,18 @@ int main() {
     std::vector<int> kelipatan3 = kelipatan(3, 5); // [3, 6, 9, 12, 15]
     return 0;
 }
+```
+== Python
+```python
+def kelipatan(a, n):
+    kelipatan = []
+    for i in range(1, n+1):
+        kelipatan.append(a * i)
+
+    return kelipatan
+
+kelipatan3 = kelipatan(3, 5)
+
 ```
 :::
 
@@ -249,6 +277,18 @@ int main() {
     return 0;
 }
 ```
+== Python
+```python
+def fpb(a, b):
+    while b != 0:
+        t = b
+        b = a % b
+        a = t
+
+    return a
+
+fpb1218 = fpb(12, 18) # 6
+```
 :::
 
 
@@ -310,6 +350,13 @@ int main() {
     int kpk1218 = kpk(12, 18); // 36
     return 0;
 }
+```
+== Python
+```python
+def kpk(a, b):
+    return (a * b) / fpb(a, b)
+
+kpk1218 = kpk(12, 18) # 36.0
 ```
 :::
 

@@ -32,6 +32,12 @@ int harga = 100000;
 int diskon = 20;
 int persen = (harga / 100) * diskon; // 20000
 ```
+== Python
+```python
+harga = 100000
+diskon = 20
+persen = (harga / 100) * diskon # 20000.0
+```
 :::
 
 ## Mencari Nilai Asli
@@ -62,6 +68,13 @@ int persen = 20000;
 int diskon = 20;
 int harga = (persen / diskon) * 100; // 100000
 ```
+== Python
+```python
+persen = 20000
+diskon = 20
+persen = (persen / diskon) * 100 # 100000.0
+
+```
 :::
 
 ## Mencari Persen
@@ -90,5 +103,11 @@ val persen = (diskon / harga) * 100 // 20
 int harga = 100000;
 int diskon = 20000;
 int persen = (diskon / harga) * 100; // 20
+```
+== Python
+```python
+harga = 100000
+diskon = 20000
+persen = (diskon / harga) * 100 # 20.0
 ```
 :::

@@ -40,6 +40,15 @@ int hasilPengurangan = a - b; // 5
 int hasilPerkalian = a * b; // 50
 int hasilPembagian = a / b; // 2
 ```
+== Python
+```python
+a = 10
+b = 5
+hasilPenjumlahan = a + b # 15
+hasilPengurangan = a - b # 5
+hasilPerkalian = a * b # 50
+hasilPembagian = a / b # 2
+```
 :::
 
 Di atas kita menggunakan simbol `/` untuk pembagian dan `*` untuk perkalian. Ini karena dalam pemrograman, kita tidak bisa menggunakan simbol matematika `÷` dan `×` kek biasanya apalagi `.` karena bahasa pemrograman umumnya mengikuti aturan ASCII yang hanya mendukung karakter dasar, sehingga simbol-simbol matematika khusus seperti `÷` dan `×` tidak tersedia. Sebagai gantinya, pemrograman menggunakan `*` sebagai pengganti kali dan `/` sebagai pengganti bagi agar kode bisa berjalan dengan baik.
@@ -72,6 +81,11 @@ int main() {
     return 0;
 }
 ```
+== Python
+```python
+pangkat = 2 ** 3 # 8
+pangkat2 = pow(2, 3) # 8
+```
 :::
 
 `pow()` biasanya meminta dua parameter, parameter pertama adalah bilangan yang mau dipangkatkan, dan parameter kedua adalah pangkatnya. jadi kalo kita mau menghitung $2^3$ kita bisa tulis `pow(2, 3)`.
@@ -102,6 +116,12 @@ int main() {
 }
 ```
 
+Di Python, kita bisa menggunakan library `sqrt()` dari library `math`, Contoh penggunaanya seperti ini:
+```python
+import math
+akar = math.sqrt(16) # 4.0
+```
+
 Tapi ada masalah kalo kita mau menghitung akar yang lebih dari 2 kaya $\sqrt[3]{8}$ atau $\sqrt[4]{16}$, Nah untuk kasus ini kita bisa pangkatkan aja bilangannya dengan $1/n$  dimana si $n$ itu adalah akar yang kita mau. Contoh penggunaannya seperti ini:
 
 :::tabs
@@ -128,6 +148,11 @@ int main() {
     return 0;
 }
 ```
+== Python
+```python
+akar3 = pow(8, 1/3) # 2.0
+akar4 = pow(16, 1/4) # 2.0
+```
 :::
 
 Hal ini bisa terjadi karena apapun bilangan yang memiliki pangkat $1/n$ akan menghasilkan akar dari bilangan tersebut. Jadi kalo kita mau menghitung $\sqrt[3]{8}$ kita bisa tulis `pow(8, 1/3)`.
@@ -150,6 +175,10 @@ val hasilModulus = 10 % 3 // 1
 == C++
 ```cpp
 int hasilModulus = 10 % 3; // 1
+```
+== Python
+```python
+hasilModulus = 10 % 3 # 1
 ```
 :::
 
@@ -192,6 +221,11 @@ val hasil = 6 + 3 * (2.0.pow(3) + Math.sqrt(16.0)) // 42.0
 == C++
 ```cpp
 int hasil = 6 + 3 * (pow(2, 3) + sqrt(16)); // 42
+```
+== Python
+```python
+import math
+hasil = 6 + 3 * (pow(2,3) + math.sqrt(16)) # 42.0
 ```
 :::
 
