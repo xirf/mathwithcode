@@ -34,31 +34,31 @@ bilanganBulat = 10
 
 Meski kelihatannya sederhana, jangan lupa kalau di pemrograman, bilangan punya batasan! Contohnya, di Javascript, bilangan paling besar yang bisa kamu pakai adalah **`9,007,199,254,740,992`**. Itu setara dengan angka yang sangat besar seriously, aku aja bingung ngucapinnya.
 
-Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS (cuman `number` dan `BigInt`), batasan itu tergantung tipe data yang kamu pakai. Contoh kalo pake `short` di c++, kamu bisa mencapai angka **`32,767`** terkecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya kek dibawah ini
+Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS (cuman `number` dan `BigInt`), batasan itu tergantung tipe data yang kamu pakai. Contoh kalo pake `short` di c++, kamu bisa mencapai angka **`32,767`** terkecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya seperti dibawah ini
 
 :::tabs
 == Javascript
 
-| Tipe Data | Ukuran (bits) | Minimal| Maksimal|
-|-----------|------------------|---------------|----|
-| Number    | 64               | -9,007,199,254,740,991<br /> (−2<sup>53</sup> - 1) | 9,007,199,254,740,992 <br /> (2<sup>53</sup> - 1 )  |
-| BigInt    | max 1,000,000,000               | `tergantung memori` | `tergantung memori`  |
-== C++
-| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      |
-|-----------|------------------|------------------------------------------------|-----------------------------------------------|
-| `short`     | 16               | -32,768                                       | 32,767                                        |
-| `int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |
-| `long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
-| `long long` | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
+| Tipe Data | Ukuran (bits) | Minimal| Maksimal| Maksimal (Secara Eksplisit) |
+|-----------|------------------|---------------|----|---------------------------|
+| Number    | 64             | -9,007,199,254,740,991<br /> (−2<sup>53</sup> - 1) | 9,007,199,254,740,992 <br /> (2<sup>53</sup> - 1 )  | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
+| BigInt    | max 1,000,000,000               | `tergantung memori` | `tergantung memori`  | `tergantung memori` |
+== C++ 
+| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      | Maksimal (Secara Eksplisit)
+|-----------|------------------|------------------------------------------------|-----------------------------------------------|---------------------------|
+| `short`     | 16              | -32,768                                       | 32,767                                        | 65,536 (2<sup>16</sup>) |
+| `int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           | 4,294,687,296 (2<sup>32</sup>) |
+| `long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
+| `long long` | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
 
 Banyak banget selengkapnya cek [sini aja ya](https://learn.microsoft.com/en-us/cpp/c-language/cpp-integer-limits?view=msvc-170#limits-on-integer-constants)
 == Kotlin
-| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      |
-|-----------|------------------|------------------------------------------------|-----------------------------------------------|
-| `Byte`      | 8                | -128                                           | 127                                           |
-| `Short`     | 16               | -32,768                                       | 32,767                                        |
-| `Int`       | 32               | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |
-| `Long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) |
+| Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      | Maksimal (Secara Eksplisit) |
+|-----------|------------------|------------------------------------------------|-----------------------------------------------|---------------------------|
+| `Byte`      | 8             | -128                                           | 127                                           | 256 (2<sup>8</sup>)
+| `Short`     | 16               | -32,768                                       | 32,767                                        | 65,536 (2<sup>16</sup>) |
+| `Int`       | 32              | -2,147,483,648 (-2<sup>31</sup>)              | 2,147,483,647 (2<sup>31</sup> - 1)           |  4,294,687,296 (2<sup>32</sup>) |
+| `Long`      | 64               | -9,223,372,036,854,775,808 (-2<sup>63</sup>) | 9,223,372,036,854,775,807 (2<sup>63</sup> - 1) | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
 :::
 
 ## Bilangan Desimal (Floating Point)
