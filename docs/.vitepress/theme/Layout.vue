@@ -32,10 +32,10 @@ const closeConsent = () => {
   <!-- Transition added for the consent popup -->
   <transition name="fade-slide">
     <div v-if="open"
-      class="w-full max-w-md p-4 fixed bottom-10 right-10 border border-gray-500/50 border-solid bg-gray-500/20 backdrop-blur-md rounded-lg z-1000 flex flex-col justify-flex-end"
+      class="p-4 fixed inset-x-4 bottom-10 border border-gray-500/50 border-solid bg-gray-500/20 backdrop-blur-md rounded-lg z-1000 flex flex-col justify-flex-end sm:max-w-md sm:left-auto sm:right-10"
       id="consent">
       <div>
-        Situs ini sedang dalam pengembangan materi mungkin belum lengkap, dan membutuhkan peninjauan lebih lanjut.
+        Situs ini sedang dalam pengembangan. Materi mungkin belum lengkap dan membutuhkan peninjauan lebih lanjut.
       </div>
       <button class="mt-4 font-bold w-fit px20px line-height-38px bg-blue-500 text-white rounded-full" @click="closeConsent">
         Okei
