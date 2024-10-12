@@ -20,5 +20,13 @@ export default [
             { text: 'Grafik', link: '/algebra/graph' },
             
         ]
+    },
+    {
+        text: 'Aljabar Linear',
+        collapsed: false,
+        items: [
+            { text: 'Transformasi Linear', link: '/linear-algebra/linear-transformation' },
+            { text: 'Perkalikan Matriks', link: '/linear-algebra/matrix-multiplication' },
+        ]
     }
 ]
