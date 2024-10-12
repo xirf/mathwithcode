@@ -35,6 +35,13 @@ export default defineConfig({
               { text: 'Persen', link: '/arithmetic/percent' },
             ]
           },
+          {
+            text: "Statistik",
+            collapsed: true,
+            items: [
+              {text: "Ukuran Letak", link: "/statistics/measures-concentration-dispersion"},
+            ]
+          }
         ],
         editLink: {
           pattern: 'https://github.com/xirf/mathwithcode/edit/master/docs/:path',
