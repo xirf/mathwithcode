@@ -74,6 +74,9 @@ contributors:
 
 Feel free to update the contributors' widget in `docs/.vitepress/theme/components/ContributorsAside.vue` to add more details about yourself—but make sure you don’t break the existing format! If it does break, it’s up to you to fix it. 😇
 
+> [!INFO] Please add yourself to the contributors list
+> After contributing to the project, please add yourself to the contributors list in the `docs/.vitepress/contributors.ts` file. This will show your account in the homepage of the project.
+
 ### The Review Process
 
 Once you submit a pull request, one of our maintainers will review it. We may suggest a few tweaks, but don’t worry—we’ll provide feedback as quickly as possible and work with you to get your contributions merged!
