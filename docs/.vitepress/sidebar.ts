@@ -14,11 +14,7 @@ export default [
         text: 'Aljabar',
         collapsed: false,
         items: [
-            { text: 'Persamaan Linear', link: '/algebra/linear-equation' },
-            { text: 'Persamaan Kuadrat', link: '/algebra/quadratic-equation' },
-            { text: 'Fungsi', link: '/algebra/function' },
-            { text: 'Grafik', link: '/algebra/graph' },
-            
+            { text: 'Persamaan Linear', link: '/algebra/linear-equation' },            
         ]
     },
     {
@@ -27,6 +23,13 @@ export default [
         items: [
             { text: 'Transformasi Linear', link: '/linear-algebra/linear-transformation' },
             { text: 'Perkalikan Matriks', link: '/linear-algebra/matrix-multiplication' },
+        ]
+    },
+    {
+        text: 'Statistika',
+        collapsed: false,
+        items: [
+            { text: 'Ukuran Letak', link: '/statistics/measures-concentration-dispersion' },
         ]
     }
 ]

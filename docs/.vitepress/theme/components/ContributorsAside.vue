@@ -1,12 +1,11 @@
-<script setup lang="ts">
+<script setup>
 import { useData } from 'vitepress';
 
 const { frontmatter } = useData();
-
 </script>
 
 <template>
-    <div class="mb-8 mt-8 w-full">
+    <div class="mb-8 mt-8 w-full" v-if="frontmatter.contributors">
         <h2 class="text-md font-black mb-2" id="kontributor">
             Kontributor
         </h2>

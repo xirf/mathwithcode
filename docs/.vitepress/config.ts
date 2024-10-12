@@ -18,9 +18,6 @@ export default defineConfig({
             text: 'Belajar', link: '/guide/',
           },
           {
-            text: 'Kontribusi', link: 'https://github.com/xirf/mathwithcode'
-          },
-          {
             text: 'Donasi', link: 'https://trakteer.id/xirf'
           }
         ],
@@ -29,10 +26,9 @@ export default defineConfig({
           pattern: 'https://github.com/xirf/mathwithcode/edit/master/docs/:path',
           text: 'Perbaiki halaman ini di GitHub'
         },
-        
         footer: {
           message: 'Dirilis di bawah lisensi MIT',
-          copyright: 'Copyright © 2024-present Anka Tama & Contributors'
+          copyright: 'Copyright © 2024-present Andika & Contributors'
         }
       }
     },
