@@ -8,6 +8,7 @@ export const sharedConfig = defineConfig({
     description: "Belajar matematika dengan barisan kode",
     cleanUrls: true,
     metaChunk: true,
+    lastUpdated: true,
     markdown: {
         config(md) {
             md.use(tabsMarkdownPlugin)

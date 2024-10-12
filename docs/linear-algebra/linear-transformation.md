@@ -1,3 +1,8 @@
+---
+contributors:
+  - name: "Rijal"
+    username: "Rnov24"
+---
 # Transformasi Linear
 
 Transformasi linear adalah aturan yang memetakan setiap vektor dalam satu ruang vektor ke vektor lain dalam ruang vektor yang mungkin berbeda, dengan tetap mempertahankan operasi penambahan vektor dan perkalian skalar. Dengan kata lain, transformasi linear adalah fungsi yang mengambil vektor sebagai input dan menghasilkan vektor sebagai output, tunduk pada batasan berikut:
@@ -318,10 +323,5 @@ int main() {
 Sebenarnya semua jenis-jenis yang disebutkan merupakan sedikit gambaran dari transformasi linear karena transformasi linear dapat bebas dilakukan dengan membuat matriks transformasi sendiri selama masih mematuhi aturan Aditivitas dan Homogenitas serta aturan Perkalian matriks. 
 :::
 
----
-Rijal  
-Instagram :[ ri.jalll ](https://www.instagram.com/ri.jalll)  
-Facebook: [ Rijal ](https://www.facebook.com/24rijal)
 
----
 
