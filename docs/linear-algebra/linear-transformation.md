@@ -1,3 +1,8 @@
+---
+contributors:
+  - name: "Rijal"
+    username: "Rnov24"
+---
 # Transformasi Linear
 
 Transformasi linear adalah aturan yang memetakan setiap vektor dalam satu ruang vektor ke vektor lain dalam ruang vektor yang mungkin berbeda, dengan tetap mempertahankan operasi penambahan vektor dan perkalian skalar. Dengan kata lain, transformasi linear adalah fungsi yang mengambil vektor sebagai input dan menghasilkan vektor sebagai output, tunduk pada batasan berikut:
@@ -11,11 +16,11 @@ $$
 \mathbf{T}(c\mathbf{u}) = c\mathbf{T}(\mathbf{u})
 $$
 
-## Jenis-Jenis Transformasi Linear
+# Jenis-Jenis Transformasi Linear
 
 Transformasi linear dapat digunakan untuk mengubah sebuah vektor menjadi vektor lain, seperti memperbesar, mengecilkan, atau bahkan mengubah rotasi vektor tersebut. Berikut adalah beberapa jenis transformasi linear:
 
-### 1. Scalling
+## Scalling
 
 Kita dapat menggunakan scalar untuk memperbesar atau memperkecil vektor.
 $$
@@ -82,7 +87,7 @@ print(result)  # output: [4, 6]
 :::
 
 
-### 2. Rotasi
+## Rotasi
 
 Kita dapat merotasikan vektor dengan cara mengalikan vektor tersebut dengan matriks rotasi $R(\theta)$, dengan $\theta$ adalah sudut rotasi vektor tersebut. 
 $$
@@ -171,7 +176,7 @@ int main() {
 ```
 :::
 
-### 3. Penggeseran
+## Penggeseran
 
 Kita dapat melakukan shearing untuk membuat vektor tegeser seolah-olah terdistorsi dengan cara mengalikan vektor tersebut dengan matriks shearing $S(a, b)$, dengan $a$ dan $b$ adalah parameter shearing, ubah $b$ menjadi 0 untuk penggeseran secara horizontal atau ubah $a$ menjadi 0 untuk penggeseran secara vertikal, atau dapat menggabungkannya. 
 $$
@@ -235,7 +240,7 @@ int main() {
 :::
 
 
-### 4. Refleksi
+## Refleksi
 
 Kita dapat melakukan refleksi untuk membuat vektor terlihat seperti cerminan dengan cara mengalikan vektor tersebut dengan matriks refleksi $F(x, y)$, dengan $x$ dan $y$ adalah parameter refleksi, ubah $x$ menjadi -1 untuk refleksi secara horizontal atau ubah $y$ menjadi -1 untuk refleksi secara vertikal, atau dapat menggabungkannya. 
 
@@ -318,10 +323,5 @@ int main() {
 Sebenarnya semua jenis-jenis yang disebutkan merupakan sedikit gambaran dari transformasi linear karena transformasi linear dapat bebas dilakukan dengan membuat matriks transformasi sendiri selama masih mematuhi aturan Aditivitas dan Homogenitas serta aturan Perkalian matriks. 
 :::
 
----
-Rijal  
-Instagram :[ ri.jalll ](https://www.instagram.com/ri.jalll)  
-Facebook: [ Rijal ](https://www.facebook.com/24rijal)
 
----
 

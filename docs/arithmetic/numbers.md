@@ -116,11 +116,14 @@ bilanganPecahan = 1/2
 ```
 :::
 
-> [!WARNING]  
-> Perhatian saat melakukan operasi dengan bilangan pecahan dan desimal.
-> Dalam banyak bahasa pemrograman, termasuk JavaScript, ada yang disebut dengan floating point error, yang dapat menyebabkan hasil perhitungan tidak akurat. Hal ini terjadi karena bilangan desimal tidak selalu dapat direpresentasikan secara tepat dalam format biner.
+> [!WARNING]  Perhatian saat melakukan operasi dengan bilangan pecahan dan desimal
+> Dalam banyak bahasa pemrograman, termasuk JavaScript, ada yang disebut dengan `floating point error`, yang dapat menyebabkan hasil perhitungan tidak akurat. Hal ini terjadi karena bilangan desimal tidak selalu dapat direpresentasikan secara tepat dalam format biner.
+> 
 > Contoh, ketika kita menjumlahkan 0.1 dan 0.2 di JavaScript, hasilnya bukan 0.3, melainkan 0.30000000000000004. Ini disebabkan oleh keterbatasan representasi angka desimal dalam komputer.
-> Untuk menghindari masalah ini, sebaiknya batasi presisi hasil perhitungan dengan cara Membulatkan hasil ke jumlah angka desimal yang diinginkan (misalnya dengan `toFixed()` atau `Math.round()`). Kamu juga bisa menggunakan pustaka seperti BigNumber atau yang lainnya
+> 
+> Untuk menghindari masalah ini, sebaiknya batasi presisi hasil perhitungan dengan cara Membulatkan hasil ke jumlah angka desimal yang diinginkan (misalnya dengan `toFixed()` atau `Math.round()`. 
+> 
+> Kamu juga bisa menggunakan pustaka seperti BigNumber atau yang lainnya
 
 Gimana dengan **Bilangan pecahan campuran** kan di matematika ada kaya $1\frac{1}{2}$, di pemrograman juga bisa kok. Kita bisa menggunakan `float` atau `double` untuk bilangan pecahan campuran. Contoh penggunaannya seperti ini:
 :::tabs

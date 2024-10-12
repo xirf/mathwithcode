@@ -3,13 +3,19 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import 'uno.css'
-import Layout from './Layout.vue'
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client"
 
-export default {
-  extends: DefaultTheme,
+import ContributorsAside from './components/ContributorsAside.vue'
+import Consent from './components/Consent.vue'
+
+export default Object.assign({}, DefaultTheme, {
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      'aside-outline-after': () => h(ContributorsAside),
+      'layout-bottom': () => h(Consent),
+    })
+  },
   enhanceApp({ app }) {
     enhanceAppWithTabs(app);
   },
-  Layout,
-} satisfies Theme
+}) as Theme

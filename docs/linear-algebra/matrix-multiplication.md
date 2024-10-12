@@ -1,7 +1,12 @@
+---
+contributors:
+  - name: "Rijal"
+    username: "Rnov24"
+---
 # Perkalian Matriks
 Perkalian matriks adalah operasi matematika yang digunakan untuk menggabungkan dua matriks dengan cara mengalikan elemen-elemen yang sesuai. Hasil perkalian matriks adalah matriks baru yang memiliki jumlah baris yang sama dengan matriks pertama dan jumlah kolom yang sama dengan matriks kedua.
 
-### Aturan Perkalian Matriks
+## Aturan Perkalian Matriks
 
 Berikut adalah aturan perkalian matriks:
 

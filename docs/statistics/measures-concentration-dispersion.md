@@ -67,40 +67,6 @@ if (Number.isInteger(posisi)) {
     hasilPersentil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi)); //20
 }
 ```
-
-== TypeScript
-```typescript
-//Data Tunggal
-const dataTunggal: number[] = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
-
-const nilaiPersen: number = 100;
-const nilaiPersentil: number = 50; //1-99
-const angkaAwal: number = 1;
-let hasilPersentil: number = 0;
-
-// Mengurutkan data secara ascending
-const dataTersortir: number[] = [...dataTunggal].sort((a, b) => a - b);
-const jumlahData: number = dataTunggal.length;
-
-// Menghitung posisi persentil
-const posisi: number = (jumlahData + angkaAwal) * (nilaiPersentil / nilaiPersen);
-
-// Jika posisi adalah bilangan bulat, ambil nilai pada posisi tersebut
-if (Number.isInteger(posisi)) {
-    hasilPersentil = dataTersortir[posisi - angkaAwal];
-} else {
-    // Jika posisi bukan bilangan bulat, lakukan interpolasi
-    const indeksBawah: number = Math.floor(posisi) - angkaAwal;
-    const indeksAtas: number = Math.ceil(posisi) - angkaAwal;
-
-    // Nilai pada indeks bawah dan atas
-    const nilaiBawah: number = dataTersortir[indeksBawah];
-    const nilaiAtas: number = dataTersortir[indeksAtas];
-
-    // Interpolasi untuk menghitung nilai persentil
-    hasilPersentil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi));
-}
-```
 :::
 
 ### Data Berkelompok
@@ -170,66 +136,6 @@ function hitungNilaiPersentil(dataKelompok, dataKumulatif, persentil) {
 // Menghitung nilai persentil ke-50
 hasilPersentil = hitungNilaiPersentil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiPersentil); //17.5
 ```
-
-== TypeScript
-```typescript
-// Tipe data untuk data kelompok
-type DataKelompok = {
-    interval: number[];
-    frekuensi: number;
-};
-
-// Tipe data untuk data kumulatif
-type DataKumulatif = DataKelompok & { kumulatif: number };
-
-// Data kelompok
-const dataKelompok: DataKelompok[] = [
-    { interval: [0, 10], frekuensi: 5 },
-    { interval: [10, 20], frekuensi: 10 },
-    { interval: [20, 30], frekuensi: 8 },
-    { interval: [30, 40], frekuensi: 2 }
-];
-
-const nilaiPersentil: number = 50; //1-99
-const nilaiAwal: number = 0;
-const nilaiPersen: number = 100;
-let hasilPersentil:number = 0
-
-// Fungsi untuk menghitung total frekuensi
-function hitungTotalFrekuensi(data: DataKelompok[]): number {
-    return data.reduce((jumlah, item) => jumlah + item.frekuensi, nilaiAwal);
-}
-
-// Fungsi untuk menghitung data kumulatif
-function hitungDataKumulatif(data: DataKelompok[]): DataKumulatif[] {
-    let frekuensiKumulatif = 0;
-    return data.map(item => {
-        frekuensiKumulatif += item.frekuensi;
-        return { ...item, kumulatif: frekuensiKumulatif };
-    });
-}
-
-// Fungsi untuk menghitung nilai persentil
-function hitungNilaiPersentil(dataKelompok: DataKelompok[], dataKumulatif: DataKumulatif[], persentil: number): number {
-    const totalFrekuensi = hitungTotalFrekuensi(dataKelompok);
-    const posisi = (persentil / nilaiPersen) * totalFrekuensi;
-
-    const kelasInterval = dataKumulatif.find(item => item.kumulatif >= posisi);
-
-    if (kelasInterval) {
-        const [batasBawah, batasAtas] = kelasInterval.interval;
-        const kumulatifBawah = dataKumulatif[dataKumulatif.indexOf(kelasInterval) - 1]?.kumulatif || 0;
-        const frekuensiDalamKelas = kelasInterval.frekuensi;
-
-        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah);
-    }
-
-    return 0; // Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
-}
-
-// Menghitung nilai persentil ke-50
-const nilaiPersentilKe50 = hitungNilaiPersentil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiPersentil); //17.5
-```
 :::
 
 ## Desil
@@ -265,36 +171,6 @@ const ukuranData = dataTunggal.length;
 
 // Menghitung posisi dari nilai desil
 const posisi = (nilaiDesil * (ukuranData + 1)) / nilaiPersen;
-
-if (Number.isInteger(posisi)) {
-    totalDesil = dataTersortir[posisi - 1]; //20
-} else {
-    const indeksBawah = Math.floor(posisi) - 1;
-    const indeksAtas = Math.ceil(posisi) - 1;
-    
-    const nilaiBawah = dataTersortir[indeksBawah];
-    const nilaiAtas = dataTersortir[indeksAtas];
-
-    // Interpolasi untuk menghitung nilai desil
-    totalDesil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi)); //20
-}
-```
-
-== TypeScript
-```typescript
-// Data Tunggal
-const dataTunggal: number[] = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
-
-const nilaiPersen: number = 10
-const nilaiDesil: number = 5; //1-9
-let totalDesil: number = 0;
-
-// Mengurutkan data secara ascending
-const dataTersortir: number[] = [...dataTunggal].sort((a, b) => a - b);
-const ukuranData: number = dataTunggal.length;
-
-// Menghitung posisi dari nilai desil
-const posisi: number = (nilaiDesil * (ukuranData + 1)) / nilaiPersen;
 
 if (Number.isInteger(posisi)) {
     totalDesil = dataTersortir[posisi - 1]; //20
@@ -377,65 +253,6 @@ function hitungNilaiDesil(dataKelompok, dataKumulatif, desil) {
 // Menghitung nilai desil ke-9
 hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil); //29.375
 ```
-== TypeScript
-```typescript
-// Tipe data untuk data kelompok
-type DataKelompok = {
-    interval: number[];
-    frekuensi: number;
-};
-
-// Tipe data untuk data kumulatif
-type DataKumulatif = DataKelompok & { kumulatif: number };
-
-// Data kelompok
-const dataKelompok: DataKelompok[] = [
-    { interval: [0, 10], frekuensi: 5 },
-    { interval: [10, 20], frekuensi: 10 },
-    { interval: [20, 30], frekuensi: 8 },
-    { interval: [30, 40], frekuensi: 2 }
-];
-
-const nilaiDesil: number = 9; // 1-9 untuk desil ke-1 hingga ke-9
-const nilaiAwal: number = 0;
-const nilaiPersen: number = 10;
-let hasilDesil:number = 0
-
-// Fungsi untuk menghitung total frekuensi
-function hitungTotalFrekuensi(data: DataKelompok[]): number {
-    return data.reduce((jumlah, item) => jumlah + item.frekuensi, nilaiAwal);
-}
-
-// Fungsi untuk menghitung data kumulatif
-function hitungDataKumulatif(data: DataKelompok[]): DataKumulatif[] {
-    let frekuensiKumulatif = 0;
-    return data.map(item => {
-        frekuensiKumulatif += item.frekuensi;
-        return { ...item, kumulatif: frekuensiKumulatif };
-    });
-}
-
-// Fungsi untuk menghitung nilai desil
-function hitungNilaiDesil(dataKelompok: DataKelompok[], dataKumulatif: DataKumulatif[], desil: number): number {
-    const totalFrekuensi = hitungTotalFrekuensi(dataKelompok);
-    const posisi = (desil / nilaiPersen) * totalFrekuensi;
-
-    const kelasInterval = dataKumulatif.find(item => item.kumulatif >= posisi);
-
-    if (kelasInterval) {
-        const [batasBawah, batasAtas] = kelasInterval.interval;
-        const kumulatifBawah = dataKumulatif[dataKumulatif.indexOf(kelasInterval) - 1]?.kumulatif || 0;
-        const frekuensiDalamKelas = kelasInterval.frekuensi;
-
-        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah);
-    }
-
-    return 0; // Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
-}
-
-// Menghitung nilai desil ke-9
-hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil); //29.375
-```
 :::
 
 ## Kuartil
@@ -470,36 +287,6 @@ const jumlahData = dataTunggal.length;
 
 // Menghitung posisi dari nilai kuartil
 const posisi = (nilaiKuartil * (jumlahData + 1)) / nilaiPersen;
-
-if (Number.isInteger(posisi)) {
-    totalKuartil = dataTersortir[posisi - 1]; //20
-} else {
-    const indeksBawah = Math.floor(posisi) - 1;
-    const indeksAtas = Math.ceil(posisi) - 1;
-    
-    const nilaiBawah = dataTersortir[indeksBawah];
-    const nilaiAtas = dataTersortir[indeksAtas];
-
-    // Interpolasi untuk menghitung nilai kuartil
-    totalKuartil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi)); //20
-}
-```
-
-== TypeScript
-```typescript
-// Data Tunggal
-const dataTunggal: number[] = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
-
-const nilaiPersen: number = 4;
-const nilaiKuartil: number = 2; // 1-3
-let totalKuartil: number = 0;
-
-// Mengurutkan data secara ascending
-const dataTersortir: number[] = [...dataTunggal].sort((a, b) => a - b);
-const jumlahData: number = dataTunggal.length;
-
-// Menghitung posisi dari nilai kuartil
-const posisi: number = (nilaiKuartil * (jumlahData + 1)) / nilaiPersen;
 
 if (Number.isInteger(posisi)) {
     totalKuartil = dataTersortir[posisi - 1]; //20
@@ -583,64 +370,132 @@ function hitungNilaiKuartil(dataKelompok, dataKumulatif, kuartil) {
 // Menghitung nilai kuartil ke-2
 hasilKuartil = hitungNilaiKuartil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiKuartil); //17.5
 ```
-
-== TypeScript
-```typescript
-// Tipe data untuk data kelompok
-type DataKelompok = {
-    interval: number[];
-    frekuensi: number;
-};
-
-// Tipe data untuk data kumulatif
-type DataKumulatif = DataKelompok & { kumulatif: number };
-
+== Kotlin
+```kotlin
 // Data kelompok
-const dataKelompok: DataKelompok[] = [
-    { interval: [0, 10], frekuensi: 5 },
-    { interval: [10, 20], frekuensi: 10 },
-    { interval: [20, 30], frekuensi: 8 },
-    { interval: [30, 40], frekuensi: 2 }
-];
+data class KelompokData(val interval: Pair<Int, Int>, val frekuensi: Int)
 
-const jumlahPersen: number = 4;
-const nilaiKuartil: number = 2; // 1-3
-const nilaiAwal: number = 0;
-let hasilKuartil:number = 0
+val dataKelompok = listOf(
+    KelompokData(0 to 10, 5),
+    KelompokData(10 to 20, 10),
+    KelompokData(20 to 30, 8),
+    KelompokData(30 to 40, 2)
+)
+
+val nilaiDesil = 9 // 1-9 untuk desil ke-1 hingga ke-9
+val nilaiAwal = 0
+val nilaiPersen = 10
+var hasilDesil = 0.0
 
 // Fungsi untuk menghitung total frekuensi
-function hitungTotalFrekuensi(data: DataKelompok[]): number {
-    return data.reduce((jumlah, item) => jumlah + item.frekuensi, nilaiAwal);
+fun hitungTotalFrekuensi(data: List<KelompokData>): Int {
+    return data.sumOf { it.frekuensi }
 }
 
 // Fungsi untuk menghitung data kumulatif
-function hitungDataKumulatif(data: DataKelompok[]): DataKumulatif[] {
-    let frekuensiKumulatif = 0;
-    return data.map(item => {
-        frekuensiKumulatif += item.frekuensi;
-        return { ...item, kumulatif: frekuensiKumulatif };
-    });
+fun hitungDataKumulatif(data: List<KelompokData>): List<KelompokData> {
+    var frekuensiKumulatif = 0
+    return data.map {
+        frekuensiKumulatif += it.frekuensi
+        it.copy(frekuensi = frekuensiKumulatif)
+    }
 }
 
-// Fungsi untuk menghitung nilai kuartil
-function hitungNilaiKuartil(dataKelompok: DataKelompok[], dataKumulatif: DataKumulatif[], kuartil: number): number {
-    const totalFrekuensi = hitungTotalFrekuensi(dataKelompok);
-    const posisi = (kuartil / jumlahPersen) * totalFrekuensi;
+// Fungsi untuk menghitung nilai desil
+fun hitungNilaiDesil(dataKelompok: List<KelompokData>, dataKumulatif: List<KelompokData>, desil: Int): Double {
+    val totalFrekuensi = hitungTotalFrekuensi(dataKelompok)
+    val posisi = (desil.toDouble() / nilaiPersen) * totalFrekuensi
 
-    const kelasInterval = dataKumulatif.find(item => item.kumulatif >= posisi);
+    val kelasInterval = dataKumulatif.find { it.frekuensi >= posisi }
 
-    if (kelasInterval) {
-        const [batasBawah, batasAtas] = kelasInterval.interval;
-        const kumulatifBawah = dataKumulatif[dataKumulatif.indexOf(kelasInterval) - 1]?.kumulatif || 0;
-        const frekuensiDalamKelas = kelasInterval.frekuensi;
+    kelasInterval?.let {
+        val (batasBawah, batasAtas) = it.interval
+        val kumulatifBawah = dataKumulatif.getOrNull(dataKumulatif.indexOf(it) - 1)?.frekuensi ?: 0
+        val frekuensiDalamKelas = it.frekuensi - kumulatifBawah
+
+        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah)
+    }
+
+    return 0.0 // Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
+}
+
+// Menghitung nilai desil ke-9
+hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil)
+println(hasilDesil) // Output: 29.375
+```
+== C++
+```cpp
+#include <iostream>
+#include <vector>
+#include <numeric> // untuk std::accumulate
+
+struct KelompokData {
+    std::pair<int, int> interval;
+    int frekuensi;
+};
+
+int nilaiDesil = 9; // 1-9 untuk desil ke-1 hingga ke-9
+int nilaiAwal = 0;
+int nilaiPersen = 10;
+double hasilDesil = 0;
+
+// Fungsi untuk menghitung total frekuensi
+int hitungTotalFrekuensi(const std::vector<KelompokData>& data) {
+    return std::accumulate(data.begin(), data.end(), nilaiAwal, 
+                           [](int jumlah, const KelompokData& item) {
+                               return jumlah + item.frekuensi;
+                           });
+}
+
+// Fungsi untuk menghitung data kumulatif
+std::vector<KelompokData> hitungDataKumulatif(const std::vector<KelompokData>& data) {
+    int frekuensiKumulatif = 0;
+    std::vector<KelompokData> dataKumulatif;
+    
+    for (const auto& item : data) {
+        frekuensiKumulatif += item.frekuensi;
+        dataKumulatif.push_back({ item.interval, frekuensiKumulatif });
+    }
+    
+    return dataKumulatif;
+}
+
+// Fungsi untuk menghitung nilai desil
+double hitungNilaiDesil(const std::vector<KelompokData>& dataKelompok, const std::vector<KelompokData>& dataKumulatif, int desil) {
+    int totalFrekuensi = hitungTotalFrekuensi(dataKelompok);
+    double posisi = (static_cast<double>(desil) / nilaiPersen) * totalFrekuensi;
+
+    auto kelasInterval = std::find_if(dataKumulatif.begin(), dataKumulatif.end(), 
+                                      [posisi](const KelompokData& item) {
+                                          return item.frekuensi >= posisi;
+                                      });
+
+    if (kelasInterval != dataKumulatif.end()) {
+        int batasBawah = kelasInterval->interval.first;
+        int batasAtas = kelasInterval->interval.second;
+        int index = std::distance(dataKumulatif.begin(), kelasInterval);
+        int kumulatifBawah = (index > 0) ? dataKumulatif[index - 1].frekuensi : 0;
+        int frekuensiDalamKelas = kelasInterval->frekuensi - kumulatifBawah;
 
         return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah);
     }
 
-    return 0; // Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
+    return 0.0; // Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
 }
 
-// Menghitung nilai kuartil ke-2
-hasilKuartil = hitungNilaiKuartil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiKuartil); //17.5
+int main() {
+    std::vector<KelompokData> dataKelompok = {
+        {{0, 10}, 5},
+        {{10, 20}, 10},
+        {{20, 30}, 8},
+        {{30, 40}, 2}
+    };
+
+    // Menghitung nilai desil ke-9
+    hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil);
+    std::cout << hasilDesil << std::endl; // Output: 29.375
+    
+    return 0;
+}
 ```
 :::

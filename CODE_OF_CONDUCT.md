@@ -38,7 +38,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [contact@mathwcode.jamcoder.id](mailto:contact@mathwcode.jamcoder.id). All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at [itsandka@gmail.com](mailto:itsandka@gmail.com). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
@@ -72,27 +72,7 @@ Community leaders will follow these Community Impact Guidelines in determining t
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html with the following modifications:
-
-- **Inclusivity Focus**: This version emphasizes inclusivity for all marginalized groups, specifically mentioning individuals with disabilities and varying socio-economic statuses to ensure a wider scope of protection and support.
-  
-- **Behavioral Examples**: Additional examples of acceptable and unacceptable behavior have been included to provide clearer guidelines. This includes specific mentions of gambling and harmful content, making it explicit that such behaviors will not be tolerated.
-
-- **Reporting Mechanism**: A dedicated email address for reporting violations has been provided, allowing for direct communication with community leaders and ensuring that complaints can be made easily and privately.
-
-- **Community Impact Guidelines**: The enforcement guidelines have been expanded to include more detailed explanations of community impact levels and corresponding consequences. This includes clearer definitions of what constitutes a serious violation versus a minor one and how repeated offenses are treated.
-
-- **Privacy and Security**: The responsibility of community leaders to protect the privacy and security of reporters has been explicitly stated, highlighting the community's commitment to safeguarding individuals who come forward with complaints.
-
-- **Public Apologies**: The possibility of requiring public apologies for certain violations has been included, which emphasizes accountability within the community.
-
-- **Scope of Representation**: The scope of what it means to represent the community has been elaborated to include both online and offline activities, ensuring that community members understand their responsibilities beyond just digital interactions.
-
-- **Clarification of Terms**: Specific terminology related to consequences (such as "temporary ban" and "permanent ban") has been clarified to ensure that community members understand the gravity of their actions and the potential repercussions.
-
-- **Support for Affected Individuals**: Language supporting individuals affected by harassment or inappropriate behavior has been strengthened, underlining the community’s commitment to creating a safe environment for everyone.
-
-
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
 For answers to common questions about this code of conduct, see https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
