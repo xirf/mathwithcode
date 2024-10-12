@@ -22,7 +22,7 @@ export default [
         collapsed: false,
         items: [
             { text: 'Transformasi Linear', link: '/linear-algebra/linear-transformation' },
-            { text: 'Perkalikan Matriks', link: '/linear-algebra/matrix-multiplication' },
+            { text: 'Perkalian Matriks', link: '/linear-algebra/matrix-multiplication' },
         ]
     },
     {
