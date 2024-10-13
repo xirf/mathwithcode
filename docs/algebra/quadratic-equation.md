@@ -43,12 +43,14 @@ Dimana $a$, $b$, dan $c$ adalah koefisien dari persamaan kuadrat $ax^2 + bx + c 
 
 Akar-akar persamaan kuadrat adalah dua nilai $x$, yang diperoleh dengan menyelesaikan persamaan kuadrat. Akar-akar persamaan kuadrat ini juga disebut angka nol dari persamaan tersebut. Sebagai contoh, akar-akar persamaan $x^2 - 3x - 4 = 0$ dapat dicari dengan menggunakan cara berikut:
 
-$$x = \frac{-b ± \sqrt{b^2 - 4ac}}{2a}$$
-$$x = \frac{-(-3) ± \sqrt{3^2 - 4\cdot1\cdot(-4)}}{2\cdot1}$$
-$$x = \frac{3 ± \sqrt{9 - - 16}}{2}$$
-$$x = \frac{3 ± \sqrt{9 + 16}}{2}$$
-$$x = \frac{3 ± \sqrt{25}}{2}$$
-$$x = \frac{3 ± 5}{2}$$
+$$\begin{align*}
+x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+x &= \frac{-(-3) \pm \sqrt{3^2 - 4\cdot1\cdot(-4)}}{2\cdot1} \\
+x &= \frac{3 \pm \sqrt{9 - - 16}}{2} \\
+x &= \frac{3 \pm \sqrt{9 + 16}}{2} \\
+x &= \frac{3 \pm \sqrt{25}}{2} \\
+x &= \frac{3 \pm 5}{2}
+\end{align*}$$
 
 Mari kira sederhanakan menjadi
 $$x = \frac{3 ± 5}{2}$$

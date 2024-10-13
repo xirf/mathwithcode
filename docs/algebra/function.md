@@ -77,9 +77,11 @@ $$g(x) = 3x - 2$$
 
 Maka penjumlahan kedua fungsi tersebut adalah
 
-$$(f + g)(x) = f(x) + g(x)$$
-$$= (2x + 3) + (3x - 2)$$
-$$= 5x + 1$$
+$$\begin{align*}
+    (f + g)(x) &= f(x) + g(x) \\
+    &= (2x + 3) + (3x - 2) \\
+    &= 5x + 1
+\end{align*}$$
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
 :::tabs
@@ -128,9 +130,11 @@ $$g(x) = 3x - 2$$
 
 Maka perkalian kedua fungsi tersebut adalah
 
-$$(f \cdot g)(x) = f(x) \cdot g(x)$$
-$$= (2x + 3) \cdot (3x - 2)$$
-$$= 6x^2 + 4x - 6$$
+$$\begin{align*}
+    (f \cdot g)(x) &= f(x) \cdot g(x) \\
+    &= (2x + 3) \cdot (3x - 2) \\
+    &= 6x^2 + 4x - 6
+\end{align*}$$
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
 
@@ -181,11 +185,13 @@ $$g(x) = 3x - 2$$
 
 Maka fungsi komposisi dari kedua fungsi tersebut adalah
 
-$$(f \circ g)(x) = f(g(x))$$
-$$= f(3x - 2)$$
-$$= 2(3x - 2) + 3$$
-$$= 6x - 4 + 3$$
-$$= 6x - 1$$
+$$\begin{align*}
+    (f \circ g)(x) &= f(g(x)) \\
+    &= f(3x - 2) \\
+    &= 2(3x - 2) + 3 \\
+    &= 6x - 4 + 3 \\
+    &= 6x - 1
+\end{align*}$$
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
 :::tabs
@@ -248,10 +254,12 @@ Langkah-langkah untuk mencari invers fungsi adalah sebagai berikut:
 4. Selesaikan persamaan tersebut
 
 Contoh untuk mencari invers dari fungsi $f(x) = 2x + 6$ adalah sebagai berikut:
-$$y = f(x) = 2x + 6$$
-$$2x = y - 6$$
-$$x = \frac{1}{2}y-\frac{6}{2}$$
-$$x = \frac{1}{2}y-3$$
+
+$$\begin{align*}
+    y &= f(x) = 2x + 6 \\
+    2x &= y - 6 \\
+    x &= \frac{1}{2}y-3
+\end{align*}$$
 
 Maka invers dari fungsi $f(x) = 2x + 6$ adalah $f^{-1}(x) = \frac{1}{2}x-3$
 
