@@ -146,8 +146,8 @@ $$ Di = \frac{i(n+1)}{10} $$
 
 | Simbol        | Pengertian                            |
 | ------------- | ------------------------------------- |
-| $D_i$         | Persentil ke-i                        |
-| i             | Nilai Persentil (1 hingga 9)          |
+| $D_i$         | Desil ke-i                            |
+| i             | Nilai Desil (1 hingga 9)              |
 | n             | Banyaknya data pada baris atau *array*|
 
 Berikut ini contoh *case* dari desil data tunggal dan data berkelompok (menggunakan data sebelumnya)
