@@ -6,9 +6,13 @@
     </p>
 </div>
 
-> [!WARNING] This project is still under development. 
+> [!WARNING]
+> This project is still under development. 
 > This project is still in the early stages of development. We are working hard to make it better for everyone. If you have any suggestions or want to contribute, feel free to reach out to us.
 
+> [!NOTE]
+> 🌐 Heads up!
+> Currently, this project is available only in 🇮🇩 Indonesian language. We’re work on translations, so stay tuned! But if you're comfy with Indonesian, you're in the right place. 🚀
 
 
 ## Table of Contents
@@ -22,42 +26,34 @@
 - [Contact](#contact)
 - [Thanks to Our Contributors](#thanks-to-our-contributors)
 
-## Introduction
+## 🌟 Introduction 
 
 Math W Code is a community-driven project that aims to help people learn math and its implementation in computer programming. We want everyone to learn math in a different way, by using code to help visualize and understand the concepts better. 
 
-## Installation
+## 🧑‍💻 Installation
 
-To set up the project locally, follow these steps:
+Ready to get started? Here's how you can set things up locally in three easy steps:
 
 | Step | Command |
 |------|---------|
 | Clone the repository | ```sh git clone https://github.com/xirf/mathwithcode.git ``` |
 | Navigate to the project directory | ```sh cd mathwithcode ``` |
 | Install the dependencies | ```sh npm install ``` |
+| Run It! |```npm run dev```|
 
-## Usage
+Then, open your browser and head to ```http://localhost:5173``` to see the site in action. 🎉
 
-To start the development server, run:
+## 🏗️ Contributing
 
-```sh
-npm run dev
-```
+We 💖 contributors! Want to join in on the fun? Awesome! Just take a quick peek at our [Contribution Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) to make sure we’re all on the same page. Whether it’s fixing a bug, suggesting a new feature, or adding some creative flair, your help is always appreciated!
 
-Open your browser and go to `http://localhost:5173` to view the website locally.
-
-## Contributing
-
-We welcome contributions from everyone. Please read our [Contribution Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before making a pull request just to make sure everyone is on the same page.
-
-## License
+## 🔐 License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to us at [contact@mathwcode.jamcoder.id](mailto:contact@mathwcode.jamcoder.id)
+## ✉️ Contact
+Got questions, suggestions, or just want to say hi? We'd love to hear from you! Shoot us an email at [itsandka@gmail.comm](mailto:itsandka@gmail.comm)
 
 ## Thanks to Our Contributors
 
-A big shoutout to all our contributors who have helped make this project better. You can find the list of contributors [here](CONTRIBUTORS.md).
+A HUGE thank you to all the amazing contributors who’ve helped make this project what it is today. Check out the full squad [here](https://github.com/xirf/mathwithcode/graphs/contributors). You rock! 💪
