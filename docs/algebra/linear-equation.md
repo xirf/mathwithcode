@@ -24,11 +24,19 @@ $$ 2x + 3 = 7 $$
 Untuk mengetahui nilai $x$ yang memenuhi persamaan tersebut, kita harus mencari nilai $x$ yang membuat kedua ruas persamaan sama. Berikut langkah-langkahnya:
 
 1. Eliminasi konstanta pada ruas kiri dengan cara mengurangkan konstanta pada ruas kiri dengan konstanta pada ruas kanan.
-   $$ 2x + 3 - 3 = 7 - 3 $$
-$$ 2x = 4 $$
+
+$$\begin{align*}
+    2x + 3 - 3 &= 7 - 3 \\
+    2x &= 4
+\end{align*}$$
+
 2. Eliminasi koefisien variabel dengan cara membagi kedua ruas dengan koefisien variabel.
-   $$ \frac{2x}{2} = \frac{4}{2} $$
-$$ x = 2 $$
+
+$$\begin{align*}
+    \frac{2x}{2} &= \frac{4}{2} \\
+    x &= 2\\
+\end{align*}$$
+
 3. Sehingga nilai $x$ yang memenuhi persamaan tersebut adalah $x = 2$.
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
@@ -106,14 +114,22 @@ Berikut contoh penyelesaian persamaan diatas dengan menggunakan metode substitus
 2. variable yang kita isolasi kemudian kita simpan dan pindahkan lainnya ke kanan.
    $$ 2x = 7 - 3y $$
 3. Karena nilai yang diisolasi adalah $2x$ maka kita bagi kedua ruas dengan $2$.
-   $$ \frac{2x}{2} = \frac{7 - 3y}{2} $$
-$$ x = \frac{7 - 3y}{2} $$
+
+$$\begin{align*}
+x &= \frac{7 - 3y}{2} \\
+x &= \frac{7}{2} - \frac{3y}{2} \\
+\end{align*}$$
+
 4. Nah kita dapat solusi parametrik dari $x$
 
 Nila parametrik inilah yang nantinya berapapun nilai $y$ yang kita masukkan akan menghasilkan nilai $x$ yang sesuai. Misalnya nilai $y = 1$ maka:
-$$ x = \frac{7 - 3(1)}{2} $$
-$$ x = \frac{4}{2} $$
-$$ x = 2 $$
+
+
+$$\begin{align*}
+x &= \frac{7 - 3(1)}{2} \\
+x &= \frac{4}{2} \\
+x &= 2
+\end{align*}$$
 
 Bagaimana jika permasalahan ini kita jadikan kode? Berikut contoh implementasinya:
 :::tabs

@@ -37,7 +37,7 @@ const plainContributors: Contributors[] = [
         github: 'xirf',
         twitter: 'xirfs',
         facebook: '0xirf',
-        sponsor: 'https://saweria.co/xirf',
+        sponsor: 'https://trakteer.id/xirf',
         actionText: "Beri Dukungan",
         title: 'Project Lead',
         desc: 'Technology is my passion and dreaming about a better world with it and making it happen is a dream come true',

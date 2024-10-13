@@ -6,9 +6,9 @@ const { frontmatter } = useData();
 
 <template>
     <div class="mb-8 mt-8 w-full" v-if="frontmatter.contributors">
-        <h2 class="text-md font-black mb-2" id="kontributor">
+        <h4 class="text-md font-black mb-2" id="kontributor">
             Kontributor
-        </h2>
+        </h4>
         <div class="w-full flex gap-2 flex-col w-full">
             <div v-for="contributor in frontmatter.contributors" :key="contributor.username" class="w-full">
                 <a :href="`https://github.com/${contributor.username}`" target="_blank" rel="noopener noreferrer" class="w-full">

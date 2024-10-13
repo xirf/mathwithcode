@@ -22,6 +22,10 @@ export default defineConfig({
           }
         ],
         sidebar,
+        outline: {
+          level: [2,3],
+          label: 'Di halaman ini'
+        },
         editLink: {
           pattern: 'https://github.com/xirf/mathwithcode/edit/master/docs/:path',
           text: 'Perbaiki halaman ini di GitHub'

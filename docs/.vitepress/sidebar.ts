@@ -14,7 +14,9 @@ export default [
         text: 'Aljabar',
         collapsed: false,
         items: [
-            { text: 'Persamaan Linear', link: '/algebra/linear-equation' },            
+            { text: 'Fungsi', link: '/algebra/function' },
+            { text: 'Persamaan Linear', link: '/algebra/linear-equation' },
+            { text: 'Persamaan Kuadrat', link: '/algebra/quadratic-equation' },
         ]
     },
     {

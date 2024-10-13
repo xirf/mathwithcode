@@ -16,6 +16,27 @@ hero:
         - theme: alt
           text: Beri Kontribusi
           link: https://github.com/xirf/mathwithcode
+features:
+  - icon: 🔢
+    title: Arimatika
+    details: Bilangan, Operasi, Faktor, Kelipatan dan sebagainya
+    link: /arithmetic/numbers
+    linkText: Pelajari
+  - icon: 📐
+    title: Aljabar
+    details: Polinomial, Persamaan, Matriks, Determinan dan sebagainya 
+    link: /algebra/polynomial
+    linkText: Pelajari
+  - icon: 📈
+    title: Aljabar Linear
+    details: Vektor, Ruang Vektor, Orthogonalitas dan sebagainya
+    link: /linear-algebra/vector
+    linkText: Pelajari
+  - icon: 📊
+    title: Statistika
+    details: Data, Distribusi, Regresi, Uji Hipotesis dan sebagainya
+    link: /statistics/measures-concentration-dispersion
+    linkText: Pelajari
 ---
 
 <script setup>
