@@ -23,7 +23,7 @@ Dalam situs ini, kita akan menggunakan berbagai bahasa pemrograman untuk menjela
         <span class="i-logos-kotlin-icon" data-icon="logos:javascript" data-inline="false"></span><span>Kotlin</span>
     </div>
     <div class="flex gap-4 py-2 px-4 border-1px border-gray-400/25 items-center border-solid h-full w-full rounded-lg w-full max-w-xs mt-0!">
-        <span class="i-logos-python-icon" data-icon="logos:python" data-inline="false"></span><span>Python</span>
+        <span class="i-logos-python" data-icon="logos:python" data-inline="false"></span><span>Python</span>
     </div>
 </div>
 
