@@ -79,8 +79,8 @@ angkaAwal = 1
 hasilPersentil = 0
 
 # Mengurutkan data secara ascending
-dataTersortir = sorted(data_tunggal)
-jumlahData = len(data_tunggal)
+dataTersortir = sorted(dataTunggal)
+jumlahData = len(dataTunggal)
 
 # Menghitung posisi persentil
 posisi = (jumlahData + angkaAwal) * (nilaiPersentil / nilaiPersen)
@@ -99,6 +99,7 @@ else:
 
     # Interpolasi untuk menghitung nilai persentil
     hasilPersentil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - int(posisi))  # 20
+    print(hasilPersentil)
 ```
 :::
 
