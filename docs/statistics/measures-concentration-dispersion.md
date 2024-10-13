@@ -67,6 +67,40 @@ if (Number.isInteger(posisi)) {
     hasilPersentil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi)); //20
 }
 ```
+
+==Python
+```python
+# Data Tunggal
+dataTunggal = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16]
+
+nilaiPersen = 100
+nilaiPersentil = 50  # 1-99
+angkaAwal = 1
+hasilPersentil = 0
+
+# Mengurutkan data secara ascending
+dataTersortir = sorted(dataTunggal)
+jumlahData = len(dataTunggal)
+
+# Menghitung posisi persentil
+posisi = (jumlahData + angkaAwal) * (nilaiPersentil / nilaiPersen)
+
+# Jika posisi adalah bilangan bulat, ambil nilai pada posisi tersebut
+if posisi.is_integer():
+    hasilPersentil = dataTersortir[int(posisi) - angkaAwal]  # 20
+else:
+    # Jika posisi bukan bilangan bulat, lakukan interpolasi
+    indeksBawah = int(posisi) - angkaAwal
+    indeksAtas = int(posisi + 1) - angkaAwal
+
+    # Nilai pada indeks bawah dan atas
+    nilaiBawah = dataTersortir[indeksBawah]
+    nilaiAtas = dataTersortir[indeksBawah]
+
+    # Interpolasi untuk menghitung nilai persentil
+    hasilPersentil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - int(posisi))  # 20
+    print(hasilPersentil)
+```
 :::
 
 ### Data Berkelompok
@@ -136,6 +170,55 @@ function hitungNilaiPersentil(dataKelompok, dataKumulatif, persentil) {
 // Menghitung nilai persentil ke-50
 hasilPersentil = hitungNilaiPersentil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiPersentil); //17.5
 ```
+==Python 
+```python
+# Data kelompok
+dataKelompok = [
+    {"interval": [0, 10], "frekuensi": 5},
+    {"interval": [10, 20], "frekuensi": 10},
+    {"interval": [20, 30], "frekuensi": 8},
+    {"interval": [30, 40], "frekuensi": 2}
+]
+
+nilaiPersentil = 50  # 1-99
+nilaiAwal = 0
+nilaiPersen = 100
+hasilPersentil = 0
+
+# Fungsi untuk menghitung total frekuensi
+def hitungTotalFrekuensi(data):
+    return sum(item['frekuensi'] for item in data)
+
+# Fungsi untuk menghitung data kumulatif
+def hitungDataKumulatif(data):
+    frekuensiKumulatif = 0
+    hasil = []
+    for item in data:
+        frekuensiKumulatif += item['frekuensi']
+        hasil.append({**item, 'kumulatif': frekuensiKumulatif})
+    return hasil
+
+# Fungsi untuk menghitung nilai persentil
+def hitungNilaiPersentil(dataKelompok, dataKumulatif, persentil):
+    totalFrekuensi = hitungTotalFrekuensi(dataKelompok)
+    posisi = (persentil / nilaiPersen) * totalFrekuensi
+
+    kelasInterval = next((item for item in dataKumulatif if item['kumulatif'] >= posisi), None)
+
+    if kelasInterval:
+        batasBawah, batasAtas = kelasInterval['interval']
+        kumulatifBawah = dataKumulatif[dataKumulatif.index(kelasInterval) - 1]['kumulatif'] if dataKumulatif.index(kelasInterval) > 0 else 0
+        frekuensiDalamKelas = kelasInterval['frekuensi']
+
+        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah)
+
+    return 0  # Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
+
+# Menghitung nilai persentil ke-50
+hasilPersentil = hitungNilaiPersentil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiPersentil)  # 17.5
+print(hasilPersentil)
+```
+
 :::
 
 ## Desil
@@ -185,6 +268,37 @@ if (Number.isInteger(posisi)) {
     totalDesil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - Math.floor(posisi)); //20
 }
 ```
+==Python 
+```python
+# Data tunggal
+dataTunggal = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16]
+
+nilaiPersen = 10
+nilaiDesil = 5  # 1-9
+totalDesil = 0
+
+# Mengurutkan data secara ascending
+dataTersortir = sorted(dataTunggal)
+ukuranData = len(dataTunggal)
+
+# Menghitung posisi dari nilai desil
+posisi = (nilaiDesil * (ukuranData + 1)) / nilaiPersen
+
+if posisi.is_integer():
+    totalDesil = dataTersortir[int(posisi) - 1]  # 20
+else:
+    indeksBawah = int(posisi) - 1
+    indeksAtas = indeksBawah + 1
+
+    nilaiBawah = dataTersortir[indeksBawah]
+    nilaiAtas = dataTersortir[indeksAtas]
+
+    # Interpolasi untuk menghitung nilai desil
+    totalDesil = nilaiBawah + (nilaiAtas - nilaiBawah) * (posisi - int(posisi))  # 20
+
+print(totalDesil)
+```
+
 :::
 
 ### Data Berkelompok
@@ -252,6 +366,56 @@ function hitungNilaiDesil(dataKelompok, dataKumulatif, desil) {
 
 // Menghitung nilai desil ke-9
 hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil); //29.375
+```
+
+==Python
+
+```python
+# Data kelompok
+dataKelompok = [
+    {"interval": [0, 10], "frekuensi": 5},
+    {"interval": [10, 20], "frekuensi": 10},
+    {"interval": [20, 30], "frekuensi": 8},
+    {"interval": [30, 40], "frekuensi": 2}
+]
+
+nilaiDesil = 9  # 1-9 untuk desil ke-1 hingga ke-9
+nilaiAwal = 0
+nilaiPersen = 10
+hasilDesil = 0
+
+# Fungsi untuk menghitung total frekuensi
+def hitungTotalFrekuensi(data):
+    return sum(item["frekuensi"] for item in data)
+
+# Fungsi untuk menghitung data kumulatif
+def hitungDataKumulatif(data):
+    frekuensiKumulatif = 0
+    hasil = []
+    for item in data:
+        frekuensiKumulatif += item["frekuensi"]
+        hasil.append({**item, "kumulatif": frekuensiKumulatif})
+    return hasil
+
+# Fungsi untuk menghitung nilai desil
+def hitungNilaiDesil(dataKelompok, dataKumulatif, desil):
+    totalFrekuensi = hitungTotalFrekuensi(dataKelompok)
+    posisi = (desil / nilaiPersen) * totalFrekuensi
+
+    kelasInterval = next((item for item in dataKumulatif if item["kumulatif"] >= posisi), None)
+
+    if kelasInterval:
+        batasBawah, batasAtas = kelasInterval["interval"]
+        kumulatifBawah = dataKumulatif[dataKumulatif.index(kelasInterval) - 1]["kumulatif"] if dataKumulatif.index(kelasInterval) > 0 else 0
+        frekuensiDalamKelas = kelasInterval["frekuensi"]
+
+        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah)
+
+    return 0  # Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
+
+# Menghitung nilai desil ke-9
+hasilDesil = hitungNilaiDesil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiDesil)  # 29.375
+print(hasilDesil)
 ```
 :::
 
@@ -497,5 +661,53 @@ int main() {
     
     return 0;
 }
+```
+==Python 
+```python
+# Data kelompok
+dataKelompok = [
+    {"interval": [0, 10], "frekuensi": 5},
+    {"interval": [10, 20], "frekuensi": 10},
+    {"interval": [20, 30], "frekuensi": 8},
+    {"interval": [30, 40], "frekuensi": 2}
+]
+
+jumlahPersen = 4
+nilaiKuartil = 2  # 1-3
+nilaiAwal = 0
+hasilKuartil = 0
+
+# Fungsi untuk menghitung total frekuensi
+def hitungTotalFrekuensi(data):
+    return sum(item["frekuensi"] for item in data)
+
+# Fungsi untuk menghitung data kumulatif
+def hitungDataKumulatif(data):
+    frekuensiKumulatif = 0
+    hasil = []
+    for item in data:
+        frekuensiKumulatif += item["frekuensi"]
+        hasil.append({**item, "kumulatif": frekuensiKumulatif})
+    return hasil
+
+# Fungsi untuk menghitung nilai kuartil
+def hitungNilaiKuartil(dataKelompok, dataKumulatif, kuartil):
+    totalFrekuensi = hitungTotalFrekuensi(dataKelompok)
+    posisi = (kuartil / jumlahPersen) * totalFrekuensi
+
+    kelasInterval = next((item for item in dataKumulatif if item["kumulatif"] >= posisi), None)
+
+    if kelasInterval:
+        batasBawah, batasAtas = kelasInterval["interval"]
+        kumulatifBawah = dataKumulatif[dataKumulatif.index(kelasInterval) - 1]["kumulatif"] if dataKumulatif.index(kelasInterval) > 0 else 0
+        frekuensiDalamKelas = kelasInterval["frekuensi"]
+
+        return batasBawah + ((posisi - kumulatifBawah) / frekuensiDalamKelas) * (batasAtas - batasBawah)
+
+    return 0  # Atau nilai default yang sesuai jika tidak ditemukan kelasInterval
+
+# Menghitung nilai kuartil ke-2
+hasilKuartil = hitungNilaiKuartil(dataKelompok, hitungDataKumulatif(dataKelompok), nilaiKuartil)  # 17.5
+print(hasilKuartil)
 ```
 :::
