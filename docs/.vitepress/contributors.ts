@@ -39,7 +39,7 @@ const plainContributors: Contributors[] = [
         facebook: '0xirf',
         sponsor: 'https://saweria.co/xirf',
         actionText: "Beri Dukungan",
-        title: 'Mobile and Fullstack Developer',
+        title: 'Project Lead',
         desc: 'Technology is my passion and dreaming about a better world with it and making it happen is a dream come true',
     },
     {

@@ -8,13 +8,11 @@ const umamiScript: HeadConfig = [ "script", {
     defer: "true",
     src: "https://cloud.umami.is/script.js",
     "data-website-id": "f120cb10-6927-4e74-b8e7-49dd74e2f057"
-}]
+} ]
 
 const baseHeader: HeadConfig[] = []
 
-const headers = process.env.NODE_ENV === "production" ?
-    baseHeader.concat(umamiScript) :
-    baseHeader
+const headers = process.env.NODE_ENV === "production" ? [ ...baseHeader, umamiScript ] : baseHeader
 
 export const sharedConfig = defineConfig({
     title: "Math W Code",
