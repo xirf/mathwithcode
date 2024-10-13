@@ -75,6 +75,18 @@ int main() {
 }
 ```
 
+==Python
+```python
+def linearEquation(a, b, c):
+    # Persamaan: a * x + b = c
+    x = (c - b) / a
+    return x
+
+a, b, c, = 2, 3, 7
+x = linearEquation(a, b, c)
+print(f"Nilai x adalah: {x}")
+```
+
 :::
 
 ## Persamaan Linear Dua Variabel
@@ -265,5 +277,29 @@ int main() {
     // Output: x: 3, y: -1
     return 0;
 }
+```
+
+==Python
+
+```python
+def pldvEliminasi(a1, b1, c1, a2, b2, c2):
+    # Menghitung koefisien untuk eliminasi
+    factor = a2 / a1
+
+    # Membuat persamaan baru dengan mengurangi
+    newB2 = b2 - factor * b1
+    newC2 = c2 - factor * c1
+
+    # Menyelesaikan untuk y
+    y = newC2 / newB2
+
+    # Menghitung x dengan substitusi y ke dalam persamaan 1
+    x = (c1 - b1 * y) / a1
+
+    return x, y
+
+# Contoh: 2x - 3y = 7 dan 3x - 2y = 8
+x, y = pldvEliminasi(2, 3, 7, 3, -2, 8)
+print(f"x: {x}, y: {y}")  # Output: x: 2, y: 1
 ```
 :::
