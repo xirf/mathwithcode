@@ -175,7 +175,15 @@ int main() {
     return 0;
 }
 ```
+== Python
+``` python
+def pldv(a, b, c, y): 
+	x = (c - b * y) / a
+	return x, y 
 
+# 2x + 3y = 7 dimana y = 1
+print(pldv(2, 3, 7, 1))# Output: (x: 2.0, y: 1)
+```
 :::
 
 ### Metode Eliminasi

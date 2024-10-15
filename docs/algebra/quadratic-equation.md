@@ -183,3 +183,37 @@ fun main() {
     akarPersamaan(a, b, c)
 }
 ```
+== Python
+``` python
+import math
+
+def findRootsStepByStep(a, b, c):
+	# Langkah 1: Hitung b^2 dan 4ac
+	bSquared = b * b
+	fourAC = 4 * a * c
+	# Langkah 2: Hitung diskriminan
+	discriminant = bSquared - fourAC
+
+	if discriminant >= 0:
+		# Jika diskriminan >= 0, lanjutkan dengan akar real
+		# Langkah 3: Hitung akar dari diskriminan
+		sqrtDiscriminant = math.sqrt(discriminant)
+		# Langkah 4: Hitung dua kemungkinan nilai untuk x
+		root1 = (-b + sqrtDiscriminant) / (2 * a)
+		root2 = (-b - sqrtDiscriminant) / (2 * a)
+		print(f"x1 = (-{b} + {sqrtDiscriminant}) / (2 * {a}) = {root1}")
+		print(f"x2 = (-{b} - {sqrtDiscriminant}) / (2 * {a}) = {root2}")
+		print(f"Akar-akarnya adalah: x1 = {root1} dan x2 = {root2}")
+	else:
+		# Jika diskriminan < 0, akar kompleks
+		realPart = -b / (2 * a)
+		imaginaryPart = math.sqrt(-discriminant) / (2 * a)
+		print(f"x1 = {realPart} + {imaginaryPart}i")
+		print(f"x2 = {realPart} - {imaginaryPart}i")
+
+# Contoh untuk persamaan x^2 - 3x - 4 = 0
+a = 1
+b = -3
+c = -4
+findRootsStepByStep(a, b, c)
+```
