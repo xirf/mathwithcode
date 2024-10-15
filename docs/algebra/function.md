@@ -28,6 +28,11 @@ fun fungsi(x: Int): Int {
     return 2 * x + 3
 }
 ```
+== Python
+``` python
+def fungsi(x):
+    return 2 * x + 3
+```
 :::
 
 ## Domain, Kodomain, dan Range
@@ -121,6 +126,18 @@ fun fg(x: Int): Int {
     return f(x) + g(x);
 }
 ```
+== Python
+``` python
+def f(x):
+    return 2 * x + 3
+
+def g(x):
+    return 3 * x - 2
+
+def fg(x):
+    return f(x) + g(x)
+
+```
 :::
 
 ### Perkalian Fungsi
@@ -174,6 +191,17 @@ fun g(x: Int): Int {
 fun fg(x: Int): Int {
     return f(x) * g(x);
 }
+```
+== Python
+``` python
+def f(x):
+    return 2 * x + 3
+
+def g(x):
+    return 3 * x - 2
+
+def fg(x):
+    return f(x) * g(x)
 ```
 :::
 
@@ -230,6 +258,17 @@ fun g(x: Int): Int {
 fun fog(x: Int): Int {
     return f(g(x));
 }
+```
+== Python
+``` python
+def f(x):
+    return 2 * x + 3
+
+def g(x):
+    return 3 * x - 2
+
+def fog(x):
+    return f(g(x))
 ```
 :::
 
@@ -317,5 +356,19 @@ fun main() {
   val x = inverseFunction(y, a, b)
   println("Invers dari f($y) adalah x = $x")
 }
+```
+== Python
+``` python
+def inverseFunction(y, a, b):
+  if a == 0:
+    raise Exception("Nilai a tidak boleh 0")
+  return (y - b) / a
+
+a = 2  # Misalkan a = 2
+b = 3  # Misalkan b = 3
+y = 7  # Nilai y (f(x))
+# f(x) = 2x + 3
+x = inverseFunction(y, a, b)
+print(f"Invers dari f({y}) adalah x = {x}")
 ```
 :::
