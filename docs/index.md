@@ -25,12 +25,12 @@ features:
   - icon: 📐
     title: Aljabar
     details: Polinomial, Persamaan, Matriks, Determinan dan sebagainya 
-    link: /algebra/polynomial
+    link: /algebra/function
     linkText: Pelajari
   - icon: 📈
     title: Aljabar Linear
     details: Vektor, Ruang Vektor, Orthogonalitas dan sebagainya
-    link: /linear-algebra/vector
+    link: /linear-algebra/linear-transformation
     linkText: Pelajari
   - icon: 📊
     title: Statistika
