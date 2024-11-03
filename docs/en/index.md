@@ -4,39 +4,39 @@ layout: home
 
 hero:
     name: "Math W Code"
-    text: "Belajar matematika dengan barisan kode"
-    tagline: Matematika dengan pendekatan yang berbeda
+    text: "Learn mathematics with lines of code"
+    tagline: Mathematics with a different approach
     image:
         src: /icon.png
         alt: Math W Code Logo
     actions:
         - theme: brand
-          text: Belajar Sekarang
-          link: /guide
+          text: Learn Now
+          link: /en/guide/
         - theme: alt
-          text: Beri Kontribusi
+          text: Contribute
           link: https://github.com/xirf/mathwithcode
 features:
   - icon: 🔢
-    title: Arimatika
-    details: Bilangan, Operasi, Faktor, Kelipatan dan sebagainya
-    link: /arithmetic/numbers
-    linkText: Pelajari
+    title: Arithmetic
+    details: Numbers, Operations, Factors, Multiples and others
+    link: /en/arithmetic/numbers/
+    linkText: Learn
   - icon: 📐
-    title: Aljabar
-    details: Polinomial, Persamaan, Matriks, Determinan dan sebagainya 
-    link: /algebra/function
-    linkText: Pelajari
+    title: Algebra
+    details: Polynomials, Equations, Matrices, Determinants and others
+    link: /en/algebra/function/en
+    linkText: Learn
   - icon: 📈
-    title: Aljabar Linear
-    details: Vektor, Ruang Vektor, Orthogonalitas dan sebagainya
-    link: /linear-algebra/linear-transformation
-    linkText: Pelajari
+    title: Linear Algebra
+    details: Vectors, Vector Spaces, Orthogonality and others
+    link: /en/linear-algebra/linear-transformation
+    linkText: Learn
   - icon: 📊
-    title: Statistika
-    details: Data, Distribusi, Regresi, Uji Hipotesis dan sebagainya
-    link: /statistics/measures-concentration-dispersion
-    linkText: Pelajari
+    title: Statistics
+    details: Data, Distribution, Regression, Hypothesis Testing and others
+    link: /en/statistics/measures-concentration-dispersion
+    linkText: Learn
 ---
 
 <script setup>
