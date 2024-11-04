@@ -122,7 +122,7 @@ x &= \frac{7}{2} - \frac{3y}{2} \\
 
 4. Nah kita dapat solusi parametrik dari $x$
 
-Nila parametrik inilah yang nantinya berapapun nilai $y$ yang kita masukkan akan menghasilkan nilai $x$ yang sesuai. Misalnya nilai $y = 1$ maka:
+Nilai parametrik inilah yang nantinya berapapun nilai $y$ yang kita masukkan akan menghasilkan nilai $x$ yang sesuai. Misalnya nilai $y = 1$ maka:
 
 
 $$\begin{align*}
@@ -177,9 +177,9 @@ int main() {
 ```
 == Python
 ``` python
-def pldv(a, b, c, y): 
+def pldv(a, b, c, y):
 	x = (c - b * y) / a
-	return x, y 
+	return x, y
 
 # 2x + 3y = 7 dimana y = 1
 print(pldv(2, 3, 7, 1))# Output: (x: 2.0, y: 1)
@@ -297,7 +297,7 @@ pair<double, double> pldvEliminasi(double a1, double b1, double c1, double a2, d
 
 int main() {
     auto result = pldvEliminasi(2, 3, 7, 4, -5, 10);
-    cout << "x: " << result.first << ", y: " << result.second << endl; 
+    cout << "x: " << result.first << ", y: " << result.second << endl;
     // Output: x: 3, y: -1
     return 0;
 }
