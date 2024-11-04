@@ -1,7 +1,7 @@
 ---
 contributors:
   - name: "Rijal"
-  - username: "Rnov24"
+    username: "Rnov24"
 ---
 # Matrix Multiplication
 Matrix multiplication is a mathematical operation used to combine two matrices by multiplying their corresponding elements.

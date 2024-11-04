@@ -25,7 +25,7 @@ features:
   - icon: 📐
     title: Algebra
     details: Polynomials, Equations, Matrices, Determinants and others
-    link: /en/algebra/function/en
+    link: /en/algebra/function/
     linkText: Learn
   - icon: 📈
     title: Linear Algebra
