@@ -100,6 +100,7 @@ findRootsStepByStep(a, b, c);
 == C++
 
 ```cpp
+#include <iostream>
 #include <cmath>
 
 fun akarPersamaan(a: Double, b: Double, c: Double) {

@@ -108,6 +108,7 @@ findRootsStepByStep(a, b, c);
 == C++
 
 ```cpp
+#include <iostream>
 #include <cmath>
 
 fun findRootsStepByStep(a: Double, b: Double, c: Double) {
