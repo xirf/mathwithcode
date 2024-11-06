@@ -45,13 +45,13 @@ function sidebar() {
           ],
       },
       {
-          text: "Aljabar",
+          text: 'Aljabar Linear',
           collapsed: false,
           items: [
-              { text: "Fungsi", link: "/algebra/function" },
-              { text: "Persamaan Linear", link: "/algebra/linear-equation" },
-              { text: "Persamaan Kuadrat", link: "/algebra/quadratic-equation" },
-          ],
+              { text: 'Transformasi Linear', link: '/linear-algebra/linear-transformation' },
+              { text: 'Matriks', link: '/linear-algebra/matrix' },
+              { text: 'Vektor', link: '/linear-algebra/vector' },
+          ]
       },
       {
           text: "Aljabar Linear",

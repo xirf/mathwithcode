@@ -43,6 +43,12 @@ const plainContributors: Contributors[] = [
         desc: 'Technology is my passion and dreaming about a better world with it and making it happen is a dream come true',
     },
     {
+        avatar: 'https://github.com/smintfy.png',
+        name: 'Smintfy',
+        github: 'smintfy',
+        twitter: 'smintfy',
+    },
+    {
         avatar: 'https://github.com/mininxd.png',
         name: 'Minin',
         github: 'mininxd',
@@ -67,12 +73,6 @@ const plainContributors: Contributors[] = [
         name: 'Abdul Malik',
         github: 'up2dul',
     },
-    {
-        avatar: 'https://github.com/smintfy.png',
-        name: 'Smintfy',
-        github: 'smintfy',
-        twitter: 'smintfy',
-    }
 ]
 
 const contributors = plainContributors.map(c => createLinks(c))

@@ -30,7 +30,7 @@ export const sharedConfig = defineConfig({
         },
         math: true,
     },
-    sitemap: { hostname: "https://mathwcode.jamcoder.id", },
+    sitemap: { hostname: "https://mathwithcode.tech", },
     themeConfig: {
         search: {
             provider: 'local',
