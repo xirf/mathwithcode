@@ -35,7 +35,7 @@ $$D = b^2 - 4ac$$
 
 Dimana $a$, $b$, dan $c$ adalah koefisien dari persamaan kuadrat $ax^2 + bx + c = 0$. Berikut adalah beberapa kemungkinan nilai diskriminan:
 
--   Jika $D > 0$, maka persamaan kuadrat memiliki solusi bilangan real
+-   Jika $D > 0$, maka persamaan kuadrat memiliki solusi bilangan real.
 -   Jika $D = 0$, maka persamaan kuadrat memiliki dua akar real yang sama.
 -   Jika $D < 0$, maka persamaan kuadrat memiliki dua akar kompleks.
 
@@ -100,7 +100,8 @@ findRootsStepByStep(a, b, c);
 == C++
 
 ```cpp
-import kotlin.math.sqrt
+#include <iostream>
+#include <cmath>
 
 fun akarPersamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus

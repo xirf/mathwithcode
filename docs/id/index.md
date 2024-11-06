@@ -24,7 +24,7 @@ features:
     linkText: Pelajari
   - icon: 📐
     title: Aljabar
-    details: Polinomial, Persamaan, Matriks, Determinan dan sebagainya 
+    details: Polinomial, Persamaan, Matriks, Determinan dan sebagainya
     link: /algebra/function
     linkText: Pelajari
   - icon: 📈

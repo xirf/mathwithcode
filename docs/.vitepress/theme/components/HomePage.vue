@@ -1,14 +1,29 @@
 <script setup lang="ts">
+import { useData } from "vitepress"
 import { VPTeamMembers } from "vitepress/theme"
 import contributor from "../../contributors";
 import sponsors from '../../sponsors';
-// import SponsorsGroup from "./SponsorsGroup.vue";
+
+const { lang } = useData()
+
+const i18n = {
+  'id-ID': {
+    contributors: 'Kontributor',
+    'become sponsor': "Menjadi Sponsor"
+  },
+  'en-US': {
+    contributors: 'Contributors',
+    'become sponsor': "Become Sponsors"
+  }
+}
+
+const translation = i18n[lang.value as keyof typeof i18n] || i18n['id-ID'] // fallback to id-ID
 </script>
 
 <template>
     <section class="vp-doc flex flex-col items-center mt-10">
         <h2 id="meet-the-team" class="font-normal pt-10 pb-2">
-            Kontributor
+            {{translation.contributors}}
         </h2>
         <div class="w-full p-10">
             <VPTeamMembers size="small" :members="contributor" />
@@ -30,7 +45,7 @@ import sponsors from '../../sponsors';
                 <div
                     class="bg-base-soft p-2 w-full md:w-82 h-36 flex items-center justify-center opacity-90 transform transition-transform duration-300 ease-in-out hover:opacity-100 hover:-translate-y-1">
                     <p class="text-center text-xs">
-                        Menjadi Sponsor
+                        {{translation['become sponsor']}}
                     </p>
                 </div>
             </a>

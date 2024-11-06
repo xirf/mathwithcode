@@ -1,6 +1,6 @@
 # Persen
 
-Pernah dapat diskon pas belanja?, biasanya kalo gak di coret ya pake tanda persen ($%$). Nah, persen ini adalah cara kita mengukur seberapa besar atau kecil suatu nilai dibandingkan dengan nilai aslinya. 
+Pernah dapat diskon pas belanja?, biasanya kalo gak di coret ya pake tanda persen ($\%$). Nah, persen ini adalah cara kita mengukur seberapa besar atau kecil suatu nilai dibandingkan dengan nilai aslinya.
 
 Misalnya kamu beli baju seharga Rp. $100.000$ tapi kamu dapat diskon $20\%$, berarti kamu bisa beli bajunya dengan harga Rp. $80.000$.
 

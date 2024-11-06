@@ -17,6 +17,9 @@ const headers = process.env.NODE_ENV === "production" ? [ ...baseHeader, umamiSc
 export const sharedConfig = defineConfig({
     title: "Math W Code",
     description: "Belajar matematika dengan barisan kode",
+    rewrites: {
+        'id/:rest*': ':rest*'
+    },
     cleanUrls: true,
     head: headers,
     metaChunk: true,

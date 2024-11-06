@@ -1,40 +1,13 @@
-import { defineConfig } from 'vitepress'
-import { sharedConfig } from './shared.config'
-import sidebar from './sidebar'
-
+import { defineConfig } from "vitepress";
+import { sharedConfig } from "./shared.config";
+import { id } from "./id";
+import { en } from "./en";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ...sharedConfig,
-
   locales: {
-    root: {
-      label: 'Indonesia',
-      lang: 'id-ID',
-      description: 'Belajar matematika dengan barisan kode',
-      themeConfig: {
-        nav: [
-          {
-            text: 'Belajar', link: '/guide/',
-          },
-          {
-            text: 'Donasi', link: 'https://trakteer.id/xirf'
-          }
-        ],
-        sidebar,
-        outline: {
-          level: [2,3],
-          label: 'Di halaman ini'
-        },
-        editLink: {
-          pattern: 'https://github.com/xirf/mathwithcode/edit/master/docs/:path',
-          text: 'Perbaiki halaman ini di GitHub'
-        },
-        footer: {
-          message: 'Dirilis di bawah lisensi MIT',
-          copyright: 'Copyright © 2024-present Andika & Contributors'
-        }
-      }
-    },
-  }
-})
+    root: { label: 'Indonesia', ...id },
+    en: { label: "English", ...en }
+  },
+});

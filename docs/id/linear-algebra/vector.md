@@ -257,4 +257,3 @@ std::vector<int> crossProduct = {
 ```
 :::
 
-
