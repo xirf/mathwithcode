@@ -24,7 +24,8 @@ export default [
         collapsed: false,
         items: [
             { text: 'Transformasi Linear', link: '/linear-algebra/linear-transformation' },
-            { text: 'Perkalian Matriks', link: '/linear-algebra/matrix-multiplication' },
+            { text: 'Matriks', link: '/linear-algebra/matrix' },
+            { text: 'Vektor', link: '/linear-algebra/vector' },
         ]
     },
     {

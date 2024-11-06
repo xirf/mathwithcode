@@ -5,32 +5,53 @@ ads: false
 editLink: false
 ---
 <br />
+<br />
 
-# Menjadi Sponsor Math With Code
+# Dukung Math With Code
 
-Math with code adalah proyek pembelajaran matematika yang dibuat bersama komunitas open source. Proyek ini diterbitkan di bawah lisensi MIT dan sepenuhnya gratis untuk digunakan. Kami berkomitmen untuk menyediakan materi pembelajaran yang berkualitas dan mudah dipahami.
+## Tentang Kami
 
-Berbagai biaya yang dikeluarkan untuk memelihara proyek ini, seperti biaya hosting, domain, dan biaya lainnya, dibiayai oleh kontribusi sukarela dari sponsor. Kelebihan dana dari sponsor akan digunakan untuk memperluas cakupan materi pembelajaran, meningkatkan kualitas konten dan donasi kepada komunitas lain yang membutuhkan.
+Math With Code adalah platform pembelajaran matematika open source yang berkomitmen menyediakan pendidikan berkualitas secara gratis untuk semua. Kami percaya bahwa pengetahuan matematika seharusnya dapat diakses oleh siapapun tanpa hambatan biaya.
 
-## Bagaimana Cara Menjadi Sponsor?
+## Mengapa Menjadi Sponsor?
 
-Sponsor dapat memberikan kontribusi melalui platform [GitHub Sponsors](https://github.com/sponsors/xirf). Kontribusi yang diberikan akan membantu kami dalam memelihara proyek ini dan meningkatkan kualitas konten yang kami berikan.
+Dengan menjadi sponsor, Anda berkontribusi dalam:
 
-## Sponsor Non-Finansial
+-   Memastikan konten tetap gratis dan bebas iklan
+-   Mendukung pengembangan materi pembelajaran baru
+-   Membantu biaya operasional (hosting, domain, dll)
+-   Mendorong inovasi dalam pendidikan matematika
 
-Selain kontribusi finansial, Anda juga dapat mendukung proyek Math with Code melalui berbagai cara seperti promosi dan partnership. Bentuk dukungan ini sangat membantu dalam meningkatkan visibilitas dan jangkauan proyek kami. Berikut adalah beberapa cara Anda dapat berkontribusi:
+## Cara Berkontribusi
 
-- **Promosi**: Membagikan proyek ini di media sosial, blog, atau platform lainnya untuk menjangkau lebih banyak orang.
-- **Partnership**: Bekerja sama dengan kami dalam bentuk kolaborasi konten, webinar, atau acara lainnya yang dapat mendukung tujuan pembelajaran kami.
-- **Materi Pembelajaran**: Berkontribusi dalam pembuatan materi pembelajaran, baik dalam bentuk penulisan artikel, video, atau materi pembelajaran lainnya.
-- **Teknologi**: Memberikan akses atau dukungan teknologi yang dapat membantu dalam pengembangan proyek ini.
-- **Lainnya**: Jika Anda memiliki ide lain yang dapat membantu proyek ini, jangan ragu untuk berbagi dengan kami.
+### Dukungan Finansial
 
-Jika Anda tertarik untuk menjadi sponsor non-tunai, silakan hubungi kami melalui [email](mailto:contact@mathwithcode.tech) untuk mendiskusikan lebih lanjut bagaimana kita dapat bekerja sama.
+Dukungan secara finansial dapat diberikan melalui:
 
-## Sponsor Saat Ini
+-   (Github Sponsor)[https://github.com/sponsors/xirf]
+-   (Patreon)[https://patreon.com/xirf].
+-   (Trakteer)[https://trakteer.id/xirf] (untuk pengguna Indonesia).
 
-Berikut adalah daftar sponsor yang telah memberikan kontribusi kepada proyek Math with Code:
+### Dukungan Non-Finansial
+
+1. **Kolaborasi Konten**
+
+    - Menulis artikel atau tutorial
+    - Membuat video pembelajaran
+    - Menerjemahkan konten
+
+2. **Dukungan Teknis**
+
+    - Code review
+    - Bug fixing
+    - Peningkatan infrastruktur
+
+3. **Marketing & Outreach**
+    - Promosi di media sosial
+    - Menulis ulasan
+    - Mengadakan workshop
+
+## Sponsor Kami
 
 <script setup>
 import sponsors from './.vitepress/sponsors';
@@ -39,10 +60,20 @@ import sponsors from './.vitepress/sponsors';
 <section class="w-full p-10 flex flex-wrap justify-center items-center gap-1">
   <template v-for="{ url, img, name } of sponsors?.special">
     <a :href="url" target="_blank" rel="sponsored noopener" class="decoration-none! w-full md:w-fit">
-      <div
-        class="bg-base-soft p-2 w-full md:w-82 h-36 flex items-center justify-center object-contain relative opacity-90 transform transition-transform duration-300 ease-in-out hover:opacity-100 hover:-translate-y-1">
+      <div class="bg-base-soft p-2 w-full md:w-82 h-36 flex items-center justify-center object-contain relative opacity-90 transform transition-transform duration-300 ease-in-out hover:opacity-100 hover:-translate-y-1">
         <img :src="img" :alt="name" class="transition-all duration-300 h-full object-contain" />
       </div>
     </a>
   </template>
 </section>
+
+## 📬 Hubungi Kami
+
+Tertarik menjadi sponsor atau memiliki ide kolaborasi? Hubungi kami di:
+
+-   Email: [contact@mathwithcode.tech](mailto:contact@mathwithcode.tech)
+-   GitHub: [github.com/xirf](https://github.com/xirf)
+
+---
+
+<small>\*Math With Code berkomitmen pada transparansi penggunaan dana sponsor. Laporan penggunaan dana akan dibagikan secara berkala kepada sponsor.</small>
