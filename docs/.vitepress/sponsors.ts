@@ -27,6 +27,12 @@ export default <SponsorData>{
             name: 'Ingin Menjadi Programmer Handal, Namun Enggan Ngoding',
             priority: true
         },
+        {
+            url: 'https://akiha.ru',
+            img: '/img/sponsors/akiharu.jpg',
+            name: 'Akiharu',
+            priority: true
+        },
     ],
 }
 
