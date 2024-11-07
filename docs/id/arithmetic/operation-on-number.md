@@ -157,6 +157,48 @@ akar4 = pow(16, 1/4) # 2.0
 
 Hal ini bisa terjadi karena apapun bilangan yang memiliki pangkat $1/n$ akan menghasilkan akar dari bilangan tersebut. Jadi kalo kita mau menghitung $\sqrt[3]{8}$ kita bisa tulis `pow(8, 1/3)`.
 
+## Akar (Tanpa Modul)
+
+Kita bisa juga mencari $\lfloor\sqrt{n}\rfloor$ tanpa memakai modul loh dengan cara memanfaatkan persamaan
+$$n = x^2 + a$$
+dengan $x$ adalah perpangkatan terdekat dari $n$ dan sisanya adalah $a$. Sebagai contoh $n = 18$ maka $x = 4$ lalu sisanya kita bisa cari dengan cara $a = n - x^2$. Kalau di kodingan seperti ini
+:::tabs
+== Javascript
+```js
+let n = 18;
+let x = 1;
+while((x + 1) * (x + 1) <= n){
+    x++;
+}
+let a = n - x * x;
+```
+== Kotlin
+```kt
+val n = 18
+var x = 1
+while ((x + 1) * (x + 1) <= n) {
+    x++
+}
+val a = n - x * x
+```
+== C++
+```cpp
+int n = 18;
+int x = 1;
+while((x + 1) * (x + 1) <= n){
+    x++;
+}
+int a = n - x * x;
+```
+== Python
+```python
+n = 18
+x = 1
+while (x + 1) * (x + 1) <= n:
+    x+=1
+a = n - x * x
+```
+:::
 ## Modulus
 
 Modulus atau sisa hasil pembagian adalah operasi matematika yang digunakan untuk menghitung sisa hasil pembagian dua bilangan. Misalnya kamu mau tau sisa hasil pembagian 10 dibagi 3, maka hasilnya adalah 1. Di pemrograman, kita bisa menggunakan operator `%` untuk menghitung modulus.
