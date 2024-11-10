@@ -235,11 +235,11 @@ function eliminasi_pldv(a1, b1, c1, a2, b2, c2) {
     let factor = a2 / a1;
 
     // Membuat persamaan baru dengan mengurangi
-    let newB2 = b2 - factor * b1;
-    let newC2 = c2 - factor * c1;
+    let new_b2 = b2 - factor * b1;
+    let new_c2 = c2 - factor * c1;
 
     // Menyelesaikan untuk y
-    let y = newC2 / newB2;
+    let y = new_c2 / new_b2;
 
     // Menghitung x dengan substitusi y ke dalam persamaan 1
     let x = (c1 - b1 * y) / a1;
@@ -258,11 +258,11 @@ fun eliminasi_pldv(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<I
     val factor = a2 / a1
 
     // Membuat persamaan baru dengan mengurangi
-    val newB2 = b2 - factor * b1
-    val newC2 = c2 - factor * c1
+    val new_b2 = b2 - factor * b1
+    val new_c2 = c2 - factor * c1
 
     // Menyelesaikan untuk y
-    val y = newC2 / newB2
+    val y = new_c2 / new_b2
 
     // Menghitung x dengan substitusi y ke dalam persamaan 1
     val x = (c1 - b1 * y) / a1
@@ -284,11 +284,11 @@ pair<double, double> eliminasi_pldv(double a1, double b1, double c1, double a2, 
     double factor = a2 / a1;
 
     // Membuat persamaan baru dengan mengurangi
-    double newB2 = b2 - factor * b1;
-    double newC2 = c2 - factor * c1;
+    double new_b2 = b2 - factor * b1;
+    double new_c2 = c2 - factor * c1;
 
     // Menyelesaikan untuk y
-    double y = newC2 / newB2;
+    double y = new_c2 / new_b2;
 
     // Menghitung x dengan substitusi y ke dalam persamaan 1
     double x = (c1 - b1 * y) / a1;
@@ -312,11 +312,11 @@ def eliminasi_pldv(a1, b1, c1, a2, b2, c2):
     factor = a2 / a1
 
     # Membuat persamaan baru dengan mengurangi
-    newB2 = b2 - factor * b1
-    newC2 = c2 - factor * c1
+    new_b2 = b2 - factor * b1
+    new_c2 = c2 - factor * c1
 
     # Menyelesaikan untuk y
-    y = newC2 / newB2
+    y = new_c2 / new_b2
 
     # Menghitung x dengan substitusi y ke dalam persamaan 1
     x = (c1 - b1 * y) / a1
