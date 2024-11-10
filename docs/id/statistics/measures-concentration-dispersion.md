@@ -246,17 +246,17 @@ const data_tunggal = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
 
 const nilai_persen = 10
 const nilai_desil = 5; //1-9
-let totalDesil = 0;
+let total_desil = 0;
 
 // Mengurutkan data secara ascending
 const data_tersortir = [...data_tunggal].sort((a, b) => a - b);
-const ukuranData = data_tunggal.length;
+const ukuran_data = data_tunggal.length;
 
 // Menghitung posisi dari nilai desil
-const posisi = (nilai_desil * (ukuranData + 1)) / nilai_persen;
+const posisi = (nilai_desil * (ukuran_data + 1)) / nilai_persen;
 
 if (Number.isInteger(posisi)) {
-    totalDesil = data_tersortir[posisi - 1]; //20
+    total_desil = data_tersortir[posisi - 1]; //20
 } else {
     const indeks_bawah = Math.floor(posisi) - 1;
     const indeks_atas = Math.ceil(posisi) - 1;
@@ -265,7 +265,7 @@ if (Number.isInteger(posisi)) {
     const nilai_atas = data_tersortir[indeks_atas];
 
     // Interpolasi untuk menghitung nilai desil
-    totalDesil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - Math.floor(posisi)); //20
+    total_desil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - Math.floor(posisi)); //20
 }
 ```
 ==Python
@@ -275,17 +275,17 @@ data_tunggal = [25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16]
 
 nilai_persen = 10
 nilai_desil = 5  # 1-9
-totalDesil = 0
+total_desil = 0
 
 # Mengurutkan data secara ascending
 data_tersortir = sorted(data_tunggal)
-ukuranData = len(data_tunggal)
+ukuran_data = len(data_tunggal)
 
 # Menghitung posisi dari nilai desil
-posisi = (nilai_desil * (ukuranData + 1)) / nilai_persen
+posisi = (nilai_desil * (ukuran_data + 1)) / nilai_persen
 
 if posisi.is_integer():
-    totalDesil = data_tersortir[int(posisi) - 1]  # 20
+    total_desil = data_tersortir[int(posisi) - 1]  # 20
 else:
     indeks_bawah = int(posisi) - 1
     indeks_atas = indeks_bawah + 1
@@ -294,9 +294,9 @@ else:
     nilai_atas = data_tersortir[indeks_atas]
 
     # Interpolasi untuk menghitung nilai desil
-    totalDesil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - int(posisi))  # 20
+    total_desil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - int(posisi))  # 20
 
-print(totalDesil)
+print(total_desil)
 ```
 
 :::

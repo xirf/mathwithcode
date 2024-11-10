@@ -185,23 +185,23 @@ $$ \mathbf{v} \cdot \mathbf{w} = 1 \cdot 3 + 2 \cdot 4 = 11 $$
 ```javascript
 const v = [1, 2];
 const w = [3, 4];
-const dotProduct = v.reduce((acc, vi, i) => acc + vi * w[i], 0);
-console.log(dotProduct); // 11
+const dot_product = v.reduce((acc, vi, i) => acc + vi * w[i], 0);
+console.log(dot_product); // 11
 ```
 == Kotlin
 ```kotlin
 val v = listOf(1, 2)
 val w = listOf(3, 4)
-val dotProduct = v.zip(w).fold(0) { acc, (vi, wi) -> acc + vi * wi }
-println(dotProduct) // 11
+val dot_product = v.zip(w).fold(0) { acc, (vi, wi) -> acc + vi * wi }
+println(dot_product) // 11
 ```
 == C++
 ```cpp
 std::vector<int> v = {1, 2};
 std::vector<int> w = {3, 4};
-int dotProduct = 0;
+int dot_product = 0;
 for (int i = 0; i < v.size(); i++) {
-    dotProduct += v[i] * w[i];
+    dot_product += v[i] * w[i];
 }
 ```
 :::

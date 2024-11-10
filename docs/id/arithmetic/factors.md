@@ -156,7 +156,7 @@ Jika kelipatan diimplementasikan dalam pemrograman, kita bisa menggunakan _loop_
 == Javascript
 
 ```js
-function kelipatan(a, n) {
+function hitung_kelipatan(a, n) {
     let hasil_kelipatan = [];
     for (let i = 1; i <= n; i++) {
         hasil_kelipatan.push(a * i);
@@ -164,13 +164,13 @@ function kelipatan(a, n) {
     return hasil_kelipatan;
 }
 
-let kelipatan3 = kelipatan(3, 5);
+let kelipatan3 = hitung_kelipatan(3, 5);
 console.log(kelipatan3); // [3, 6, 9, 12, 15]
 ```
 == Kotlin
 
 ```kt
-fun kelipatan(a: Int, n: Int): List<Int> {
+fun hitung_kelipatan(a: Int, n: Int): List<Int> {
     val hasil_kelipatan = mutableListOf<Int>()
     for (i in 1..n) {
         hasil_kelipatan.add(a * i)
@@ -178,13 +178,13 @@ fun kelipatan(a: Int, n: Int): List<Int> {
     return hasil_kelipatan
 }
 
-val kelipatan3 = kelipatan(3, 5)
+val kelipatan3 = hitung_kelipatan(3, 5)
 println(kelipatan3) // [3, 6, 9, 12, 15]
 ```
 == C++
 
 ```cpp
-std::vector<int> kelipatan(int a, int n) {
+std::vector<int> hitung_kelipatan(int a, int n) {
     std::vector<int> hasil_kelipatan;
     for (int i = 1; i <= n; i++) {
         hasil_kelipatan.push_back(a * i);
@@ -193,7 +193,7 @@ std::vector<int> kelipatan(int a, int n) {
 }
 
 int main() {
-    std::vector<int> kelipatan3 = kelipatan(3, 5); // [3, 6, 9, 12, 15]
+    std::vector<int> kelipatan3 = hitung_kelipatan(3, 5); // [3, 6, 9, 12, 15]
     return 0;
 }
 ```

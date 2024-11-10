@@ -5,10 +5,10 @@ Pernah dapat diskon pas belanja?, biasanya kalo gak di coret ya pake tanda perse
 Misalnya kamu beli baju seharga Rp. $100.000$ tapi kamu dapat diskon $20\%$, berarti kamu bisa beli bajunya dengan harga Rp. $80.000$.
 
 Cara ngitung harga diskon itu gampang banget, kita bisa pakai rumus:
-$$ nilai_diskon = \frac{harga}{100} \times persen $$
+$$ nilai\_diskon = \frac{harga}{100} \times persen $$
 
 Jadi kalo kita mau ngitung $20\%$ dari $100.000$ kita bisa tulis:
-$$ nilai_diskon = \frac{100.000}{100} \times 20\% = 20.000 $$
+$$ nilai\_diskon = \frac{100.000}{100} \times 20\% = 20.000 $$
 
 karena dibagi $100$ jadi kita bisa kurangi dua nol dari $100.000$ jadi $1.000$ dan dikalikan $20$ jadi $20.000$.
 
@@ -80,7 +80,7 @@ harga = (nilai_diskon / diskon) * 100 # 100000.0
 ## Mencari Persen
 
 Kalo sebelumnya kita ngitung persen dari nilai asli, sekarang kita akan mencari nilai diskon dari nilai asli tersebut. Rumusnya kita ubah jadi:
-$$ persen = \frac{nilai_diskon}{nilai} \times 100 $$
+$$ persen = \frac{nilai\_diskon}{nilai} \times 100 $$
 Misalnya kita punya nilai asli sebesar $100.000$, dan nilai diskon $20.000$ lalu kita mau cari persennya, kita bisa tulis:
 $$ persen = \frac{20.000}{100.000} \times 100 = 20\% $$
 
