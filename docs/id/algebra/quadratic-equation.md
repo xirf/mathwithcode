@@ -67,10 +67,10 @@ Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 function cari_akar_persamaan(a, b, c) {
 	// Langkah 1: Hitung b^2 dan 4ac
 	const b_squared = b * b;
-	const four_aC = 4 * a * c;
+	const four_ac = 4 * a * c;
 
 	// Langkah 2: Hitung diskriminan
-	const discriminant = b_squared - four_aC;
+	const discriminant = b_squared - four_ac;
 
 	if (discriminant >= 0) {
 		// Jika diskriminan >= 0, lanjutkan dengan akar real
@@ -108,10 +108,10 @@ cari_akar_persamaan(a, b, c);
 fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus
     val b_squared = b * b
-    val four_aC = 4 * a * c
+    val four_ac = 4 * a * c
 
     // Langkah 2: Hitung diskriminan
-    val discriminant = b_squared - four_aC
+    val discriminant = b_squared - four_ac
 
     if (discriminant >= 0) {
         // Jika diskriminan >= 0, lanjutkan dengan akar real
@@ -153,10 +153,10 @@ import kotlin.math.sqrt
 fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus
     val b_squared = b * b
-    val four_aC = 4 * a * c
+    val four_ac = 4 * a * c
 
     // Langkah 2: Hitung diskriminan
-    val discriminant = b_squared - four_aC
+    val discriminant = b_squared - four_ac
 
     if (discriminant >= 0) {
         // Jika diskriminan >= 0, lanjutkan dengan akar real
@@ -193,10 +193,10 @@ import math
 def cari_akar_persamaan(a, b, c):
 	# Langkah 1: Hitung b^2 dan 4ac
 	b_squared = b * b
-	four_aC = 4 * a * c
+	four_ac = 4 * a * c
 
 	# Langkah 2: Hitung diskriminan
-	discriminant = b_squared - four_aC
+	discriminant = b_squared - four_ac
 
 	if discriminant >= 0:
 		# Jika diskriminan >= 0, lanjutkan dengan akar real
