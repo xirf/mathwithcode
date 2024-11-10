@@ -85,10 +85,10 @@ function cari_akar_persamaan(a, b, c) {
 		console.log(`Akar-akarnya adalah: x1 = ${root1} dan x2 = ${root2}`);
 	} else {
 		// Jika diskriminan < 0, akar kompleks
-		const realPart = -b / (2 * a);
+		const real_part = -b / (2 * a);
 		const imaginary_part = Math.sqrt(-discriminant) / (2 * a);
-		console.log(`x1 = ${realPart} + ${imaginary_part}i`);
-		console.log(`x2 = ${realPart} - ${imaginary_part}i`);
+		console.log(`x1 = ${real_part} + ${imaginary_part}i`);
+		console.log(`x2 = ${real_part} - ${imaginary_part}i`);
 	}
 }
 
@@ -128,10 +128,10 @@ fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
         println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2")
     } else {
         // Jika diskriminan < 0, akar kompleks
-        val realPart = -b / (2 * a)
+        val real_part = -b / (2 * a)
         val imaginary_part = sqrt(-discriminant) / (2 * a)
-        println("x1 = $realPart + ${imaginary_part}i")
-        println("x2 = $realPart - ${imaginary_part}i")
+        println("x1 = $real_part + ${imaginary_part}i")
+        println("x2 = $real_part - ${imaginary_part}i")
     }
 }
 
@@ -171,10 +171,10 @@ fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
         println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2")
     } else {
         // Jika diskriminan < 0, akar kompleks
-        val realPart = -b / (2 * a)
+        val real_part = -b / (2 * a)
         val imaginary_part = sqrt(-discriminant) / (2 * a)
-        println("x1 = $realPart + ${imaginary_part}i")
-        println("x2 = $realPart - ${imaginary_part}i")
+        println("x1 = $real_part + ${imaginary_part}i")
+        println("x2 = $real_part - ${imaginary_part}i")
     }
 }
 
@@ -211,10 +211,10 @@ def cari_akar_persamaan(a, b, c):
 		print(f"Akar-akarnya adalah: x1 = {root1} dan x2 = {root2}")
 	else:
 		# Jika diskriminan < 0, akar kompleks
-		realPart = -b / (2 * a)
+		real_part = -b / (2 * a)
 		imaginary_part = math.sqrt(-discriminant) / (2 * a)
-		print(f"x1 = {realPart} + {imaginary_part}i")
-		print(f"x2 = {realPart} - {imaginary_part}i")
+		print(f"x1 = {real_part} + {imaginary_part}i")
+		print(f"x2 = {real_part} - {imaginary_part}i")
 
 # Contoh untuk persamaan x^2 - 3x - 4 = 0
 a = 1
