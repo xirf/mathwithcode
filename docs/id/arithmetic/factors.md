@@ -54,19 +54,20 @@ Kalo di pemrograman kita bisa pake _loop_ dan [modulo](/arithmetic/operation-on-
 ```js
 function faktorisasi(bilangan) {
 	let faktor = 2;
-	let faktorisasi = [];
+	let hasil_faktorisasi = [];
 	while (bilangan > 1) {
 		if (bilangan % faktor === 0) {
-			faktorisasi.push(faktor);
+			hasil_faktorisasi.push(faktor);
 			bilangan /= faktor;
 		} else {
 			faktor++;
 		}
 	}
-	return faktorisasi;
+	return hasil_faktorisasi;
 }
 
-let faktorisasi100 = faktorisasi(100); // [2, 2, 5, 5]
+let faktorisasi_100 = faktorisasi(100);
+console.log(faktorisasi_100); // [2, 2, 5, 5]
 ```
 
 == Kotlin
@@ -74,20 +75,22 @@ let faktorisasi100 = faktorisasi(100); // [2, 2, 5, 5]
 ```kt
 fun faktorisasi(bilangan: Int): List<Int> {
     var faktor = 2
-    val faktorisasi = mutableListOf<Int>()
+    val hasil_faktorisasi = mutableListOf<Int>()
     var bilangan = bilangan
     while (bilangan > 1) {
         if (bilangan % faktor == 0) {
-            faktorisasi.add(faktor)
+            hasil_faktorisasi.add(faktor)
             bilangan /= faktor
         } else {
             faktor++
         }
     }
-    return faktorisasi
+    return hasil_faktorisasi
 }
 
-val faktorisasi100 = faktorisasi(100) // [2, 2, 5, 5]
+val faktorisasi_100 = faktorisasi(100)
+println(faktorisasi_100) // [2, 2, 5, 5]
+
 ```
 
 == C++
@@ -98,20 +101,20 @@ val faktorisasi100 = faktorisasi(100) // [2, 2, 5, 5]
 
 std::vector<int> faktorisasi(int bilangan) {
     int faktor = 2;
-    std::vector<int> faktorisasi;
+    std::vector<int> hasil_faktorisasi;
     while (bilangan > 1) {
         if (bilangan % faktor == 0) {
-            faktorisasi.push_back(faktor);
+            hasil_faktorisasi.push_back(faktor);
             bilangan /= faktor;
         } else {
             faktor++;
         }
     }
-    return faktorisasi;
+    return hasil_faktorisasi;
 }
 
 int main() {
-    std::vector<int> faktorisasi100 = faktorisasi(100); // [2, 2, 5, 5]
+    std::vector<int> faktorisasi_100 = faktorisasi(100); // [2, 2, 5, 5]
     return 0;
 }
 ```
@@ -119,17 +122,18 @@ int main() {
 ```python
 def faktorisasi(bilangan):
     faktor = 2
-    faktorisasi = []
+    hasil_faktorisasi = []
     while bilangan > 1:
         if bilangan % faktor == 0:
-            faktorisasi.append(faktor)
+            hasil_faktorisasi.append(faktor)
             bilangan /= faktor
         else:
             faktor += 1
 
-    return faktorisasi
+    return hasil_faktorisasi
 
-faktorisasi100 = faktorisasi(100) # [2, 2, 5, 5]
+faktorisasi_100 = faktorisasi(100)
+print (faktorisasi_100) # [2, 2, 5, 5]
 ```
 
 :::
@@ -153,37 +157,39 @@ Jika kelipatan diimplementasikan dalam pemrograman, kita bisa menggunakan _loop_
 
 ```js
 function kelipatan(a, n) {
-    let kelipatan = [];
+    let hasil_kelipatan = [];
     for (let i = 1; i <= n; i++) {
-        kelipatan.push(a * i);
+        hasil_kelipatan.push(a * i);
     }
-    return kelipatan;
+    return hasil_kelipatan;
 }
 
-let kelipatan3 = kelipatan(3, 5); // [3, 6, 9, 12, 15]
+let kelipatan3 = kelipatan(3, 5);
+console.log(kelipatan3); // [3, 6, 9, 12, 15]
 ```
 == Kotlin
 
 ```kt
 fun kelipatan(a: Int, n: Int): List<Int> {
-    val kelipatan = mutableListOf<Int>()
+    val hasil_kelipatan = mutableListOf<Int>()
     for (i in 1..n) {
-        kelipatan.add(a * i)
+        hasil_kelipatan.add(a * i)
     }
-    return kelipatan
+    return hasil_kelipatan
 }
 
-val kelipatan3 = kelipatan(3, 5) // [3, 6, 9, 12, 15]
+val kelipatan3 = kelipatan(3, 5)
+println(kelipatan3) // [3, 6, 9, 12, 15]
 ```
 == C++
 
 ```cpp
 std::vector<int> kelipatan(int a, int n) {
-    std::vector<int> kelipatan;
+    std::vector<int> hasil_kelipatan;
     for (int i = 1; i <= n; i++) {
-        kelipatan.push_back(a * i);
+        hasil_kelipatan.push_back(a * i);
     }
-    return kelipatan;
+    return hasil_kelipatan;
 }
 
 int main() {
@@ -193,19 +199,18 @@ int main() {
 ```
 == Python
 ```python
-def kelipatan(a, n):
-    kelipatan = []
+def hitung_kelipatan(a, n):
+    hasil_kelipatan = []
     for i in range(1, n+1):
-        kelipatan.append(a * i)
+        hasil_kelipatan.append(a * i)
+    return hasil_kelipatan
 
-    return kelipatan
-
-kelipatan3 = kelipatan(3, 5)
-
+hasil = hitung_kelipatan(3, 5)
+print (hasil) # [3, 6, 9, 12, 15]
 ```
 :::
 
-## Faktor Persekutuan Terbesar (FPB) 
+## Faktor Persekutuan Terbesar (FPB)
 
 FPB itu angka terbesar yang bisa membagi dua bilangan tanpa sisa. FPB biasanya dipakai untuk mencari kesamaan dari dua bilangan yang berbeda.
 
@@ -242,7 +247,8 @@ function fpb(a, b) {
     return a;
 }
 
-let fpb1218 = fpb(12, 18); // 6
+let fpb_1218 = fpb(12, 18);
+console.log(fpb_1218); // 6
 ```
 == Kotlin
 
@@ -258,11 +264,14 @@ fun fpb(a: Int, b: Int): Int {
     return a
 }
 
-val fpb1218 = fpb(12, 18) // 6
+val fpb_1218 = fpb(12, 18)
+println(fpb_1218) // 6
 ```
 == C++
 
 ```cpp
+#include<iostream>
+
 std::vector<int> fpb(int a, int b) {
     while (b != 0) {
         int t = b;
@@ -273,7 +282,8 @@ std::vector<int> fpb(int a, int b) {
 }
 
 int main() {
-    int fpb1218 = fpb(12, 18); // 6
+    int fpb_1218 = fpb(12, 18);
+    std::cout << fpb_1218 << std::endl; // 6
     return 0;
 }
 ```
@@ -287,7 +297,8 @@ def fpb(a, b):
 
     return a
 
-fpb1218 = fpb(12, 18) # 6
+fpb_1218 = fpb(12, 18)
+print (fpb_1218) # 6
 ```
 :::
 
@@ -328,7 +339,8 @@ function kpk(a, b) {
     return (a * b) / fpb(a, b);
 }
 
-let kpk1218 = kpk(12, 18); // 36
+let kpk_1218 = kpk(12, 18);
+console.log(kpk_1218); // 36
 ```
 == Kotlin
 
@@ -337,17 +349,21 @@ fun kpk(a: Int, b: Int): Int {
     return (a * b) / fpb(a, b)
 }
 
-val kpk1218 = kpk(12, 18) // 36
+val kpk_1218 = kpk(12, 18) // 36
+println(kpk_1218) // 36
 ```
 == C++
 
 ```cpp
+#include <iostream>
+
 int kpk(int a, int b) {
     return (a * b) / fpb(a, b);
 }
 
 int main() {
-    int kpk1218 = kpk(12, 18); // 36
+    int kpk_1218 = kpk(12, 18);
+    std::cout << kpk_1218 << std::endl; // 36
     return 0;
 }
 ```
@@ -356,7 +372,8 @@ int main() {
 def kpk(a, b):
     return (a * b) / fpb(a, b)
 
-kpk1218 = kpk(12, 18) # 36.0
+kpk_1218 = kpk(12, 18)
+print (kpk_1218) # 36.0
 ```
 :::
 

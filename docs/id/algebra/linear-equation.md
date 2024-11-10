@@ -44,12 +44,13 @@ Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 ==javascript
 
 ```js
-function linearEquation(a, b, c) {
+function linear_equation(a, b, c) {
 	// Persamaan: a * x + b = c
 	const x = (c - b) / a;
 	return x;
 }
-console.log(linearEquation(2, 3, 7)); // Output: 2
+let x = linear_equation(2, 3, 7);
+console.log(`Nilai x adalah {x}`); // Output: 2
 ```
 
 ==kotlin
@@ -67,7 +68,7 @@ println("Nilai x adalah: $x")
 == C++
 
 ```cpp
-int linearEquation(int a, int b, int c) {
+int linear_equation(int a, int b, int c) {
     // Persamaan: a * x + b = c
     int x = (c - b) / a;
     return x;
@@ -77,7 +78,7 @@ int main() {
     int a = 2;
     int b = 3;
     int c = 7;
-    int x = linearEquation(a, b, c);
+    int x = linear_equation(a, b, c);
     cout << "Nilai x adalah: " << x << endl;
     return 0;
 }
@@ -85,13 +86,13 @@ int main() {
 
 ==Python
 ```python
-def linearEquation(a, b, c):
+def linear_equation(a, b, c):
     # Persamaan: a * x + b = c
     x = (c - b) / a
     return x
 
 a, b, c, = 2, 3, 7
-x = linearEquation(a, b, c)
+x = linear_equation(a, b, c)
 print(f"Nilai x adalah: {x}")
 ```
 
@@ -229,7 +230,7 @@ Bagaimana jika permasalahan ini kita jadikan kode? Berikut contoh implementasiny
 ==javascript
 
 ```js
-function pldvEliminasi(a1, b1, c1, a2, b2, c2) {
+function eliminasi_pldv(a1, b1, c1, a2, b2, c2) {
     // Menghitung koefisien untuk eliminasi
     let factor = a2 / a1;
 
@@ -247,12 +248,12 @@ function pldvEliminasi(a1, b1, c1, a2, b2, c2) {
 }
 
 // 2x - 3y = 7 dan 3x - 2y = 8
-console.log(pldvEliminasi(2, 3, 7, 3, -2, 8)); // Output: { x: 2, y: 1 }
+console.log(eliminasi_pldv(2, 3, 7, 3, -2, 8)); // Output: { x: 2, y: 1 }
 ```
 == kotlin
 
 ```kotlin
-fun pldvEliminasi(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<Int, Int> {
+fun eliminasi_pldv(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<Int, Int> {
     // Menghitung koefisien untuk eliminasi
     val factor = a2 / a1
 
@@ -270,7 +271,7 @@ fun pldvEliminasi(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<In
 }
 
 // 2x - 3y = 7 dan 3x - 2y = 8
-println(pldvEliminasi(2, 3, 7, 3, -2, 8)) // Output: (2, 1)
+println(eliminasi_pldv(2, 3, 7, 3, -2, 8)) // Output: (2, 1)
 ```
 == C++
 
@@ -278,7 +279,7 @@ println(pldvEliminasi(2, 3, 7, 3, -2, 8)) // Output: (2, 1)
 #include <iostream>
 #include <utility>
 
-pair<double, double> pldvEliminasi(double a1, double b1, double c1, double a2, double b2, double c2) {
+pair<double, double> eliminasi_pldv(double a1, double b1, double c1, double a2, double b2, double c2) {
     // Menghitung koefisien untuk eliminasi
     double factor = a2 / a1;
 
@@ -296,7 +297,7 @@ pair<double, double> pldvEliminasi(double a1, double b1, double c1, double a2, d
 }
 
 int main() {
-    auto result = pldvEliminasi(2, 3, 7, 4, -5, 10);
+    auto result = eliminasi_pldv(2, 3, 7, 4, -5, 10);
     cout << "x: " << result.first << ", y: " << result.second << endl;
     // Output: x: 3, y: -1
     return 0;
@@ -306,7 +307,7 @@ int main() {
 ==Python
 
 ```python
-def pldvEliminasi(a1, b1, c1, a2, b2, c2):
+def eliminasi_pldv(a1, b1, c1, a2, b2, c2):
     # Menghitung koefisien untuk eliminasi
     factor = a2 / a1
 
@@ -323,7 +324,7 @@ def pldvEliminasi(a1, b1, c1, a2, b2, c2):
     return x, y
 
 # Contoh: 2x - 3y = 7 dan 3x - 2y = 8
-x, y = pldvEliminasi(2, 3, 7, 3, -2, 8)
+x, y = eliminasi_pldv(2, 3, 7, 3, -2, 8)
 print(f"x: {x}, y: {y}")  # Output: x: 2, y: 1
 ```
 :::

@@ -226,34 +226,33 @@ Produk silang ini penting dalam fisika untuk menghitung momen gaya dan dalam gra
 ```javascript
 const v = [1, 2, 3];
 const w = [4, 5, 6];
-const crossProduct = [
+const cross_product = [
     v[1] * w[2] - v[2] * w[1],
     v[2] * w[0] - v[0] * w[2],
     v[0] * w[1] - v[1] * w[0]
 ];
 
-console.log(crossProduct); // [-3, 6, -3]
+console.log(cross_product); // [-3, 6, -3]
 ```
 == Kotlin
 ```kotlin
 val v = listOf(1, 2, 3)
 val w = listOf(4, 5, 6)
-val crossProduct = listOf(
+val cross_product = listOf(
     v[1] * w[2] - v[2] * w[1],
     v[2] * w[0] - v[0] * w[2],
     v[0] * w[1] - v[1] * w[0]
 )
-println(crossProduct) // [-3, 6, -3]
+println(cross_product) // [-3, 6, -3]
 ```
 == C++
 ```cpp
 std::vector<int> v = {1, 2, 3};
 std::vector<int> w = {4, 5, 6};
-std::vector<int> crossProduct = {
+std::vector<int> cross_product = {
     v[1] * w[2] - v[2] * w[1],
     v[2] * w[0] - v[0] * w[2],
     v[0] * w[1] - v[1] * w[0]
 };
 ```
 :::
-

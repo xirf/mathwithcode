@@ -54,18 +54,18 @@ console.log(result); // output: [4, 6]
 #include <cmath>
 
 void scalling(double vector[], double scalar) {
-    double hasilVector[sizeof(vector) / sizeof(vector[0])];
+    double hasil_vector[sizeof(vector) / sizeof(vector[0])];
     for (int i = 0; i < sizeof(vector) / sizeof(vector[0]); i++) {
-        hasilVector[i] = vector[i] * scalar;
+        hasil_vector[i] = vector[i] * scalar;
     }
-    std::cout << "Hasil dari scalling vektor [" << vector[0] << ", " << vector[1] << "] dengan scalar " << scalar << " adalah [" << hasilVector[0] << ", " << hasilVector[1] << "]" << std::endl;
+    std::cout << "Hasil dari scalling vektor [" << vector[0] << ", " << vector[1] << "] dengan scalar " << scalar << " adalah [" << hasil_vector[0] << ", " << hasil_vector[1] << "]" << std::endl;
 }
 
 
 int main() {
     double vector[] = {2, 3};
     double scalar = 2;
-    
+
     scalling(vector, scalar); // Output: [4, 6]
     return 0;
 }
@@ -89,7 +89,7 @@ print(result)  # output: [4, 6]
 
 ## Rotasi
 
-Kita dapat merotasikan vektor dengan cara mengalikan vektor tersebut dengan matriks rotasi $R(\theta)$, dengan $\theta$ adalah sudut rotasi vektor tersebut. 
+Kita dapat merotasikan vektor dengan cara mengalikan vektor tersebut dengan matriks rotasi $R(\theta)$, dengan $\theta$ adalah sudut rotasi vektor tersebut.
 $$
 R(\theta) = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}
 $$
@@ -100,18 +100,18 @@ Bisa diimplementasikan menjadi program, seperti berikut:
 :::tabs
 == Javascript
 ``` js
-function rotasi(vector, theta) {
+function hitung_rotasi(vector, theta) {
     // Inisialisasi array untuk menyimpan hasil rotasi
     let hasil = [];
-    
+
     // Hitung cosinus dan sinus dari sudut theta
-    let cosTheta = Math.cos(theta);
-    let sinTheta = Math.sin(theta);
-    
+    let cos_theta = Math.cos(theta);
+    let sin_theta = Math.sin(theta);
+
     // Lakukan perhitungan rotasi untuk komponen i dan j
-    hasil.push(vector[0] * cosTheta - vector[1] * sinTheta); // Komponen i
-    hasil.push(vector[0] * sinTheta + vector[1] * cosTheta); // Komponen j
-    
+    hasil.push(vector[0] * cos_theta - vector[1] * sin_theta); // Komponen i
+    hasil.push(vector[0] * sin_theta + vector[1] * cos_theta); // Komponen j
+
     // Return hasil rotasi
     return hasil;
 }
@@ -119,32 +119,32 @@ function rotasi(vector, theta) {
 // contoh penggunaan
 let vector = [2, 3];
 let theta = Math.PI / 2; // 90 derajat
-let result = rotasi(vector, theta);
+let result = hitung_rotasi(vector, theta);
 console.log(result);
 ```
 == Python
 ``` py
 import math
 
-def rotasi(vector, theta):
+def hitung_rotasi(vector, theta):
     # Inisialisasi array untuk menyimpan hasil rotasi
     hasil = []
-    
+
     # Hitung cosinus dan sinus dari sudut theta
-    cosTheta = math.cos(theta)
-    sinTheta = math.sin(theta)
-    
+    cos_theta = math.cos(theta)
+    sin_theta = math.sin(theta)
+
     # Lakukan perhitungan rotasi untuk komponen i dan j
-    hasil.append(vector[0] * cosTheta - vector[1] * sinTheta) # Komponen i
-    hasil.append(vector[0] * sinTheta + vector[1] * cosTheta) # Komponen j
-    
+    hasil.append(vector[0] * cos_theta - vector[1] * sin_theta) # Komponen i
+    hasil.append(vector[0] * sin_theta + vector[1] * cos_theta) # Komponen j
+
     # Return hasil rotasi
     return hasil
 
 # contoh penggunaan
 vector = [2, 3]
 theta = math.pi / 2 # 90 derajat
-result = rotasi(vector, theta)
+result = hitung_rotasi(vector, theta)
 print(result)
 
 ```
@@ -153,24 +153,24 @@ print(result)
 #include <iostream>
 #include <cmath>
 
-void rotasi(double vector[], double theta, double hasil[]) {
+void hitung_rotasi(double vector[], double theta, double hasil[]) {
     // Hitung cosinus dan sinus dari sudut theta
-    double cosTheta = std::cos(theta);
-    double sinTheta = std::sin(theta);
-    
+    double cos_theta = std::cos(theta);
+    double sin_theta = std::sin(theta);
+
     // Lakukan perhitungan rotasi untuk komponen i dan j
-    hasil[0] = vector[0] * cosTheta - vector[1] * sinTheta; // Komponen i
-    hasil[1] = vector[0] * sinTheta + vector[1] * cosTheta; // Komponen j
+    hasil[0] = vector[0] * cos_theta - vector[1] * sin_theta; // Komponen i
+    hasil[1] = vector[0] * sin_theta + vector[1] * cos_theta; // Komponen j
 }
 
 int main() {
     double vector[] = {2, 3};
     double theta = M_PI / 2; // 90 derajat
     double result[2];
-    
-    rotasi(vector, theta, result);
+
+    hitung_rotasi(vector, theta, result);
     std::cout << "(" << result[0] << ", " << result[1] << ")" << std::endl;
-    
+
     return 0;
 }
 ```
@@ -178,7 +178,7 @@ int main() {
 
 ## Penggeseran
 
-Kita dapat melakukan shearing untuk membuat vektor tegeser seolah-olah terdistorsi dengan cara mengalikan vektor tersebut dengan matriks shearing $S(a, b)$, dengan $a$ dan $b$ adalah parameter shearing, ubah $b$ menjadi 0 untuk penggeseran secara horizontal atau ubah $a$ menjadi 0 untuk penggeseran secara vertikal, atau dapat menggabungkannya. 
+Kita dapat melakukan shearing untuk membuat vektor tegeser seolah-olah terdistorsi dengan cara mengalikan vektor tersebut dengan matriks shearing $S(a, b)$, dengan $a$ dan $b$ adalah parameter shearing, ubah $b$ menjadi 0 untuk penggeseran secara horizontal atau ubah $a$ menjadi 0 untuk penggeseran secara vertikal, atau dapat menggabungkannya.
 $$
 S(a, b) = \begin{pmatrix} 1 & a \\ b & 1 \end{pmatrix}
 $$
@@ -242,7 +242,7 @@ int main() {
 
 ## Refleksi
 
-Kita dapat melakukan refleksi untuk membuat vektor terlihat seperti cerminan dengan cara mengalikan vektor tersebut dengan matriks refleksi $F(x, y)$, dengan $x$ dan $y$ adalah parameter refleksi, ubah $x$ menjadi -1 untuk refleksi secara horizontal atau ubah $y$ menjadi -1 untuk refleksi secara vertikal, atau dapat menggabungkannya. 
+Kita dapat melakukan refleksi untuk membuat vektor terlihat seperti cerminan dengan cara mengalikan vektor tersebut dengan matriks refleksi $F(x, y)$, dengan $x$ dan $y$ adalah parameter refleksi, ubah $x$ menjadi -1 untuk refleksi secara horizontal atau ubah $y$ menjadi -1 untuk refleksi secara vertikal, atau dapat menggabungkannya.
 
 * Refleksi terhadap sumbu x :
 $$
@@ -256,7 +256,7 @@ Bisa diimplementasikan menjadi program, seperti berikut:
 :::tabs
 == Javascript
 ``` js
-function refleksi(vector, terhadap) {
+function hitung_refleksi(vector, terhadap) {
     let hasil;
     if (terhadap === "x") {
         hasil = [vector[0], -vector[1]];
@@ -267,13 +267,13 @@ function refleksi(vector, terhadap) {
 
 // contoh penggunaan
 let vector = [2, 3];
-let result = refleksi(vector, "x"); // atau refleksi(vector, "y") untuk refleksi terhadap y
+let result = hitung_refleksi(vector, "x"); // atau hitung_refleksi(vector, "y") untuk refleksi terhadap y
 console.log(result);
 
 ```
 == Python
 ``` py
-def refleksi(vector, terhadap):
+def hitung_refleksi(vector, terhadap):
     hasil;
     if (terhadap == "x"):
         hasil = [vector[0], -vector[1]]
@@ -283,14 +283,14 @@ def refleksi(vector, terhadap):
 
 # contoh penggunaan
 vector = [2, 3]
-result = refleksi(vector, "x")  # atau refleksi(vector, "y") untuk refleksi terhadap y
+result = hitung_refleksi(vector, "x")  # atau hitung_refleksi(vector, "y") untuk refleksi terhadap y
 print(result)
 ```
 == C++
 ``` cpp
 #include <iostream>
 
-void refleksi(double vector[], double terhadap[], double hasil[]) {
+void hitung_refleksi(double vector[], double terhadap[], double hasil[]) {
     if (terhadap[0] == 1) {
         hasil[0] = vector[0];
         hasil[1] = -vector[1];
@@ -304,24 +304,23 @@ int main() {
     double vector[] = {2, 3};
     double terhadap[] = {1}; // 1 untuk refleksi terhadap x, 2 untuk refleksi terhadap y
     double hasil[2];
-    
-    refleksi(vector, terhadap, hasil);
-    
+
+    hitung_refleksi(vector, terhadap, hasil);
+
     std::cout << "Hasil refleksi vektor [" << vector[0] << ", " << vector[1] << "] terhadap ";
     if (terhadap[0] == 1) {
         std::cout << "x adalah [" << hasil[0] << ", " << hasil[1] << "]" << std::endl;
     } else if (terhadap[0] == 2) {
         std::cout << "y adalah [" << hasil[0] << ", " << hasil[1] << "]" << std::endl;
     }
-    
+
     return 0;
 }
 ```
 :::
 
 ::: info
-Sebenarnya semua jenis-jenis yang disebutkan merupakan sedikit gambaran dari transformasi linear karena transformasi linear dapat bebas dilakukan dengan membuat matriks transformasi sendiri selama masih mematuhi aturan Aditivitas dan Homogenitas serta aturan Perkalian matriks. 
+Sebenarnya semua jenis-jenis yang disebutkan merupakan sedikit gambaran dari transformasi linear karena transformasi linear dapat bebas dilakukan dengan membuat matriks transformasi sendiri selama masih mematuhi aturan Aditivitas dan Homogenitas serta aturan Perkalian matriks.
 :::
-
 
 

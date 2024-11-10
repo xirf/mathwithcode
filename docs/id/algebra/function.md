@@ -40,7 +40,7 @@ def fungsi(x):
 
 **Kodomain** sendiri adalah himpunan semua nilai output yang mungkin dalam fungsi. Sedangkan **range** adalah himpunan semua nilai output yang benar-benar dihasilkan oleh fungsi.
 
-Dalam pemrograman, **domain** dan **kodomain** bisa diartikan sebagai tipe data input dan output dari fungsi yang didefinisikan. 
+Dalam pemrograman, **domain** dan **kodomain** bisa diartikan sebagai tipe data input dan output dari fungsi yang didefinisikan.
 
 Dengan kata lain, domain dalam konteks pemrograman adalah jenis data yang bisa diterima oleh fungsi sebagai input (*parameter*), dan kodomain adalah jenis data yang dihasilkan oleh fungsi sebagai output.
 
@@ -67,7 +67,7 @@ Fungsi logaritma adalah fungsi yang merupakan kebalikan dari fungsi eksponensial
 <iframe src="https://www.desmos.com/calculator/tbuqmiynvo?embed" width="300" height="200" class="mx-auto w-full" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ### Fungsi Trigonometri
-Fungsi trigonometri adalah fungsi yang melibatkan fungsi trigonometri seperti sin, cos, tan, dan sebagainya. Fungsi ini memiliki grafik berbentuk gelombang. Dibawah ini adalah contoh grafik fungsi trigonometri dimana 
+Fungsi trigonometri adalah fungsi yang melibatkan fungsi trigonometri seperti sin, cos, tan, dan sebagainya. Fungsi ini memiliki grafik berbentuk gelombang. Dibawah ini adalah contoh grafik fungsi trigonometri dimana
 - Merah adalah fungsi sin(x)
 - Hijau adalah fungsi cos(x)
 - Ungu adalah fungsi tan(x)
@@ -76,7 +76,7 @@ Fungsi trigonometri adalah fungsi yang melibatkan fungsi trigonometri seperti si
 ## Operasi pada Fungsi
 
 ### Penjumlahan dan Pengurangan Fungsi
-Penjumlahan dan pengurangan fungsi dilakukan dengan cara menambahkan atau mengurangkan fungsi satu dengan fungsi lainnya. Misalnya 
+Penjumlahan dan pengurangan fungsi dilakukan dengan cara menambahkan atau mengurangkan fungsi satu dengan fungsi lainnya. Misalnya
 $$f(x) = 2x + 3$$
 $$g(x) = 3x - 2$$
 
@@ -306,7 +306,7 @@ Apabila kita jadikan sebagai fungsi di pemrograman dimana nilai $x$ sudah diketa
 :::tabs
 == Javascript
 ``` js
-function inverseFunction(y, a, b) {
+function inverse_function(y, a, b) {
   if (a === 0) {
     throw new Error("Nilai a tidak boleh 0");
   }
@@ -316,13 +316,14 @@ function inverseFunction(y, a, b) {
 const a = 2;  // Misalkan a = 2
 const b = 3;  // Misalkan b = 3
 const y = 7;  // Nilai y (f(x))
+
 // f(x) = 2x + 3
-const x = inverseFunction(y, a, b);
+const x = inverse_function(y, a, b);
 console.log(`Invers dari f(${y}) adalah x = ${x}`);
 ```
 == C++
 ``` cpp
-int inverseFunction(int y, int a, int b) {
+int inverse_function(int y, int a, int b) {
   if (a == 0) {
     throw "Nilai a tidak boleh 0";
   }
@@ -333,15 +334,16 @@ int main() {
   int a = 2;  // Misalkan a = 2
   int b = 3;  // Misalkan b = 3
   int y = 7;  // Nilai y (f(x))
+
   // f(x) = 2x + 3
-  int x = inverseFunction(y, a, b);
+  int x = inverse_function(y, a, b);
   cout << "Invers dari f(" << y << ") adalah x = " << x << endl;
   return 0;
 }
 ```
 == Kotlin
 ``` kotlin
-fun inverseFunction(y: Int, a: Int, b: Int): Int {
+fun inverse_function(y: Int, a: Int, b: Int): Int {
   if (a == 0) {
     throw IllegalArgumentException("Nilai a tidak boleh 0")
   }
@@ -352,14 +354,15 @@ fun main() {
   val a = 2  // Misalkan a = 2
   val b = 3  // Misalkan b = 3
   val y = 7  // Nilai y (f(x))
+
   // f(x) = 2x + 3
-  val x = inverseFunction(y, a, b)
+  val x = inverse_function(y, a, b)
   println("Invers dari f($y) adalah x = $x")
 }
 ```
 == Python
 ``` python
-def inverseFunction(y, a, b):
+def inverse_function(y, a, b):
   if a == 0:
     raise Exception("Nilai a tidak boleh 0")
   return (y - b) / a
@@ -367,8 +370,9 @@ def inverseFunction(y, a, b):
 a = 2  # Misalkan a = 2
 b = 3  # Misalkan b = 3
 y = 7  # Nilai y (f(x))
+
 # f(x) = 2x + 3
-x = inverseFunction(y, a, b)
+x = inverse_function(y, a, b)
 print(f"Invers dari f({y}) adalah x = {x}")
 ```
 :::
