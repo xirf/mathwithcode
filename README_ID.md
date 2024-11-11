@@ -6,7 +6,7 @@
     </p>
 </div>
 
-[English](readme.md)
+[English](README.md)
 
 > [!WARNING]
 > Proyek ini masih dalam tahap awal pengembangan. Kami sedang bekerja keras untuk membuatnya lebih baik bagi semua orang. Jika Anda memiliki saran atau ingin berkontribusi, jangan ragu untuk menghubungi kami.
