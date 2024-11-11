@@ -64,29 +64,31 @@ Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 ==Javascript
 
 ```js
-function findRootsStepByStep(a, b, c) {
+function cari_akar_persamaan(a, b, c) {
 	// Langkah 1: Hitung b^2 dan 4ac
-	const bSquared = b * b;
-	const fourAC = 4 * a * c;
+	const b_squared = b * b;
+	const four_ac = 4 * a * c;
+
 	// Langkah 2: Hitung diskriminan
-	const discriminant = bSquared - fourAC;
+	const discriminant = b_squared - four_ac;
 
 	if (discriminant >= 0) {
 		// Jika diskriminan >= 0, lanjutkan dengan akar real
 		// Langkah 3: Hitung akar dari diskriminan
-		const sqrtDiscriminant = Math.sqrt(discriminant);
-		// Langkah 4: Hitung dua kemungkinan nilai untuk x
-		const root1 = (-b + sqrtDiscriminant) / (2 * a);
-		const root2 = (-b - sqrtDiscriminant) / (2 * a);
-		console.log(`x1 = (-${b} + ${sqrtDiscriminant}) / (2 * ${a}) = ${root1}`);
-		console.log(`x2 = (-${b} - ${sqrtDiscriminant}) / (2 * ${a}) = ${root2}`);
+		const sqrt_discriminant = Math.sqrt(discriminant);
+
+        // Langkah 4: Hitung dua kemungkinan nilai untuk x
+		const root1 = (-b + sqrt_discriminant) / (2 * a);
+		const root2 = (-b - sqrt_discriminant) / (2 * a);
+		console.log(`x1 = (-${b} + ${sqrt_discriminant}) / (2 * ${a}) = ${root1}`);
+		console.log(`x2 = (-${b} - ${sqrt_discriminant}) / (2 * ${a}) = ${root2}`);
 		console.log(`Akar-akarnya adalah: x1 = ${root1} dan x2 = ${root2}`);
 	} else {
 		// Jika diskriminan < 0, akar kompleks
-		const realPart = -b / (2 * a);
-		const imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
-		console.log(`x1 = ${realPart} + ${imaginaryPart}i`);
-		console.log(`x2 = ${realPart} - ${imaginaryPart}i`);
+		const real_part = -b / (2 * a);
+		const imaginary_part = Math.sqrt(-discriminant) / (2 * a);
+		console.log(`x1 = ${real_part} + ${imaginary_part}i`);
+		console.log(`x2 = ${real_part} - ${imaginary_part}i`);
 	}
 }
 
@@ -94,7 +96,7 @@ function findRootsStepByStep(a, b, c) {
 const a = 1;
 const b = -3;
 const c = -4;
-findRootsStepByStep(a, b, c);
+cari_akar_persamaan(a, b, c);
 ```
 
 == C++
@@ -103,33 +105,33 @@ findRootsStepByStep(a, b, c);
 #include <iostream>
 #include <cmath>
 
-fun akarPersamaan(a: Double, b: Double, c: Double) {
+fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus
-    val bSquared = b * b
-    val fourAC = 4 * a * c
+    val b_squared = b * b
+    val four_ac = 4 * a * c
 
     // Langkah 2: Hitung diskriminan
-    val discriminant = bSquared - fourAC
+    val discriminant = b_squared - four_ac
 
     if (discriminant >= 0) {
         // Jika diskriminan >= 0, lanjutkan dengan akar real
         // Langkah 3: Hitung akar dari diskriminan
-        val sqrtDiscriminant = sqrt(discriminant)
+        val sqrt_discriminant = sqrt(discriminant)
 
         // Langkah 4: Hitung dua kemungkinan nilai untuk x
-        val root1 = (-b + sqrtDiscriminant) / (2 * a)
-        val root2 = (-b - sqrtDiscriminant) / (2 * a)
-        println("x1 = (-$b + $sqrtDiscriminant) / (2 * $a) = $root1")
-        println("x2 = (-$b - $sqrtDiscriminant) / (2 * $a) = $root2")
+        val root1 = (-b + sqrt_discriminant) / (2 * a)
+        val root2 = (-b - sqrt_discriminant) / (2 * a)
+        println("x1 = (-$b + $sqrt_discriminant) / (2 * $a) = $root1")
+        println("x2 = (-$b - $sqrt_discriminant) / (2 * $a) = $root2")
 
         // Tampilkan hasil akhirnya
         println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2")
     } else {
         // Jika diskriminan < 0, akar kompleks
-        val realPart = -b / (2 * a)
-        val imaginaryPart = sqrt(-discriminant) / (2 * a)
-        println("x1 = $realPart + ${imaginaryPart}i")
-        println("x2 = $realPart - ${imaginaryPart}i")
+        val real_part = -b / (2 * a)
+        val imaginary_part = sqrt(-discriminant) / (2 * a)
+        println("x1 = $real_part + ${imaginary_part}i")
+        println("x2 = $real_part - ${imaginary_part}i")
     }
 }
 
@@ -138,7 +140,7 @@ fun main() {
     val a = 1.0
     val b = -3.0
     val c = -4.0
-    akarPersamaan(a, b, c)
+    cari_akar_persamaan(a, b, c)
 }
 
 ```
@@ -148,31 +150,31 @@ fun main() {
 ```kotlin
 import kotlin.math.sqrt
 
-fun akarPersamaan(a: Double, b: Double, c: Double) {
+fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus
-    val bSquared = b * b
-    val fourAC = 4 * a * c
+    val b_squared = b * b
+    val four_ac = 4 * a * c
 
     // Langkah 2: Hitung diskriminan
-    val discriminant = bSquared - fourAC
+    val discriminant = b_squared - four_ac
 
     if (discriminant >= 0) {
         // Jika diskriminan >= 0, lanjutkan dengan akar real
         // Langkah 3: Hitung akar dari diskriminan
-        val sqrtDiscriminant = sqrt(discriminant)
+        val sqrt_discriminant = sqrt(discriminant)
 
         // Langkah 4: Hitung dua kemungkinan nilai untuk x
-        val root1 = (-b + sqrtDiscriminant) / (2 * a)
-        val root2 = (-b - sqrtDiscriminant) / (2 * a)
-        println("x1 = (-$b + $sqrtDiscriminant) / (2 * $a) = $root1")
-        println("x2 = (-$b - $sqrtDiscriminant) / (2 * $a) = $root2")
+        val root1 = (-b + sqrt_discriminant) / (2 * a)
+        val root2 = (-b - sqrt_discriminant) / (2 * a)
+        println("x1 = (-$b + $sqrt_discriminant) / (2 * $a) = $root1")
+        println("x2 = (-$b - $sqrt_discriminant) / (2 * $a) = $root2")
         println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2")
     } else {
         // Jika diskriminan < 0, akar kompleks
-        val realPart = -b / (2 * a)
-        val imaginaryPart = sqrt(-discriminant) / (2 * a)
-        println("x1 = $realPart + ${imaginaryPart}i")
-        println("x2 = $realPart - ${imaginaryPart}i")
+        val real_part = -b / (2 * a)
+        val imaginary_part = sqrt(-discriminant) / (2 * a)
+        println("x1 = $real_part + ${imaginary_part}i")
+        println("x2 = $real_part - ${imaginary_part}i")
     }
 }
 
@@ -181,40 +183,42 @@ fun main() {
     val a = 1.0
     val b = -3.0
     val c = -4.0
-    akarPersamaan(a, b, c)
+    cari_akar_persamaan(a, b, c)
 }
 ```
 == Python
 ``` python
 import math
 
-def findRootsStepByStep(a, b, c):
+def cari_akar_persamaan(a, b, c):
 	# Langkah 1: Hitung b^2 dan 4ac
-	bSquared = b * b
-	fourAC = 4 * a * c
+	b_squared = b * b
+	four_ac = 4 * a * c
+
 	# Langkah 2: Hitung diskriminan
-	discriminant = bSquared - fourAC
+	discriminant = b_squared - four_ac
 
 	if discriminant >= 0:
 		# Jika diskriminan >= 0, lanjutkan dengan akar real
 		# Langkah 3: Hitung akar dari diskriminan
-		sqrtDiscriminant = math.sqrt(discriminant)
+		sqrt_discriminant = math.sqrt(discriminant)
+
 		# Langkah 4: Hitung dua kemungkinan nilai untuk x
-		root1 = (-b + sqrtDiscriminant) / (2 * a)
-		root2 = (-b - sqrtDiscriminant) / (2 * a)
-		print(f"x1 = (-{b} + {sqrtDiscriminant}) / (2 * {a}) = {root1}")
-		print(f"x2 = (-{b} - {sqrtDiscriminant}) / (2 * {a}) = {root2}")
+		root1 = (-b + sqrt_discriminant) / (2 * a)
+		root2 = (-b - sqrt_discriminant) / (2 * a)
+		print(f"x1 = (-{b} + {sqrt_discriminant}) / (2 * {a}) = {root1}")
+		print(f"x2 = (-{b} - {sqrt_discriminant}) / (2 * {a}) = {root2}")
 		print(f"Akar-akarnya adalah: x1 = {root1} dan x2 = {root2}")
 	else:
 		# Jika diskriminan < 0, akar kompleks
-		realPart = -b / (2 * a)
-		imaginaryPart = math.sqrt(-discriminant) / (2 * a)
-		print(f"x1 = {realPart} + {imaginaryPart}i")
-		print(f"x2 = {realPart} - {imaginaryPart}i")
+		real_part = -b / (2 * a)
+		imaginary_part = math.sqrt(-discriminant) / (2 * a)
+		print(f"x1 = {real_part} + {imaginary_part}i")
+		print(f"x2 = {real_part} - {imaginary_part}i")
 
 # Contoh untuk persamaan x^2 - 3x - 4 = 0
 a = 1
 b = -3
 c = -4
-findRootsStepByStep(a, b, c)
+cari_akar_persamaan(a, b, c)
 ```

@@ -1,9 +1,9 @@
 ---
 title: Bilangan
-description: Contoh penggunaan Bilangan dalam pemrograman 
+description: Contoh penggunaan Bilangan dalam pemrograman
 ---
 
-# Bilangan 
+# Bilangan
 
 Bilangan merupakan dasar dari matematika, semuanya di matematika pake bilangan. Dalam pemrograman, bilangan juga sangat penting. Kita bisa melakukan berbagai operasi matematika dengan bilangan, seperti penjumlahan, pengurangan, perkalian, dan pembagian.
 
@@ -16,19 +16,19 @@ Bilangan bulat adalah bilangan yang tidak punya koma. Di pemrograman, bilangan b
 :::tabs
 == Javascript
 ```js
-let bilanganBulat = 10;
+let bilangan_bulat = 10;
 ```
 == Kotlin
 ```kt
-val bilanganBulat: Int = 10
+val bilangan_bulat: Int = 10
 ```
 == C++
 ```cpp
-int bilanganBulat = 10;
+int bilangan_bulat = 10;
 ```
 == Python
 ```python
-bilanganBulat = 10
+bilangan_bulat = 10
 ```
 :::
 
@@ -43,7 +43,7 @@ Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS 
 |-----------|------------------|---------------|----|---------------------------|
 | Number    | 64             | -9,007,199,254,740,991<br /> (−2<sup>53</sup> - 1) | 9,007,199,254,740,992 <br /> (2<sup>53</sup> - 1 )  | 18,446,744,073,709,551,616 (2<sup>64</sup>) |
 | BigInt    | max 1,000,000,000               | `tergantung memori` | `tergantung memori`  | `tergantung memori` |
-== C++ 
+== C++
 | Tipe Data | Ukuran (bits) | Minimal                                         | Maksimal                                      | Maksimal (Secara Eksplisit)
 |-----------|------------------|------------------------------------------------|-----------------------------------------------|---------------------------|
 | `short`     | 16              | -32,768                                       | 32,767                                        | 65,536 (2<sup>16</sup>) |
@@ -68,27 +68,27 @@ Bilangan desimal atau floating point adalah bilangan yang punya koma. Di pemrogr
 :::tabs
 == Javascript
 ```js
-let bilanganDesimal = 3.14;
+let bilangan_desimal = 3.14;
 ```
 == Kotlin
 ```kt
-val bilanganDesimal: Float = 3.14F
+val bilangan_desimal: Float = 3.14F
 ```
 Kita juga bisa menggunakan `double` untuk bilangan desimal yang memiliki angka di belakang koma lebih banyak (sampe 15 digit). Contoh penggunaannya seperti ini:
 ```kt
-val bilanganDesimal: Double = 3.141592653589793f
+val bilangan_desimal: Double = 3.141592653589793f
 ```
 == C++
 ```cpp
-float bilanganDesimal = 3.14f;
+float bilangan_desimal = 3.14f;
 ```
 Kita juga bisa menggunakan `double` untuk bilangan desimal yang memiliki angka di belakang koma lebih banyak (sampe 15 digit). Contoh penggunaannya seperti ini:
 ```cpp
-double bilanganDesimal = 3.141592653589793F;
+double bilangan_desimal = 3.141592653589793F;
 ```
 == Python
 ```python
-bilanganDesimal = 3.14
+bilangan_desimal = 3.14
 ```
 :::
 
@@ -100,48 +100,48 @@ Bilangan pecahan adalah bilangan yang punya pembilang dan penyebut. Di pemrogram
 :::tabs
 == Javascript
 ```js
-let bilanganPecahan = 1/2;
+let bilangan_pecahan = 1/2;
 ```
 == Kotlin
 ```kt
-val bilanganPecahan = 1/2 // Otomatis jadi float
+val bilangan_pecahan = 1/2 // Otomatis jadi float
 ```
 == C++
 ```cpp
-float bilanganPecahan = 1/2;
+float bilangan_pecahan = 1/2;
 ```
 == Python
 ```python
-bilanganPecahan = 1/2
+bilangan_pecahan = 1/2
 ```
 :::
 
 > [!WARNING]  Perhatian saat melakukan operasi dengan bilangan pecahan dan desimal
 > Dalam banyak bahasa pemrograman, termasuk JavaScript, ada yang disebut dengan `floating point error`, yang dapat menyebabkan hasil perhitungan tidak akurat. Hal ini terjadi karena bilangan desimal tidak selalu dapat direpresentasikan secara tepat dalam format biner.
-> 
+>
 > Contoh, ketika kita menjumlahkan 0.1 dan 0.2 di JavaScript, hasilnya bukan 0.3, melainkan 0.30000000000000004. Ini disebabkan oleh keterbatasan representasi angka desimal dalam komputer.
-> 
-> Untuk menghindari masalah ini, sebaiknya batasi presisi hasil perhitungan dengan cara Membulatkan hasil ke jumlah angka desimal yang diinginkan (misalnya dengan `toFixed()` atau `Math.round()`. 
-> 
+>
+> Untuk menghindari masalah ini, sebaiknya batasi presisi hasil perhitungan dengan cara Membulatkan hasil ke jumlah angka desimal yang diinginkan (misalnya dengan `toFixed()` atau `Math.round()`.
+>
 > Kamu juga bisa menggunakan pustaka seperti BigNumber atau yang lainnya
 
 Gimana dengan **Bilangan pecahan campuran** kan di matematika ada kaya $1\frac{1}{2}$, di pemrograman juga bisa kok. Kita bisa menggunakan `float` atau `double` untuk bilangan pecahan campuran. Contoh penggunaannya seperti ini:
 :::tabs
 == Javascript
 ```js
-let bilanganPecahanCampuran = 1 + 1/2;
+let bilangan_pecahan_campuran = 1 + 1/2;
 ```
 == Kotlin
 ```kt
-val bilanganPecahanCampuran: Double = 1 + 1/2
+val bilangan_pecahan_campuran: Double = 1 + 1/2
 ```
 == C++
 ```cpp
-double bilanganPecahanCampuran = 1 + 1/2;
+double bilangan_pecahan_campuran = 1 + 1/2;
 ```
 == Python
 ```python
-bilanganPecahanCampuran = 1 + 1/2
+bilangan_pecahan_campuran = 1 + 1/2
 ```
 :::
 

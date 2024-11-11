@@ -17,37 +17,37 @@ Di pemrograman, kita bisa melakukan berbagai operasi matematika dengan bilangan.
 ```js
 let a = 10;
 let b = 5;
-let hasilPenjumlahan = a + b; // 15
-let hasilPengurangan = a - b; // 5
-let hasilPerkalian = a * b; // 50
-let hasilPembagian = a / b; // 2
+let hasil_penjumlahan = a + b; // 15
+let hasil_pengurangan = a - b; // 5
+let hasil_perkalian = a * b; // 50
+let hasil_pembagian = a / b; // 2
 ```
 == Kotlin
 ```kt
 val a = 10
 val b = 5
-val hasilPenjumlahan = a + b // 15
-val hasilPengurangan = a - b // 5
-val hasilPerkalian = a * b // 50
-val hasilPembagian = a / b // 2
+val hasil_penjumlahan = a + b // 15
+val hasil_pengurangan = a - b // 5
+val hasil_perkalian = a * b // 50
+val hasil_pembagian = a / b // 2
 ```
 == C++
 ```cpp
 int a = 10;
 int b = 5;
-int hasilPenjumlahan = a + b; // 15
-int hasilPengurangan = a - b; // 5
-int hasilPerkalian = a * b; // 50
-int hasilPembagian = a / b; // 2
+int hasil_penjumlahan = a + b; // 15
+int hasil_pengurangan = a - b; // 5
+int hasil_perkalian = a * b; // 50
+int hasil_pembagian = a / b; // 2
 ```
 == Python
 ```python
 a = 10
 b = 5
-hasilPenjumlahan = a + b # 15
-hasilPengurangan = a - b # 5
-hasilPerkalian = a * b # 50
-hasilPembagian = a / b # 2
+hasil_penjumlahan = a + b # 15
+hasil_pengurangan = a - b # 5
+hasil_perkalian = a * b # 50
+hasil_pembagian = a / b # 2
 ```
 :::
 
@@ -208,19 +208,19 @@ Operator ini berguna banget buat ngecek bilangan itu genap, ganjil atau punya po
 :::tabs
 == Javascript
 ```js
-let hasilModulus = 10 % 3; // 1
+let hasil_modulus = 10 % 3; // 1
 ```
 == Kotlin
 ```kt
-val hasilModulus = 10 % 3 // 1
+val hasil_modulus = 10 % 3 // 1
 ```
 == C++
 ```cpp
-int hasilModulus = 10 % 3; // 1
+int hasil_modulus = 10 % 3; // 1
 ```
 == Python
 ```python
-hasilModulus = 10 % 3 # 1
+hasil_modulus = 10 % 3 # 1
 ```
 :::
 
@@ -262,7 +262,7 @@ val hasil = 6 + 3 * (2.0.pow(3) + Math.sqrt(16.0)) // 42.0
 
 == C++
 ```cpp
-int hasil = 6 + 3 * (pow(2, 3) + sqrt(16)); // 42
+int hasil = 6 + 3 * (pow(2,3) + sqrt(16)); // 42
 ```
 == Python
 ```python
@@ -271,4 +271,4 @@ hasil = 6 + 3 * (pow(2,3) + math.sqrt(16)) # 42.0
 ```
 :::
 
-## 
+##
