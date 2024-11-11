@@ -6,7 +6,7 @@
     </p>
 </div>
 
-[Bahasa Indonesia](readme_ID)
+[Bahasa Indonesia](README_ID.md)
 
 > [!WARNING]
 > This project is still in the early stages of development. We are working hard to make it better for everyone. If you have any suggestions or want to contribute, feel free to reach out to us.
