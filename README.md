@@ -6,13 +6,13 @@
     </p>
 </div>
 
+[Bahasa Indonesia](readme_ID)
+
 > [!WARNING]
-> This project is still under development. 
 > This project is still in the early stages of development. We are working hard to make it better for everyone. If you have any suggestions or want to contribute, feel free to reach out to us.
 
 > [!NOTE]
-> 🌐 Heads up!
-> Currently, this project is available only in 🇮🇩 Indonesian language. We’re work on translations, so stay tuned! But if you're comfy with Indonesian, you're in the right place. 🚀
+> Currently, this project is available focused in 🇮🇩 Indonesian language. Translation for English is underway, if you would like to contribute to the translation effort or stay updated on the English version's progress, please feel free to open an issue or join our community discussion.
 
 
 ## Table of Contents
