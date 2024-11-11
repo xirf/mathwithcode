@@ -47,6 +47,7 @@ When writing or coding, try to stick to these guidelines:
 - Aim for simplicity and clarity—your work should be easy for others to follow.
 - Please use proper grammar and spelling. Everyone makes mistakes, but let’s keep them to a minimum.
 - Name your files and folders in English and using `kebab-case` (e.g., `linear-algebra`).
+- Use `snake_case` for variable and function name or follow common naming convention
 - Be as descriptive as possible with your filenames and folder names (keep it short 👀).
 - Mixing languages in the same document is fine, but do it sparingly.
 - Get creative! You can leave a credit for yourself at the top of the document you created. ✨
