@@ -49,6 +49,15 @@ hasil_pengurangan = a - b # 5
 hasil_perkalian = a * b # 50
 hasil_pembagian = a / b # 2
 ```
+== Rust
+```rust
+let a: u64 = 10;
+let b: u64 = 5;
+let hasil_penjumlahan: u64 = a + b; // 15
+let hasil_pengurangan: u64 = a - b; // 5
+let hasil_perkalian: u64 = a * b; // 50
+let hasil_pembagian: f64 = a as f64 / b as f64; // 2.0
+```
 :::
 
 Di atas kita menggunakan simbol `/` untuk pembagian dan `*` untuk perkalian. Ini karena dalam pemrograman, kita tidak bisa menggunakan simbol matematika `÷` dan `×` kek biasanya apalagi `.` karena bahasa pemrograman umumnya mengikuti aturan ASCII yang hanya mendukung karakter dasar, sehingga simbol-simbol matematika khusus seperti `÷` dan `×` tidak tersedia. Sebagai gantinya, pemrograman menggunakan `*` sebagai pengganti kali dan `/` sebagai pengganti bagi agar kode bisa berjalan dengan baik.
@@ -86,6 +95,14 @@ int main() {
 pangkat = 2 ** 3 # 8
 pangkat2 = pow(2, 3) # 8
 ```
+== Rust
+```rust
+let pangkat: u64 = 2_u64.pow(3); // 8
+let pangkat2: f64 = 2.0_f64.powf(3.0); // 8.0
+```
+> [!NOTE]
+> Dalam Rust, `powf` bukanlah kesalahan pengetikan, melainkan nama fungsi yang digunakan untuk bilangan float. Jika kamu ingin melakukan operasi pangkat pada bilangan bulat, gunakan fungsi `pow`. Untuk bilangan float, gunakan `powf`.
+
 :::
 
 `pow()` biasanya meminta dua parameter, parameter pertama adalah bilangan yang mau dipangkatkan, dan parameter kedua adalah pangkatnya. jadi kalo kita mau menghitung $2^3$ kita bisa tulis `pow(2, 3)`.
@@ -122,18 +139,23 @@ import math
 akar = math.sqrt(16) # 4.0
 ```
 
+Untuk Rust, kita tidak perlu menggunakan library tambahan untuk menghitung akar kuadrat. Kita bisa memanfaatkan fungsi `sqrt` yang sudah tersedia pada tipe data float. Berikut adalah contohnya:
+```rust
+let akar: f64 = 16.0_f64.sqrt(); // 4.0
+```
+
 Tapi ada masalah kalo kita mau menghitung akar yang lebih dari 2 kaya $\sqrt[3]{8}$ atau $\sqrt[4]{16}$, Nah untuk kasus ini kita bisa pangkatkan aja bilangannya dengan $1/n$  dimana si $n$ itu adalah akar yang kita mau. Contoh penggunaannya seperti ini:
 
 :::tabs
 == Javascript
 ```js
-let akar3 = Math.pow(8, 1/3); // 2
-let akar4 = Math.pow(16, 1/4); // 2
+let akar3 = Math.pow(8, 1 / 3); // 2
+let akar4 = Math.pow(16, 1 / 4); // 2
 ```
 == Kotlin
 ```kt
-val akar3 = Math.pow(8.0, 1.0/3.0) // 2.0
-val akar4 = Math.pow(16.0, 1.0/4.0) // 2.0
+val akar3 = Math.pow(8.0, 1.0 / 3.0) // 2.0
+val akar4 = Math.pow(16.0, 1.0 / 4.0) // 2.0
 ```
 == C++
 ```cpp
@@ -141,8 +163,8 @@ val akar4 = Math.pow(16.0, 1.0/4.0) // 2.0
 #include <cmath>
 
 int main() {
-    double akar3 = pow(8, 1.0/3); // 2
-    double akar4 = pow(16, 1.0/4); // 2
+    double akar3 = pow(8, 1.0 / 3); // 2
+    double akar4 = pow(16, 1.0 / 4); // 2
     std::cout << akar3 << std::endl;
     std::cout << akar4 << std::endl;
     return 0;
@@ -150,8 +172,13 @@ int main() {
 ```
 == Python
 ```python
-akar3 = pow(8, 1/3) # 2.0
-akar4 = pow(16, 1/4) # 2.0
+akar3 = pow(8, 1 / 3) # 2.0
+akar4 = pow(16, 1 / 4) # 2.0
+```
+== Rust
+```rust
+let akar3: f64 = 8.0_f64.powf(1.0 / 3.0); // 2.0
+let akar4: f64 = 16.0_f64.powf(1.0 / 4.0); // 2.0
 ```
 :::
 
@@ -198,6 +225,15 @@ while (x + 1) * (x + 1) <= n:
     x+=1
 a = n - x * x
 ```
+== Rust
+```rust
+let n = 18;
+let mut x = 1;
+while (x + 1) * (x + 1) <= n {
+    x += 1;
+}
+let a = n - x * x;
+```
 :::
 ## Modulus
 
@@ -221,6 +257,10 @@ int hasil_modulus = 10 % 3; // 1
 == Python
 ```python
 hasil_modulus = 10 % 3 # 1
+```
+== Rust
+```rust
+let Hasil_modulus: u64 = 10 % 3; // 1
 ```
 :::
 
@@ -268,6 +308,10 @@ int hasil = 6 + 3 * (pow(2,3) + sqrt(16)); // 42
 ```python
 import math
 hasil = 6 + 3 * (pow(2,3) + math.sqrt(16)) # 42.0
+```
+== Rust
+```rust
+let hasil: f64 = 6.0 + 3.0 * (2.0_f64.powf(3.0) + 16.0_f64.sqrt()); // 42.0
 ```
 :::
 
