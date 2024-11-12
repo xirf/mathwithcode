@@ -127,7 +127,7 @@ bilangan_pecahan = 1 / 2
 let bilangan_pecahan: f64 = 1.0 / 2.0;
 ```
 
-Berbeda dengan Kotlin, di mana nilai dapat otomatis berubah menjadi float, Rust dan beberapa bahasa pemrograman lainnya sensitif terhadap tipe data. Misalnya, jika kita menggunakan `1/2`, hasilnya akan `0` karena `1` merupakan integer. Untuk mendapatkan hasil sebagai float, kita perlu menambahkan `.0` di belakangnya.
+Berbeda dengan Kotlin, di mana nilai dapat otomatis berubah menjadi float, Rust dan beberapa bahasa pemrograman lainnya sensitif terhadap tipe data. Misalnya, jika kita menggunakan `1 / 2`, hasilnya akan `0` karena `1` merupakan integer. Untuk mendapatkan hasil sebagai float, kita perlu menambahkan `.0` di belakangnya.
 :::
 
 > [!WARNING]  Perhatian saat melakukan operasi dengan bilangan pecahan dan desimal
