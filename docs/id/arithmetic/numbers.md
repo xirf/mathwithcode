@@ -30,11 +30,15 @@ int bilangan_bulat = 10;
 ```python
 bilangan_bulat = 10
 ```
+== Rust
+```rust
+let bilangan_bulat: u64 = 10;
+```
 :::
 
-Meski kelihatannya sederhana, jangan lupa kalau di pemrograman, bilangan punya batasan! Contohnya, di Javascript, bilangan paling besar yang bisa kamu pakai adalah **`9,007,199,254,740,992`**. Itu setara dengan angka yang sangat besar seriously, aku aja bingung ngucapinnya.
+Meski kelihatannya sederhana, jangan lupa kalau di pemrograman, bilangan punya batasan! Contohnya, di Rust, bilangan paling besar yang bisa kamu pakai adalah **`340,282,366,920,938,463,463,374,607,431,768,211,455`** atau $2^{128} - 1$. Itu angka yang sangat besar, aku aja bingung ngucapinnya.
 
-Nah, kalau di C++ dan bahasa lain yang punya tipe data lebih banyak daripada JS (cuman `number` dan `BigInt`), batasan itu tergantung tipe data yang kamu pakai. Contoh kalo pake `short` di c++, kamu bisa mencapai angka **`32,767`** terkecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya seperti dibawah ini
+Nah, batasan itu tergantung tipe data yang kamu pakai kecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya seperti dibawah ini
 
 :::tabs
 == Javascript
@@ -90,6 +94,10 @@ double bilangan_desimal = 3.141592653589793F;
 ```python
 bilangan_desimal = 3.14
 ```
+== Rust
+```rust
+let bilangan_desimal: f64 = 3.14;
+```
 :::
 
 
@@ -100,20 +108,26 @@ Bilangan pecahan adalah bilangan yang punya pembilang dan penyebut. Di pemrogram
 :::tabs
 == Javascript
 ```js
-let bilangan_pecahan = 1/2;
+let bilangan_pecahan = 1 / 2;
 ```
 == Kotlin
 ```kt
-val bilangan_pecahan = 1/2 // Otomatis jadi float
+val bilangan_pecahan = 1 / 2 // Otomatis jadi float
 ```
 == C++
 ```cpp
-float bilangan_pecahan = 1/2;
+float bilangan_pecahan = 1 / 2;
 ```
 == Python
 ```python
-bilangan_pecahan = 1/2
+bilangan_pecahan = 1 / 2
 ```
+== Rust
+```rust
+let bilangan_pecahan: f64 = 1.0 / 2.0;
+```
+
+Berbeda dengan Kotlin, di mana nilai dapat otomatis berubah menjadi float, Rust dan beberapa bahasa pemrograman lainnya sensitif terhadap tipe data. Misalnya, jika kita menggunakan `1/2`, hasilnya akan `0` karena `1` merupakan integer. Untuk mendapatkan hasil sebagai float, kita perlu menambahkan `.0` di belakangnya.
 :::
 
 > [!WARNING]  Perhatian saat melakukan operasi dengan bilangan pecahan dan desimal
@@ -129,19 +143,23 @@ Gimana dengan **Bilangan pecahan campuran** kan di matematika ada kaya $1\frac{1
 :::tabs
 == Javascript
 ```js
-let bilangan_pecahan_campuran = 1 + 1/2;
+let bilangan_pecahan_campuran = 1 + 1 / 2;
 ```
 == Kotlin
 ```kt
-val bilangan_pecahan_campuran: Double = 1 + 1/2
+val bilangan_pecahan_campuran: Double = 1 + 1 / 2
 ```
 == C++
 ```cpp
-double bilangan_pecahan_campuran = 1 + 1/2;
+double bilangan_pecahan_campuran = 1 + 1 / 2;
 ```
 == Python
 ```python
-bilangan_pecahan_campuran = 1 + 1/2
+bilangan_pecahan_campuran = 1 + 1 / 2
+```
+== Rust
+```rust
+let bilangan_pecahan_campuran: f64 = 1.0 + 1.0 / 2.0;
 ```
 :::
 
