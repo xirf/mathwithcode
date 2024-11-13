@@ -40,9 +40,9 @@ nilai_diskon = (harga / 100) * diskon # 20000.0
 ```
 == Rust
 ```rust
-let harga: f64 = 100000.0;
-let diskon: f64 = 20.0;
-let nilai_diskon: f64 = (harga / 100.0) * diskon; // 20000
+let harga = 100000.0;
+let diskon = 20.0;
+let nilai_diskon = (harga / 100.0) * diskon; // 20000
 ```
 :::
 
@@ -82,9 +82,9 @@ harga = (nilai_diskon / diskon) * 100 # 100000.0
 ```
 == Rust
 ```rust
-let nilai_diskon: f64 = 20000.0;
-let diskon: f64 = 20.0;
-let harga: f64 = (nilai_diskon / diskon) * 100.0; // 100000.0
+let nilai_diskon = 20000.0;
+let diskon = 20.0;
+let harga = (nilai_diskon / diskon) * 100.0; // 100000.0
 ```
 :::
 
@@ -123,8 +123,8 @@ persen = (nilai_diskon / harga) * 100 # 20.0
 ```
 == Rust
 ```rust
-let harga: f64 = 100000.0;
-let nilai_diskon: f64 = 20000.0;
-let persen: f64 = (nilai_diskon / harga) * 100.0; // 20.0
+let harga = 100000.0;
+let nilai_diskon = 20000.0;
+let persen = (nilai_diskon / harga) * 100.0; // 20.0
 ```
 :::

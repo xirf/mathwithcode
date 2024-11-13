@@ -32,7 +32,7 @@ bilangan_bulat = 10
 ```
 == Rust
 ```rust
-let bilangan_bulat: u64 = 10;
+let bilangan_bulat = 10;
 ```
 :::
 
@@ -96,7 +96,7 @@ bilangan_desimal = 3.14
 ```
 == Rust
 ```rust
-let bilangan_desimal: f64 = 3.14;
+let bilangan_desimal = 3.14;
 ```
 :::
 
@@ -124,7 +124,7 @@ bilangan_pecahan = 1 / 2
 ```
 == Rust
 ```rust
-let bilangan_pecahan: f64 = 1.0 / 2.0;
+let bilangan_pecahan = 1.0 / 2.0;
 ```
 
 Berbeda dengan Kotlin, di mana nilai dapat otomatis berubah menjadi float, Rust dan beberapa bahasa pemrograman lainnya sensitif terhadap tipe data. Misalnya, jika kita menggunakan `1 / 2`, hasilnya akan `0` karena `1` merupakan integer. Untuk mendapatkan hasil sebagai float, kita perlu menambahkan `.0` di belakangnya.
@@ -159,7 +159,7 @@ bilangan_pecahan_campuran = 1 + 1 / 2
 ```
 == Rust
 ```rust
-let bilangan_pecahan_campuran: f64 = 1.0 + 1.0 / 2.0;
+let bilangan_pecahan_campuran = 1.0 + 1.0 / 2.0;
 ```
 :::
 

@@ -100,11 +100,11 @@ fn linear_equation(a: u64, b: u64, c: u64) -> u64 {
 }
 
 fn main() {
-    let a: u64 = 2;
-    let b: u64 = 3;
-    let c: u64 = 7;
+    let a = 2;
+    let b = 3;
+    let c = 7;
 
-    let x: u64 = linear_equation(a, b, c);
+    let x = linear_equation(a, b, c);
     println!("Nilai x adalah: {}", x);
 }
 ```
@@ -200,7 +200,7 @@ print(pldv(2, 3, 7, 1))# Output: (x: 2.0, y: 1)
 == Rust
 ```rust
 fn pldv(a: u64, b: u64, c: u64, y: u64) -> (u64, u64) {
-    let x: u64 = (c - b * y) / a;
+    let x = (c - b * y) / a;
     (x, y)
 }
 
@@ -354,17 +354,17 @@ print(f"x: {x}, y: {y}")  # Output: x: 2, y: 1
 ```rust
 fn eliminasi_pldv(a1: f64, b1: f64, c1: f64, a2: f64, b2: f64, c2: f64) -> (f64, f64) {
     // Menghitung koefisien untuk eliminasi
-    let factor: f64 = a2 / a1;
+    let factor = a2 / a1;
 
     // Membuat persamaan baru dengan mengurangi
-    let new_b2: f64 = b2 - factor * b1;
-    let new_c2: f64 = c2 - factor * c1;
+    let new_b2 = b2 - factor * b1;
+    let new_c2 = c2 - factor * c1;
 
     // Menyelesaikan untuk y
-    let y: f64 = new_c2 / new_b2;
+    let y = new_c2 / new_b2;
 
     // Menghitung x dengan substitusi y ke dalam persamaan 1
-    let x: f64 = (c1 - b1 * y) / a1;
+    let x = (c1 - b1 * y) / a1;
 
     (x, y)
 }

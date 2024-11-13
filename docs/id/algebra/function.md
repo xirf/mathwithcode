@@ -431,9 +431,9 @@ fn inverse_function(y: u64, a: u64, b: u64) -> Result<u64, &'static str> {
 }
 
 fn main() {
-    let a: u64 = 2; // Misalkan a = 2
-    let b: u64 = 3; // Misalkan b = 3
-    let y: u64 = 7; // Nilai y (f(x))
+    let a = 2; // Misalkan a = 2
+    let b = 3; // Misalkan b = 3
+    let y = 7; // Nilai y (f(x))
 
     // f(x) = 2x + 3
     let x = inverse_function(y, a, b).unwrap();

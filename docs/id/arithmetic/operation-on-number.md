@@ -51,12 +51,12 @@ hasil_pembagian = a / b # 2
 ```
 == Rust
 ```rust
-let a: u64 = 10;
-let b: u64 = 5;
-let hasil_penjumlahan: u64 = a + b; // 15
-let hasil_pengurangan: u64 = a - b; // 5
-let hasil_perkalian: u64 = a * b; // 50
-let hasil_pembagian: f64 = a as f64 / b as f64; // 2.0
+let a = 10;
+let b = 5;
+let hasil_penjumlahan = a + b; // 15
+let hasil_pengurangan = a - b; // 5
+let hasil_perkalian = a * b; // 50
+let hasil_pembagian = a as f64 / b as f64; // 2.0
 ```
 :::
 
@@ -97,8 +97,8 @@ pangkat2 = pow(2, 3) # 8
 ```
 == Rust
 ```rust
-let pangkat: u64 = 2_u64.pow(3); // 8
-let pangkat2: f64 = 2.0_f64.powf(3.0); // 8.0
+let pangkat = 2_u64.pow(3); // 8
+let pangkat2 = 2.0_f64.powf(3.0); // 8.0
 ```
 > [!NOTE]
 > Dalam Rust, `powf` bukanlah kesalahan pengetikan, melainkan nama fungsi yang digunakan untuk bilangan float. Jika kamu ingin melakukan operasi pangkat pada bilangan bulat, gunakan fungsi `pow`. Untuk bilangan float, gunakan `powf`.
@@ -141,7 +141,7 @@ akar = math.sqrt(16) # 4.0
 
 Untuk Rust, kita tidak perlu menggunakan library tambahan untuk menghitung akar kuadrat. Kita bisa memanfaatkan fungsi `sqrt` yang sudah tersedia pada tipe data float. Berikut adalah contohnya:
 ```rust
-let akar: f64 = 16.0_f64.sqrt(); // 4.0
+let akar = 16.0_f64.sqrt(); // 4.0
 ```
 
 Tapi ada masalah kalo kita mau menghitung akar yang lebih dari 2 kaya $\sqrt[3]{8}$ atau $\sqrt[4]{16}$, Nah untuk kasus ini kita bisa pangkatkan aja bilangannya dengan $1/n$  dimana si $n$ itu adalah akar yang kita mau. Contoh penggunaannya seperti ini:
@@ -177,8 +177,8 @@ akar4 = pow(16, 1 / 4) # 2.0
 ```
 == Rust
 ```rust
-let akar3: f64 = 8.0_f64.powf(1.0 / 3.0); // 2.0
-let akar4: f64 = 16.0_f64.powf(1.0 / 4.0); // 2.0
+let akar3 = 8.0_f64.powf(1.0 / 3.0); // 2.0
+let akar4 = 16.0_f64.powf(1.0 / 4.0); // 2.0
 ```
 :::
 
@@ -260,7 +260,7 @@ hasil_modulus = 10 % 3 # 1
 ```
 == Rust
 ```rust
-let Hasil_modulus: u64 = 10 % 3; // 1
+let Hasil_modulus = 10 % 3; // 1
 ```
 :::
 
@@ -311,7 +311,7 @@ hasil = 6 + 3 * (pow(2,3) + math.sqrt(16)) # 42.0
 ```
 == Rust
 ```rust
-let hasil: f64 = 6.0 + 3.0 * (2.0_f64.powf(3.0) + 16.0_f64.sqrt()); // 42.0
+let hasil = 6.0 + 3.0 * (2.0_f64.powf(3.0) + 16.0_f64.sqrt()); // 42.0
 ```
 :::
 
