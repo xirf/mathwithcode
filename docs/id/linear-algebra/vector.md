@@ -70,7 +70,10 @@ for (int i = 0; i < v.size(); i++) {
 ```rust
 let v = vec![1, 2];
 let w = vec![3, 4];
-let sum: Vec<i32> = v.iter().zip(w.iter()).map(|(vi, wi)| vi + wi).collect();
+let sum: Vec<i32> = v.iter()
+    .zip(w.iter())
+    .map(|(vi, wi)| vi + wi)
+    .collect();
 println!("{:?}", sum); // [4, 6]
 ```
 :::
@@ -114,7 +117,9 @@ for (int i = 0; i < v.size(); i++) {
 ```rust
 let v = vec![1, 2];
 let c = 2;
-let scaled: Vec<i32> = v.iter().map(|&vi| c * vi).collect();
+let scaled: Vec<i32> = v.iter()
+    .map(|&vi| c * vi)
+    .collect();
 println!("{:?}", scaled); // [2, 4]
 ```
 :::
@@ -153,7 +158,9 @@ for (int i = 0; i < v.size(); i++) {
 ```rust
 let v = vec![1, 2];
 let c = 2;
-let diff: Vec<i32> = v.iter().map(|&vi| c - vi).collect();
+let diff: Vec<i32> = v.iter()
+    .map(|&vi| c - vi)
+    .collect();
 println!("{:?}", diff); // [-2, -4]
 ```
 
@@ -196,7 +203,11 @@ magnitude = sqrt(magnitude);
 == Rust
 ```rust
 let v = vec![3, 4];
-let magnitude = (v.iter().map(|&vi: &i32| vi.pow(2)).sum::<i32>() as f64).sqrt();
+let magnitude = (
+    v.iter()
+        .map(|&vi: &i32| vi.pow(2))
+        .sum::<i32>() as f64)
+    .sqrt();
 println!("{}", magnitude); // 5
 
 ```
@@ -241,7 +252,10 @@ for (int i = 0; i < v.size(); i++) {
 ```rust
 let v = vec![1, 2];
 let w = vec![3, 4];
-let dot_product: i32 = v.iter().zip(w.iter()).map(|(vi, wi)| vi * wi).sum();
+let dot_product: i32 = v.iter()
+    .zip(w.iter())
+    .map(|(vi, wi)| vi * wi)
+    .sum();
 println!("{}", dot_product); // 11
 ```
 :::
