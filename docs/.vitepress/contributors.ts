@@ -73,6 +73,11 @@ const plainContributors: Contributors[] = [
         name: 'Abdul Malik',
         github: 'up2dul',
     },
+    {
+        avatar: 'https://github.com/windofbay.png',
+        name: 'MasBay',
+        github: 'windofbay',
+    },
 ]
 
 const contributors = plainContributors.map(c => createLinks(c))
