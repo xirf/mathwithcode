@@ -37,6 +37,11 @@ features:
     details: Data, Distribution, Regression, Hypothesis Testing and others
     link: /en/statistics/measures-concentration-dispersion
     linkText: Learn
+  - icon: 🔄️
+    title: Calculus
+    details: Limit, Derivative, and Integration  
+    link: /en/calculus/limit
+    linkText: Learn
 ---
 
 <script setup>

@@ -80,5 +80,15 @@ function sidebar() {
               },
           ],
       },
+      {
+        text: "Calculus",
+        collapsed: false,
+        items: [
+            {
+                text: "Limit",
+                link: "/en/calculus/limit",
+            },
+        ],
+      },
   ]
 }

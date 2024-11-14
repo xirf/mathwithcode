@@ -74,6 +74,12 @@ const plainContributors: Contributors[] = [
         github: 'up2dul',
     },
     {
+
+        avatar: 'https://github.com/windofbay.png',
+        name: 'MasBay',
+        github: 'windofbay',
+    },
+    {
         avatar: "https://github.com/zevtyardt.png",
         name: "Val",
         github: "zevtyardt",

@@ -37,6 +37,11 @@ features:
     details: Data, Distribusi, Regresi, Uji Hipotesis dan sebagainya
     link: /statistics/measures-concentration-dispersion
     linkText: Pelajari
+  - icon: 🔄️
+    title: Kalkulus
+    details: Limit, Turunan, dan Integral
+    link: /calculus/limit
+    linkText: Pelajari
 ---
 
 <script setup>
