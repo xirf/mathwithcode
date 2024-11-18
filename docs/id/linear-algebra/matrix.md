@@ -49,6 +49,14 @@ A = [
     [7, 8, 9]
 ]
 ```
+== Rust
+```rust
+let a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+```
 :::
 
 
@@ -70,7 +78,7 @@ $$ I = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} $$
 
 ### Matriks Segitiga Atas (*Upper Triangular Matrix*)
 
-Merupakan matriks yang elemen-elemen di bawah diagonal utamanya bernilai nol. Sebagai contoh, matriks segitiga atas $3 \times 3$ adalah: 
+Merupakan matriks yang elemen-elemen di bawah diagonal utamanya bernilai nol. Sebagai contoh, matriks segitiga atas $3 \times 3$ adalah:
 
 $$ A = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6 \end{bmatrix} $$
 
@@ -192,6 +200,28 @@ sum = [
 ]
 print(sum)  # [[6, 8], [10, 12]]
 ```
+== Rust
+```rust
+let a = [
+    [1, 2],
+    [3, 4],
+];
+let b = [
+    [5, 6],
+    [7, 8],
+];
+
+let sum: Vec<Vec<i32>> = a.iter()
+    .zip(b.iter())
+    .map(|(row_a, row_b)| {
+        row_a.iter()
+            .zip(row_b.iter())
+            .map(|(val_a, val_b)| val_a + val_b)
+            .collect()
+    })
+    .collect();
+println!("{:?}", sum); // [[6, 8], [10, 12]]
+```
 :::
 
 ### Pengurangan Matriks
@@ -266,6 +296,28 @@ diff = [
 ]
 print(diff)  # [[-4, -4], [-4, -4]]
 ```
+== Rust
+```rust
+let a = [
+    [1, 2],
+    [3, 4],
+];
+let b = [
+    [5, 6],
+    [7, 8],
+];
+
+let diff: Vec<Vec<i32>> = a.iter()
+    .zip(b.iter())
+    .map(|(row_a, row_b)| {
+        row_a.iter()
+            .zip(row_b.iter())
+            .map(|(val_a, val_b)| val_a - val_b)
+            .collect()
+    })
+    .collect();
+println!("{:?}", diff); // [[-4, -4], [-4, -4]]
+```
 :::
 
 
@@ -289,12 +341,12 @@ $$
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23}
-\end{bmatrix} \times 
+\end{bmatrix} \times
 \begin{bmatrix}
 b_{11} & b_{12} \\
 b_{21} & b_{22} \\
 b_{31} & b_{32}
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 a_{11}*b_{11} + a_{12}*b_{21} + a_{13}*b_{31} & a_{11}*b_{12} + a_{12}*b_{22} + a_{13}*b_{32} \\
 a_{21}*b_{11} + a_{22}*b_{21} + a_{23}*b_{31} & a_{21}*b_{12} + a_{22}*b_{22} + a_{23}*b_{32}
@@ -307,7 +359,7 @@ Contoh soal perkalian matriks adalah sebagai berikut:
 Diberikan dua matriks A dan B dengan ukuran 2x2 dan 2x3, masing-masing:
 
 $$
-A = 
+A =
 \begin{bmatrix}
 2 & 3 \\
 4 & 1
@@ -315,7 +367,7 @@ A =
 $$
 
 $$
-B = 
+B =
 \begin{bmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6
@@ -350,7 +402,7 @@ $$
 $$
 7. masukan semua elemen ke matriks baru.
 $$
-AB = 
+AB =
 \begin{bmatrix}
 14 & 19 & 24 \\
 8 & 13 & 18
@@ -380,18 +432,18 @@ const B = [
 for (let i = 0; i < A.length; i++) {
     // Inisialisasi array untuk menyimpan hasil perkalian baris matriks A dengan kolom matriks B.
     result[i] = [];
-    
+
     // Iterasi kolom matriks B.
     for (let j = 0; j < B[0].length; j++) {
         // Inisialisasi variabel untuk menyimpan hasil perkalian baris matriks A dengan kolom matriks B.
         let sum = 0;
-        
+
         // Iterasi kolom matriks A dan baris matriks B.
         for (let k = 0; k < A[0].length; k++) {
             // Lakukan perkalian elemen matriks A dengan elemen matriks B dan tambahkan hasilnya ke variabel sum.
             sum += A[i][k] * B[k][j];
         }
-        
+
         // Simpan hasil perkalian baris matriks A dengan kolom matriks B ke array result.
         result[i][j] = sum;
     }
@@ -425,13 +477,13 @@ int main() {
         for (int j = 0; j < B[0].size(); j++) {
             // Inisialisasi variabel untuk menyimpan hasil perkalian baris matriks A dengan kolom matriks B
             int sum = 0;
-            
+
             // Iterasi kolom matriks A dan baris matriks B
             for (int k = 0; k < A[0].size(); k++) {
                 // Lakukan perkalian elemen matriks A dengan elemen matriks B dan tambahkan hasilnya ke variabel sum
                 sum += A[i][k] * B[k][j];
             }
-            
+
             // Simpan hasil perkalian baris matriks A dengan kolom matriks B ke array result
             result[i][j] = sum;
         }
@@ -470,12 +522,12 @@ for i in range(len(A)):
     for j in range(len(B[0])):
         # Inisialisasi variabel untuk menyimpan hasil perkalian baris matriks A dengan kolom matriks B
         sum = 0
-        
+
         # Iterasi kolom matriks A dan baris matriks B
         for k in range(len(A[0])):
             # Lakukan perkalian elemen matriks A dengan elemen matriks B dan tambahkan hasilnya ke variabel sum
             sum += A[i][k] * B[k][j]
-        
+
         # Simpan hasil perkalian baris matriks A dengan kolom matriks B ke array result
         result[i][j] = sum
 
@@ -485,6 +537,33 @@ for row in result:
         print(val, end=" ")
     print()
 
+```
+== Rust
+```rust
+let a = [
+    [2, 3],
+    [4, 1],
+];
+let b = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+
+let mut result = vec![vec![0; 3]; 2];
+for i in 0..2 {
+    for j in 0..3 {
+        for k in 0..2 {
+            result[i][j] += a[i][k] * b[k][j];
+        }
+    }
+}
+
+for row in result.iter() {
+    for val in row.iter() {
+        print!("{} ", val);
+    }
+    println!();
+}
 ```
 :::
 
@@ -569,6 +648,23 @@ scaled = [
 ]
 print(scaled)  # [[2, 4], [6, 8]]
 ```
+== Rust
+```rust
+let a = [
+    [1, 2],
+    [3, 4],
+];
+let c = 2;
+
+let scaled: Vec<Vec<i32>> = a.iter()
+    .map(|row| {
+        row.iter()
+            .map(|&val| c * val)
+            .collect()
+    })
+    .collect();
+println!("{:?}", scaled); // [[2, 4], [6, 8]]
+```
 :::
 
 
@@ -627,6 +723,22 @@ transpose = [
     for i in range (len(A[0]))
 ]
 print(transpose)  # [[1, 4], [2, 5], [3, 6]]
+```
+== Rust
+```rust
+let a = [
+    [1, 2, 3],
+    [4, 5, 6],
+];
+
+let transpose: Vec<Vec<i32>> = (0..3)
+    .map(|i| {
+        a.iter()
+            .map(|row| row[i])
+            .collect()
+    })
+    .collect();
+println!("{:?}", transpose); // [[1, 4], [2, 5], [3, 6]]
 ```
 :::
 
@@ -748,7 +860,41 @@ def determinant(A):
         return sum(A[0][j] * determinant([row[:j] + row[j + 1:] for row in A[1:]]) * (-1) ** (1 + j) for j in range(len(A[0])))
 
 print(determinant(A))  # 0
+```
+== Rust
+```rust
+fn determinant(matrix: [Vec<i32>]) -> i32 {
+    let n = matrix.len();
+    if n == 2 {
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+    }
 
+    let mut det = 0;
+    for (j, &val) in matrix[0].iter().enumerate() {
+        let sub_matrix: Vec<Vec<i32>> = matrix[1..]
+            .iter()
+            .map(|row| {
+                row.iter()
+                    .enumerate()
+                    .filter(|&(i, _)| i != j)
+                    .map(|(_, &x)| x)
+                    .collect()
+            })
+            .collect();
+        det += val * determinant(&sub_matrix) * if j % 2 == 0 { 1 } else { -1 };
+    }
+
+    det
+}
+
+fn main() {
+    let a = vec![
+        vec![1, 2, 3],
+        vec![4, 5, 6],
+        vec![7, 8, 9],
+    ];
+    println!("{}", determinant(a)); // 0
+}
 ```
 :::
 
@@ -838,6 +984,25 @@ def determinant(A):
 
 print(determinant(A))  # 0
 ```
+== Rust
+```rust
+fn determinant(matrix: [Vec<i32>]) {
+    let mut det = 1;
+    for i in 0..matrix.len() {
+        det *= matrix[i][i];
+    }
+    det
+}
+
+fn main() {
+    let a = vec![
+        vec![1, 2, 3],
+        vec![4, 5, 6],
+        vec![7, 8, 9],
+    ];
+    println!("{}", determinant(a)); // 0
+}
+```
 :::
 
 ## Invers Matriks
@@ -915,7 +1080,6 @@ fun inverse(A: Array<IntArray>): Array<DoubleArray> {
 
 println(inverse(A).contentDeepToString()) // [[-2.0, 1.0], [1.5, -0.5]]
 ```
-
 == C++
 ```cpp
 #include <iostream>
@@ -960,6 +1124,42 @@ int main() {
     }
 
     return 0;
+}
+```
+== Rust
+```rust
+fn determinant(matrix: &[Vec<f32>]) -> f32 {
+    matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+}
+
+fn cofactor(matrix: &[Vec<f32>], i: usize, j: usize) -> f32 {
+    matrix[1 - i][1 - j]
+}
+
+fn adjoint(matrix: &[Vec<f32>]) -> Vec<Vec<f32>> {
+    vec![
+        vec![cofactor(&matrix, 0, 0), -cofactor(&matrix, 0, 1)],
+        vec![-cofactor(&matrix, 1, 0), cofactor(&matrix, 1, 1)],
+    ]
+}
+
+fn inverse(matrix: &[Vec<f32>]) -> Vec<Vec<f32>> {
+    let det = determinant(&matrix);
+    let adj = adjoint(&matrix);
+    adj.iter()
+        .map(|row| row.iter()
+            .map(|&val| val / det)
+            .collect())
+        .collect()
+}
+
+fn main() {
+    let a = vec![
+        vec![1.0, 2.0],
+        vec![3.0, 4.0],
+    ];
+    let hasil = inverse(&a);
+    println!("{:?}", hasil); // [[-2.0, 1.0], [1.5, -0.5]]
 }
 ```
 :::
@@ -1098,6 +1298,43 @@ int main() {
     }
 
     return 0;
+}
+```
+== Rust
+```rust
+fn inverse(a: Vec<Vec<i32>>) -> Vec<Vec<f64>> {
+    let n = a.len();
+    let mut ai: Vec<Vec<f64>> = a.iter()
+        .enumerate()
+        .map(|(i, row)| {
+            let mut r: Vec<f64> = row.iter().map(|&x| x as f64).collect();
+            r.append(&mut (0..n).map(|j| if i == j { 1.0 } else { 0.0 }).collect());
+            r
+        })
+        .collect();
+
+    for i in 0..n {
+        let pivot = ai[i][i];
+        for j in 0..ai[i].len() {
+            ai[i][j] /= pivot;
+        }
+        for k in 0..n {
+            if k != i {
+                let factor = ai[k][i];
+                for j in 0..ai[k].len() {
+                    ai[k][j] -= factor * ai[i][j];
+                }
+            }
+        }
+    }
+
+    ai.iter().map(|row| row[n..].to_vec()).collect()
+}
+
+fn main() {
+    let a = vec![vec![1, 2], vec![3, 4]];
+    let result = inverse(a);
+    println!("{:?}", result); // [[-2.0, 1.0], [1.5, -0.5]]
 }
 ```
 :::
