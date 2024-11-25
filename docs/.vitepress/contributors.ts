@@ -86,6 +86,12 @@ const plainContributors: Contributors[] = [
         facebook: "mzyui",
         sponsor: 'https://trakteer.id/mzyu',
     },
+    {
+        avatar: "https://github.com/fadjarrafi.png",
+        name: "Fadjar",
+        github: "fadjarrafi",
+        facebook: "rafifadjar21",
+    },
 
 ]
 
