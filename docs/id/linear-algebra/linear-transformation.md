@@ -82,7 +82,25 @@ def scalling(vector, scalar):
 vector = [2, 3]
 scalar = 2
 result = scalling(vector, scalar)
-print(result)  # output: [4, 6]
+print(result)  # Output: [4, 6]
+```
+== Rust
+```rust
+fn scalling(vector: &[i32], scalar: i32) -> Vec<i32> {
+    let mut hasil_scaling = vec![];
+    for i in 0..vector.len() {
+        hasil_scaling.push(vector[i] * scalar)
+    }
+    hasil_scaling
+}
+
+fn main() {
+    // contoh penggunaan
+    let vector = [2, 3];
+    let scalar = 2;
+    let hasil = scalling(&vector, scalar);
+    println!("{:?}", hasil); // Output: [4, 6]
+}
 ```
 :::
 
@@ -174,6 +192,30 @@ int main() {
     return 0;
 }
 ```
+== Rust
+```rust
+use std::f64::consts::PI;
+
+fn hitung_rotasi(vector: [f64; 2], theta: f64) -> [f64; 2] {
+    // Hitung cosinus dan sinus dari sudut theta
+    let cos_theta = theta.cos();
+    let sin_theta = theta.sin();
+
+    // Lakukan perhitungan rotasi untuk komponen i dan j
+    [
+        vector[0] * cos_theta - vector[1] * sin_theta, // Komponen i
+        vector[0] * sin_theta + vector[1] * cos_theta, // Komponen j
+    ]
+}
+
+fn main() {
+    let vector = [2.0, 3.0];
+    let theta = PI / 2.0; // 90 derajat
+
+    let result = hitung_rotasi(vector, theta);
+    println!("({}, {})", result[0], result[1]);
+}
+```
 :::
 
 ## Penggeseran
@@ -235,6 +277,26 @@ int main() {
     std::vector<double> result = geser(vector, a, b);
     std::cout << "(" << result[0] << ", " << result[1] << ")" << std::endl;
     return 0;
+}
+```
+== Rust
+```rust
+fn geser(vector: &[f64; 2], a: f64, b: f64) -> [f64; 2] {
+    // Hitung hasil penggeseran
+    [
+        vector[0] * 1.0 + a * vector[1], // Komponen x
+        b * vector[0] + vector[1] * 1.0, // Komponen y
+    ]
+}
+
+fn main() {
+    // Contoh penggunaan
+    let vector = [2.0, 3.0];
+    let a = 1.0; // parameter shearing horizontal
+    let b = 0.0; // parameter shearing vertikal
+
+    let result = geser(&vector, a, b);
+    println!("({}, {})", result[0], result[1]);
 }
 ```
 :::
@@ -317,10 +379,35 @@ int main() {
     return 0;
 }
 ```
+== Rust
+```rust
+fn hitung_refleksi(vector: &[f64; 2], terhadap: &[i32], hasil: &mut [f64; 2]) {
+    if terhadap[0] == 1 {
+        hasil[0] = vector[0]; // Refleksi terhadap sumbu x
+        hasil[1] = -vector[1];
+    } else if terhadap[0] == 2 {
+        hasil[0] = -vector[0]; // Refleksi terhadap sumbu y
+        hasil[1] = vector[1];
+    }
+}
+
+fn main() {
+    let vector = [2.0, 3.0];
+    let terhadap = [1]; // 1 untuk refleksi terhadap x, 2 untuk refleksi terhadap y
+    let mut hasil = [0.0, 0.0];
+
+    hitung_refleksi(&vector, &terhadap, &mut hasil);
+
+    println!("Hasil refleksi vektor [{}, {}] terhadap", vector[0], vector[1]);
+    if terhadap[0] == 1 {
+        println!("x adalah [{}, {}]", hasil[0], hasil[1]);
+    } else if terhadap[0] == 2 {
+        println!("y adalah [{}, {}]", hasil[0], hasil[1]);
+    }
+}
+```
 :::
 
 ::: info
 Sebenarnya semua jenis-jenis yang disebutkan merupakan sedikit gambaran dari transformasi linear karena transformasi linear dapat bebas dilakukan dengan membuat matriks transformasi sendiri selama masih mematuhi aturan Aditivitas dan Homogenitas serta aturan Perkalian matriks.
 :::
-
-
