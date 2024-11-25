@@ -318,8 +318,8 @@ Here's the $R^2$ calculation if we depict it through a graph:
   <line x1="50" y1="50" x2="50" y2="350" stroke="black" stroke-width="2"/>
   
   <!-- Axis Labels -->
-  <text x="300" y="390" text-anchor="middle">Biaya Iklan (X)</text>
-  <text x="20" y="200" transform="rotate(-90, 20, 200)" text-anchor="middle">Penjualan (Y)</text>
+  <text x="300" y="390" text-anchor="middle">Advertising Cost (X)</text>
+  <text x="20" y="200" transform="rotate(-90, 20, 200)" text-anchor="middle">Sales (Y)</text>
   
   <!-- Regression Line -->
   <line x1="50" y1="290" x2="550" y2="90" stroke="blue" stroke-width="2"/>
