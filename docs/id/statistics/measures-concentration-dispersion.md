@@ -33,7 +33,7 @@ Berikut ini contoh *case* dari persentil data tunggal dan data berkelompok
 ### Data Tunggal
 Misalnya ada baris angka seperti dibawah dan kita ingin mencari persentil ke-50
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data Tunggal
@@ -157,7 +157,7 @@ $$ P_p = L + \frac{p/100 - \sum f_b}{f_i} \times c $$
 | c             | Panjang kelas interval yang memuat $P_p$                              |
 
 Misalnya ada data kelompok umur warga dibawah 1 tahun hingga 40 tahun seperti dibawah dan kita ingin mencari persentil ke-50 dari kelompok data tersebut
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data kelompok
@@ -331,7 +331,7 @@ Berikut ini contoh *case* dari desil data tunggal dan data berkelompok (mengguna
 ### Data Tunggal
 Misalnya ada baris angka seperti dibawah dan kita ingin mencari desil ke-5
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data Tunggal
@@ -439,7 +439,7 @@ $$ D_i = L + \frac{i/10 - \sum f_b}{f_i} \times c $$
 | c             | Panjang kelas interval yang memuat $D_i$                              |
 
 Misalnya ada data kelompok umur warga dibawah 1 tahun hingga 40 tahun seperti dibawah dan kita ingin mencari desil ke-9 dari kelompok data tersebut
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data kelompok
@@ -558,7 +558,7 @@ $$ Qi = \frac{i(n+1)}{4} $$
 ### Data Tunggal
 Misalnya ada baris angka seperti dibawah dan kita ingin mencari kuartil ke-2
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data Tunggal
@@ -606,7 +606,7 @@ $$ Q_i = L + \frac{i/4 - \sum f_b}{f_i} \times c $$
 | c             | Panjang kelas interval yang memuat $Q_i$                              |
 
 Misalnya ada data kelompok umur warga dibawah 1 tahun hingga 40 tahun seperti dibawah dan kita ingin mencari kuartil ke-2 dari kelompok data tersebut
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Data kelompok

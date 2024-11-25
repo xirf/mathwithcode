@@ -40,7 +40,7 @@ $$\begin{align*}
 3. Sehingga nilai $x$ yang memenuhi persamaan tersebut adalah $x = 2$.
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function linear_equation(a, b, c) {
@@ -145,7 +145,7 @@ x &= 2
 \end{align*}$$
 
 Bagaimana jika permasalahan ini kita jadikan kode? Berikut contoh implementasinya:
-:::tabs
+:::tabs key:lang
 ==javascript
 
 ```js
@@ -250,7 +250,7 @@ Jika sudah memiliki dua persamaan kita bisa menghilangkan salah satu variabel de
 6. Sehingga nilai $x$ dan $y$ yang memenuhi persamaan tersebut adalah $x = 2$ dan $y = 1$.
 
 Bagaimana jika permasalahan ini kita jadikan kode? Berikut contoh implementasinya:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```js

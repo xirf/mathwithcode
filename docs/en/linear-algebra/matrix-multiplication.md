@@ -94,7 +94,7 @@ To solve the matrix multiplication above. Here are the steps:
 
 Below is the code implementation in multiple languages:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```js
 // Initialize arrays for matrices and result

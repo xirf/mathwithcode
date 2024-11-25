@@ -48,7 +48,7 @@ Dari pohon faktor diatas kita bisa lihat bahwa faktorisasi dari 100 adalah $2 \t
 
 Kalo di pemrograman kita bisa pake _loop_ dan [modulo](/arithmetic/operation-on-number#modulus) untuk mencari faktorisasi dari suatu bilangan. Berikut contoh implementasinya:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```js
@@ -173,7 +173,7 @@ Misalnya lagi jika $a = 3$ maka kelipatan dari 3 adalah:
 - dan seterusnya...
 
 Jika kelipatan diimplementasikan dalam pemrograman, kita bisa menggunakan _loop_ untuk melakukan perkalian berulang. Contohnya seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```js
@@ -270,7 +270,7 @@ Cara ngitungnya kek gini:
 5. Kalo $r$ udah 0, maka FPB dari $a$ dan $b$ adalah $b$.
 
 Pusing? Tenang, mari jadiin kode aja biar lebih mudah dimengerti kek gini:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```javascript
@@ -383,7 +383,7 @@ Kalian bebas sih pake yang mana, yang penting gak salah.
 
 
 Gampang kan? Mari kita jadiin kode biar lebih mudah dimengerti:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```javascript

@@ -20,7 +20,7 @@ Suppose a curve $f(x) = x+3$ and we will know limit value around $x=3$. We can a
 
 or with programming code:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function f(x){
@@ -139,7 +139,7 @@ let's suppose another function that similiar to the  $f(x)=x+3$, let's take $g(x
 | ...                 | ...                 | 
 
 code:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function f(x){

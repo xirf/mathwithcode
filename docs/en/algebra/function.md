@@ -12,7 +12,7 @@ Where $f$ is a function, $x$ is the input, and $y$ is the output.
 Algebraic functions have a similar concept to functions in programming where both have *input* dan *output*.
 For example, the function $f(x) = 2x + 3$ when we make it as a function in programming, it will be as follows:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function myFunction(x) {
@@ -102,7 +102,7 @@ $$\begin{align*}
 \end{align*}$$
 
 If we make it as a function in programming, it will be like the followings:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -168,7 +168,7 @@ $$\begin{align*}
 
 If we make it as a function in programming, it will be like the followings:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -235,7 +235,7 @@ $$\begin{align*}
 \end{align*}$$
 
 If we make it as a function in programming, it will be like the followings:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -316,7 +316,7 @@ $$\begin{align*}
 Then the inverse of the function $f(x) = 2x + 6$ is $f^{-1}(x) = \frac{1}{2}x-3$
 
 When we make it as a function in programming where the value $x$ is known and the output is the value $y$, then it will be as follows:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function inverseFunction(y, a, b) {

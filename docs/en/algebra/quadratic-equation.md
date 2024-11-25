@@ -68,7 +68,7 @@ Which eventually becomes $x = 4$ or $x = -1$. So, the roots of the equation $x^2
 
 If implemented in code, the result would be like this:
 
-:::tabs
+:::tabs key:lang
 ==Javascript
 
 ```js

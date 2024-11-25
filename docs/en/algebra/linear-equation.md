@@ -43,7 +43,7 @@ $$\begin{align*}
 3. Therefore the value of $x$ which satisfies the equation is $x = 2$.
 
 If we implemented it in code, the code would be like this:
-:::tabs
+:::tabs key:lang
 ==javascript
 
 ```js
@@ -137,7 +137,7 @@ x &= 2
 \end{align*}$$
 
 What if we implement this problem as code? Here is an example of its implementation:
-:::tabs
+:::tabs key:lang
 ==javascript
 
 ```js
@@ -230,7 +230,7 @@ If we already have two equations, we can eliminate one of the variables by multi
 6. So the value of $x$ and $y$ that satisfies the equation is $x = 2$ and $y = 1$.
 
 What if we implement this problem as code? Here is an example of its implementation:
-:::tabs
+:::tabs key:lang
 ==javascript
 
 ```js

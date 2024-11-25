@@ -34,7 +34,7 @@ $$
 $$
 
 It can be implemented into a program, like the followings:
-:::tabs
+:::tabs key:lang
 == JavaScript
 ``` js
 function scaling(vector, scalar) {
@@ -117,7 +117,7 @@ R(\theta)u = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
 $$
 
 It can be implemented into a program, like the followings:
-:::tabs
+:::tabs key:lang
 == JavaScript
 ``` js
 function rotation(vector, theta) {
@@ -236,7 +236,7 @@ $$
 
 This can be implemented in a program as follows:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ``` js
 function shear(vector, a, b) {
@@ -323,7 +323,7 @@ $$
 
 This can be implemented in a program as follows:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ``` js
 function reflect(vector, axis) {

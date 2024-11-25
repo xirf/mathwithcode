@@ -9,7 +9,7 @@ Dalam matematika fungsi aljabar merupakan suatu notasi yang menghubungkan dua hi
 
 Fungsi aljabar memiliki konsep yang mirip dengan fungsi yang ada di pemrograman dimana keduanya memiliki *input* dan *output*. Misalnya fungsi $f(x) = 2x + 3$ apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function fungsi(x) {
@@ -95,7 +95,7 @@ $$\begin{align*}
 \end{align*}$$
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -174,7 +174,7 @@ $$\begin{align*}
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -255,7 +255,7 @@ $$\begin{align*}
 \end{align*}$$
 
 Apabila kita jadikan sebagai fungsi di pemrograman, maka akan menjadi seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function f(x) {
@@ -350,7 +350,7 @@ $$\begin{align*}
 Maka invers dari fungsi $f(x) = 2x + 6$ adalah $f^{-1}(x) = \frac{1}{2}x-3$
 
 Apabila kita jadikan sebagai fungsi di pemrograman dimana nilai $x$ sudah diketahui dan outputnya adalah nilai $y$, maka akan menjadi seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function inverse_function(y, a, b) {

@@ -13,7 +13,7 @@ $$ percentage\;value = \frac{10}{100} \times 20\% = 2 $$
 because divided by $100$, we can subtract two zeros from $10$ which becomes $0.1$ and multiply it by $20$ to get $2$.
 
 If we convert it to code, we can write it like this:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let price = 10;
@@ -49,7 +49,7 @@ For example, we have a percentage value of $2$ and we want to find the original 
 $$ original\;value = \frac{2}{20\%} \times 100 = 10 $$
 
 If we convert it to code, we can write it like this:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let percentageValue = 2;
@@ -85,7 +85,7 @@ For example, we have an original value of $10$ and we want to find the percentag
 $$ percentage = \frac{2}{10} \times 100 = 20\% $$
 
 If we convert it to code, we can write it like this:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let price = 10;

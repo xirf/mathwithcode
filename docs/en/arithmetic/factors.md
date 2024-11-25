@@ -48,7 +48,7 @@ From the factor tree above we can see that the factorization of 100 is $2 \times
 
 In programming, we can use _loop_ and [modulo](/en/arithmetic/operation-on-number#modulus) to find the factorization of a number. Here is an example of its implementation:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```js
@@ -148,7 +148,7 @@ For example, if $a = 3$ then the multiples of 3 are:
 - and so on...
 
 If multiples are implemented in programming, we can use _loop_ to perform repeated multiplication. Here’s an example:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```js
@@ -228,7 +228,7 @@ How to calculate it is like this:
 5. If $r$ is 0, then the GCF of $a$ and $b$ is $b$.
 
 Are you still with me? Relax, let's turn it into code that we can easily understand:
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```javascript
@@ -318,7 +318,7 @@ From the table above we can see that the common multiple of 12 and 18 is **$36$*
 You are free to use whichever one you like, as long as it's not wrong.
 
 Easy right? Let's turn it into code that we can easily understand::
-:::tabs
+:::tabs key:lang
 == Javascript
 
 ```javascript

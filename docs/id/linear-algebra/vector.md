@@ -12,7 +12,7 @@ Dalam ruang dua dimensi, vektor hanya memiliki dua komponen, yaitu $v_1$ dan $v_
 
 Dalam pemrograman, vektor sering direpresentasikan sebagai suatu array, list, atau tuple. Misalnya kita dapat merepresentasikan vektor $\mathbf{v} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ sebagai:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2];
@@ -42,7 +42,7 @@ Penjumlahan vektor dilakukan dengan cara menjumlahkan setiap komponen vektor. Mi
 $$ \mathbf{v} + \mathbf{w} = \begin{bmatrix} v_1 + w_1 \\ v_2 + w_2 \end{bmatrix} $$
 
 Operasi ini apabila diimplementasikan dalam pemrograman kita bisa memanfaatkan fungsi `map` yang akan melakukan iterasi pada setiap elemen vektor.
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2];
@@ -89,7 +89,7 @@ $$ c \cdot \mathbf{v} = \begin{bmatrix} c \cdot v_1 \\ c \cdot v_2 \end{bmatrix}
 
 Disini setiap elemen vektor $\mathbf{v}$ akan dikalikan dengan bilangan skalar $c$ ini akan menghasilkan vektor baru yang elemennya diperoleh dari perkalian skalar tersebut.
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2];
@@ -130,7 +130,7 @@ Selisih atau pengurangan vektor sama seperti penjumlahan vektor, hanya saja kita
 
 $$ \mathbf{v} - \mathbf{w} = \begin{bmatrix} v_1 - w_1 \\ v_2 - w_2 \end{bmatrix} $$
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2];
@@ -178,7 +178,7 @@ $$ \|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2} $$
 
 Dalam pemrograman, kita dapat menghitung magnitudo vektor dengan menggunakan fungsi `reduce` dan `sqrt` untuk menghitung akar kuadrat.
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [3, 4];
@@ -224,7 +224,7 @@ Contoh apabila kita memiliki dua vektor $\mathbf{v} = \begin{bmatrix} 1 \\ 2 \en
 $$ \mathbf{v} \cdot \mathbf{w} = 1 \cdot 3 + 2 \cdot 4 = 11 $$
 
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2];
@@ -275,7 +275,7 @@ $$ \mathbf{v} \times \mathbf{w} = \begin{bmatrix} 2 \cdot 6 - 3 \cdot 5 \\ 3 \cd
 
 Produk silang ini penting dalam fisika untuk menghitung momen gaya dan dalam grafika komputer untuk menghitung vektor normal.
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const v = [1, 2, 3];

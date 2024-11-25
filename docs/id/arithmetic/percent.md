@@ -13,7 +13,7 @@ $$ nilai\_diskon = \frac{100.000}{100} \times 20\% = 20.000 $$
 karena dibagi $100$ jadi kita bisa kurangi dua nol dari $100.000$ jadi $1.000$ dan dikalikan $20$ jadi $20.000$.
 
 Kalo diubah ke kodingan, kita bisa tulis seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let harga = 100000;
@@ -55,7 +55,7 @@ Misalnya kita punya nilai diskon sebesar $20.000$ dan kita mau cari nilai asliny
 $$ nilai = \frac{20.000}{20\%} \times 100 = 100.000 $$
 
 Kalo diubah ke kodingan, kita bisa tulis seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let nilai_diskon = 20000;
@@ -96,7 +96,7 @@ Misalnya kita punya nilai asli sebesar $100.000$, dan nilai diskon $20.000$ lalu
 $$ persen = \frac{20.000}{100.000} \times 100 = 20\% $$
 
 Kalo diubah ke kodingan, kita bisa tulis seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let harga = 100000;

@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-    name: "Math W Code"
+    name: "Math With Code"
     text: "Belajar matematika dengan barisan kode"
     tagline: Matematika dengan pendekatan yang berbeda
     image:
-        src: /icon.png
-        alt: Math W Code Logo
+        src: /luca.webp
+        alt: Luca Math With Code
     actions:
         - theme: brand
           text: Belajar Sekarang

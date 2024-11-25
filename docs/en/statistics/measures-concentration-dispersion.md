@@ -35,7 +35,7 @@ The following is an example case of percentiles of single data and grouped data.
 ### Data Tunggal
 For example, there is a row of numbers like below and we want to find the 50th percentile.
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Single Data Set
@@ -121,7 +121,7 @@ $$ P_p = L + \frac{p/100 - \sum f_b}{f_i} \times c $$
 | c             | The length of the loading interval class $P_p$                              |
 
 For example, there is data on the age group of citizens under 1 year to 40 years as below and we want to find the 50th percentile of this data group.
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Group Data
@@ -240,7 +240,7 @@ Here is an example *case* of single data decile and grouped data (using previous
 ### Single Data
 For example, there is a row of numbers like below and we want to find the 5th decile.
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Single Data
@@ -317,7 +317,7 @@ $$ D_i = L + \frac{i/10 - \sum f_b}{f_i} \times c $$
 | c             | The length of the loading interval class $D_i$                          |
 
 For example, there is data on the age group of citizens under 1 year to 40 years as below and we want to find the 9th decile of this data group
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Group Data
@@ -436,7 +436,7 @@ $$ Qi = \frac{i(n+1)}{4} $$
 ### Single Data
 For example, there is a row of numbers like below and we want to find the 2nd quartile
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Single Data
@@ -514,7 +514,7 @@ $$ Q_i = L + \frac{i/4 - \sum f_b}{f_i} \times c $$
 | c             | The length of the loading interval class $Q_i$                          |
 
 For example, there is data on the age group of citizens under 1 year to 40 years as below and we want to find the 2nd quartile of this data group
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 // Group Data

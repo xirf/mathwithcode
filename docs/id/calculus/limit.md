@@ -21,7 +21,7 @@ Misalnya terdapat sebuah fungsi $f(x) = x+3$ dan kita ingin mengetahui nilai lim
 | ...                 | ...                 |
 
 atau dengan menggunakan kode program:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function f(x){
@@ -164,7 +164,7 @@ yakni $g(x)=\frac{x^2-9}{x-3}$
 | ...                 | ...                 |
 
 kode program:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function f(x){

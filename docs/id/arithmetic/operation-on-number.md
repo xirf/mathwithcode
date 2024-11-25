@@ -12,7 +12,7 @@ Operasi bilangan atau proses untuk memanipulasi nilai numerik tertentu pake tekn
 
 Di pemrograman, kita bisa melakukan berbagai operasi matematika dengan bilangan. Ada penjumlahan, pengurangan, perkalian, dan pembagian. Berbeda dengan matematika biasa yang pakai simbol `+`, `-`, `*`, dan `/`, di pemrograman kita pakai simbol yang berbeda. Contoh penggunaannya seperti ini:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let a = 10;
@@ -68,7 +68,7 @@ Di atas kita menggunakan simbol `/` untuk pembagian dan `*` untuk perkalian. Ini
 ## Pangkat (Exponentiation)
 
 Pangkat adalah operasi matematika yang digunakan untuk menghitung hasil perkalian bilangan dengan dirinya sendiri sebanyak $n$ kali. Di pemrograman, kita bisa menggunakan operator `**` ataupun pakai `pow()` untuk menghitung pangkat. Contoh penggunaannya seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let pangkat = 2 ** 3; // 8
@@ -146,7 +146,7 @@ let akar = 16.0_f64.sqrt(); // 4.0
 
 Tapi ada masalah kalo kita mau menghitung akar yang lebih dari 2 kaya $\sqrt[3]{8}$ atau $\sqrt[4]{16}$, Nah untuk kasus ini kita bisa pangkatkan aja bilangannya dengan $1/n$  dimana si $n$ itu adalah akar yang kita mau. Contoh penggunaannya seperti ini:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let akar3 = Math.pow(8, 1 / 3); // 2
@@ -189,7 +189,7 @@ Hal ini bisa terjadi karena apapun bilangan yang memiliki pangkat $1/n$ akan men
 Kita bisa juga mencari $\lfloor\sqrt{n}\rfloor$ tanpa memakai modul loh dengan cara memanfaatkan persamaan
 $$n = x^2 + a$$
 dengan $x$ adalah perpangkatan terdekat dari $n$ dan sisanya adalah $a$. Sebagai contoh $n = 18$ maka $x = 4$ lalu sisanya kita bisa cari dengan cara $a = n - x^2$. Kalau di kodingan seperti ini
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let n = 18;
@@ -241,7 +241,7 @@ Modulus atau sisa hasil pembagian adalah operasi matematika yang digunakan untuk
 
 Operator ini berguna banget buat ngecek bilangan itu genap, ganjil atau punya pola tertentu. Contoh penggunaannya seperti ini:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let hasil_modulus = 10 % 3; // 1
@@ -290,7 +290,7 @@ Jadi, hasil akhirnya adalah **42**.
 
 Kalo di pemrograman urutan operasi ini udah di tangani sama bahasanya jadi kamu gak perlu khawatir kalo salah urutan operasi. Kamu cukup teliti aja sama rumus yang akan kamu gunakan. Kalo rumus tadi kita masukkan ke kode maka akan jadi seperti ini.
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let hasil = 6 + 3 * (2 ** 3 + Math.sqrt(16)); // 42

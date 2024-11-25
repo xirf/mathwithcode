@@ -60,7 +60,7 @@ Yang akhirnya menjadi $x = 4$ atau $x = -1$. Jadi, akar-akar dari persamaan $x^2
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 function cari_akar_persamaan(a, b, c) {

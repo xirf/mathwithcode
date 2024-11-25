@@ -13,7 +13,7 @@ However, numbers in programming are categorized into several types, depending on
 
 Integers are numbers without decimals. In programming, integers are usually referred to as `integer`. Examples of integers include 1, 2, 3, 4, 5, and so on.
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let myInteger = 10;
@@ -36,7 +36,7 @@ Although it seems simple, don't forget that in programming, numbers have limits!
 
 Now, in C++ and other languages that have more data types than JS (which only has `number` and `BigInt`), the limits depend on the data type you use. For example, if you use `short` in C++, you can reach the number **`32,767`** except in Python, which doesn't have a limit for integers, as Python dynamically handles the size of integers. Here's an example:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 
 | Data Type | Size (bits) | Minimum | Maximum | Maximum (Explicitly) |
@@ -65,7 +65,7 @@ There are many more details which [you can check here](https://learn.microsoft.c
 
 Decimal numbers or floating points are numbers that have decimals. In programming, decimal numbers are usually referred to as `float` or `double`. Examples of decimal numbers include 1.5, 2.3, 3.14, and so on. To create a decimal number, you can use code like the following
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let myDecimal = 3.14;
@@ -97,7 +97,7 @@ myDecimal = 3.14
 
 Fractional numbers are numbers that have a numerator and a denominator. In programming, fractional numbers are usually referred to as `fraction`. Examples of fractional numbers include 1/2, 3/4, 5/6, and so on. Unfortunately, programming does not have a data type for fractional numbers. They are simply computed, resulting in a decimal number. An example of its use is as follows:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let myFraction = 1/2;
@@ -126,7 +126,7 @@ myFraction = 1/2
 > You can also use libraries like BigNumber or others.
 
 What about **mixed fractions**? In mathematics, there's something like $1\frac{1}{2}$, and you can do it in programming too. You can use `float` or `double` for mixed fractions. An example of its use is as follows:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let mixedFraction = 1 + 1/2;

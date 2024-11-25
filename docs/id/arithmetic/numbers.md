@@ -13,7 +13,7 @@ Namun bilangan di pemrograman dibagi-bagi ke beberapa jenis, tergantung dari tip
 
 Bilangan bulat adalah bilangan yang tidak punya koma. Di pemrograman, bilangan bulat biasanya disebut dengan `integer`. Contoh bilangan bulat adalah 1, 2, 3, 4, 5, dan seterusnya.
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let bilangan_bulat = 10;
@@ -40,7 +40,7 @@ Meski kelihatannya sederhana, jangan lupa kalau di pemrograman, bilangan punya b
 
 Nah, batasan itu tergantung tipe data yang kamu pakai kecuali di python, python tidak memiliki batas bilangan bulat, karena Python secara dinamis menangani ukuran bilangan bulat. contohnya seperti dibawah ini
 
-:::tabs
+:::tabs key:lang
 == Javascript
 
 | Tipe Data | Ukuran (bits) | Minimal| Maksimal| Maksimal (Secara Eksplisit) |
@@ -69,7 +69,7 @@ Banyak banget selengkapnya cek [sini aja ya](https://learn.microsoft.com/en-us/c
 
 Bilangan desimal atau floating point adalah bilangan yang punya koma. Di pemrograman, bilangan desimal biasanya disebut dengan `float` atau `double`. Contoh bilangan desimal adalah 1.5, 2.3, 3.14, dan seterusnya. Untuk membuat bilangan desimal kamu bisa menggunakan kode seperti dibawah ini
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let bilangan_desimal = 3.14;
@@ -105,7 +105,7 @@ let bilangan_desimal = 3.14;
 
 Bilangan pecahan adalah bilangan yang punya pembilang dan penyebut. Di pemrograman, bilangan pecahan biasanya disebut dengan `fraction`. Contoh bilangan pecahan adalah 1/2, 3/4, 5/6, dan seterusnya. Sayangnya di pemrograman, bilangan pecahan gak ada tipe datanya tapi langsung dihitung aja yang nantinya hasilnya bakal jadi bilangan desimal. Contoh penggunaannya seperti ini:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let bilangan_pecahan = 1 / 2;
@@ -140,7 +140,7 @@ Berbeda dengan Kotlin, di mana nilai dapat otomatis berubah menjadi float, Rust 
 > Kamu juga bisa menggunakan pustaka seperti BigNumber atau yang lainnya
 
 Gimana dengan **Bilangan pecahan campuran** kan di matematika ada kaya $1\frac{1}{2}$, di pemrograman juga bisa kok. Kita bisa menggunakan `float` atau `double` untuk bilangan pecahan campuran. Contoh penggunaannya seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let bilangan_pecahan_campuran = 1 + 1 / 2;

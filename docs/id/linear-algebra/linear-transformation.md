@@ -31,7 +31,7 @@ $$
 $$
 
 Bisa diimplementasikan menjadi program, seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function scalling(vector, scalar) {
@@ -115,7 +115,7 @@ $$
 R(\theta)u = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}  \begin{pmatrix}i \\ j \end{pmatrix}= \begin{pmatrix} i\cos\theta - j\sin\theta \\ i\sin\theta + j\cos\theta \end{pmatrix}
 $$
 Bisa diimplementasikan menjadi program, seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function hitung_rotasi(vector, theta) {
@@ -228,7 +228,7 @@ $$
 S(a, b)u = \begin{pmatrix} 1 & a \\ b & 1 \end{pmatrix}  \begin{pmatrix}i \\ j \end{pmatrix}= \begin{pmatrix} i + aj \\ bi + j \end{pmatrix}
 $$
 Bisa diimplementasikan menjadi program, seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function geser(vector, a, b) {
@@ -315,7 +315,7 @@ $$
 R_yu = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix}i \\ j\end{pmatrix} = \begin{pmatrix} -i \\ j \end{pmatrix}
 $$
 Bisa diimplementasikan menjadi program, seperti berikut:
-:::tabs
+:::tabs key:lang
 == Javascript
 ``` js
 function hitung_refleksi(vector, terhadap) {

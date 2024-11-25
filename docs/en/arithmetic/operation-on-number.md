@@ -11,7 +11,7 @@ Number operations or the processes of manipulating certain numeric values ​​
 
 In programming, we can perform various mathematical operations with numbers. There are addition, subtraction, multiplication, and division. Unlike regular mathematics that uses the symbols `+`, `-`, `*`, and `/`, in programming we use different symbols. An example of its use is as follows:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let a = 10;
@@ -58,7 +58,7 @@ Above we use `/` for division and `*` for multiplication. This is because in pro
 ## Exponentiation (Powers)
 
 Exponentiation is a mathematical operation used to multiply a number by itself $n$ times. In programming, you can use the `**` operator or the `pow()` to calculate powers. Here's an example:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let power = 2 ** 3; // 8
@@ -93,7 +93,7 @@ power2 = pow(2, 3) # 8
 
 Most programming languages have a function for calculating roots. In JavaScript, we can use the `Math.sqrt()` (*Square Root*) function for square roots. Here's an example:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let root = Math.sqrt(16); // 4
@@ -128,7 +128,7 @@ root = math.sqrt(16) # 4.0
 
 But there's a problem, if we want to calculate roots that are more than 2, like $\sqrt[3]{8}$ or $\sqrt[4]{16}$, Well, in this case, we can just raise the number to the power of $1/n$ where $n$ is the root we want. Here's an example:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let cubeRoot = Math.pow(8, 1/3); // 2
@@ -167,7 +167,7 @@ The modulus (remainder) operation calculates the remainder of division between t
 
 This operation is particularly useful for checking if a number is even, odd, or follows a specific pattern. Here's an example:
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let modulusResult = 10 % 3; // 1
@@ -212,7 +212,7 @@ So, the final result is **42**.
 
 In programming, the order of operations is handled by the language, so you don't need to worry about the wrong order of operations. You just need to be careful with the formula you are going to use. If we put the formula into the code, it will look like this.
 
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 let result = 6 + 3 * (2 ** 3 + Math.sqrt(16)); // 42

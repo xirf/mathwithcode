@@ -16,7 +16,7 @@ Setiap elemen pada matriks $A$ dilambangkan dengan $a_{ij}$, dimana $i$ adalah n
 
 Dalam pemrograman, matriks sering direpresentasikan sebagai array dua dimensi. Misalnya, matriks $A$ di atas dapat direpresentasikan sebagai array dua dimensi sebagai berikut:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -140,7 +140,7 @@ $$ A + B = \begin{bmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{bmatrix} = \begin{bmatrix
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -236,7 +236,7 @@ $$ A - B = \begin{bmatrix} 1-5 & 2-6 \\ 3-7 & 4-8 \end{bmatrix} = \begin{bmatrix
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -412,7 +412,7 @@ $$
 
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
-:::tabs
+:::tabs key:lang
 == Javascript
 ```js
 // Inisialisasi array untuk menyimpan hasil perkalian matriks.
@@ -600,7 +600,7 @@ Disini setiap elemen matriks $A$ akan dikalikan dengan bilangan skalar $c$ ini a
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -680,7 +680,7 @@ $$ A^T = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix} $$
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -766,7 +766,7 @@ Dimana $|A_{1j}|$ adalah determinan matriks $A$ setelah menghapus baris pertama 
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -906,7 +906,7 @@ $$ |A| = a_{11} \cdot a_{22} \cdot \ldots \cdot a_{nn} $$
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -1019,7 +1019,7 @@ Dimana $|A|$ adalah determinan matriks $A$ dan $\text{adj}(A)$ adalah matriks ad
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
@@ -1174,7 +1174,7 @@ Dimana $[A | I]$ adalah matriks gabungan dari matriks $A$ dan matriks identitas,
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
-:::tabs
+:::tabs key:lang
 == JavaScript
 ```javascript
 const A = [
