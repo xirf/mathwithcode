@@ -33,6 +33,12 @@ fun fungsi(x: Int): Int {
 def fungsi(x):
     return 2 * x + 3
 ```
+== Rust
+```rust
+fn fungsi(x: u64) -> u64 {
+    2 * x + 3
+}
+```
 :::
 
 ## Domain, Kodomain, dan Range
@@ -136,7 +142,20 @@ def g(x):
 
 def fg(x):
     return f(x) + g(x)
+```
+== Rust
+```rust
+fn f(x: u64) -> u64 {
+    2 * x + 3
+}
 
+fn g(x: u64) -> u64 {
+    3 * x - 2
+}
+
+fn fg(x: u64) -> u64 {
+    f(x) + g(x)
+}
 ```
 :::
 
@@ -202,6 +221,20 @@ def g(x):
 
 def fg(x):
     return f(x) * g(x)
+```
+== Rust
+```rust
+fn f(x: u64) -> u64 {
+    2 * x + 3
+}
+
+fn g(x: u64) -> u64 {
+    3 * x - 2
+}
+
+fn fg(x: u64) -> u64 {
+    f(x) * g(x)
+}
 ```
 :::
 
@@ -269,6 +302,20 @@ def g(x):
 
 def fog(x):
     return f(g(x))
+```
+== Rust
+```rust
+fn f(x: u64) -> u64 {
+    2 * x + 3
+}
+
+fn g(x: u64) -> u64 {
+    3 * x - 2
+}
+
+fn fog(x: u64) -> u64 {
+    f(g(x))
+}
 ```
 :::
 
@@ -374,5 +421,23 @@ y = 7  # Nilai y (f(x))
 # f(x) = 2x + 3
 x = inverse_function(y, a, b)
 print(f"Invers dari f({y}) adalah x = {x}")
+```
+== Rust
+```rust
+fn inverse_function(y: u64, a: u64, b: u64) -> Result<u64, &'static str> {
+  if a == 0:
+    return Err("Nilai a tidak boleh 0")
+  Ok((y - b) / a)
+}
+
+fn main() {
+    let a = 2; // Misalkan a = 2
+    let b = 3; // Misalkan b = 3
+    let y = 7; // Nilai y (f(x))
+
+    // f(x) = 2x + 3
+    let x = inverse_function(y, a, b).unwrap();
+    println!("Invers dari f({}) adalah x = {}", y, x);
+}
 ```
 :::

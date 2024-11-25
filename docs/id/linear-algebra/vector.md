@@ -25,6 +25,10 @@ val v = listOf(1, 2)
 ```cpp
 std::vector<int> v = {1, 2};
 ```
+== Rust
+```rust
+let v = vec![1, 2];
+```
 :::
 
 Vektor juga dapat direpresentasikan dalam bentuk koordinat kartesian, yaitu dengan menggunakan titik $(x, y)$.
@@ -61,6 +65,16 @@ std::vector<int> sum;
 for (int i = 0; i < v.size(); i++) {
     sum.push_back(v[i] + w[i]);
 }
+```
+== Rust
+```rust
+let v = vec![1, 2];
+let w = vec![3, 4];
+let sum: Vec<i32> = v.iter()
+    .zip(w.iter())
+    .map(|(vi, wi)| vi + wi)
+    .collect();
+println!("{:?}", sum); // [4, 6]
 ```
 :::
 
@@ -99,6 +113,15 @@ for (int i = 0; i < v.size(); i++) {
     scaled.push_back(c * v[i]);
 }
 ```
+== Rust
+```rust
+let v = vec![1, 2];
+let c = 2;
+let scaled: Vec<i32> = v.iter()
+    .map(|&vi| c * vi)
+    .collect();
+println!("{:?}", scaled); // [2, 4]
+```
 :::
 
 ### Selisih Vektor
@@ -131,6 +154,16 @@ for (int i = 0; i < v.size(); i++) {
     diff.push_back(v[i] - w[i]);
 }
 ```
+== Rust
+```rust
+let v = vec![1, 2];
+let c = 2;
+let diff: Vec<i32> = v.iter()
+    .map(|&vi| c - vi)
+    .collect();
+println!("{:?}", diff); // [-2, -4]
+```
+
 :::
 
 ## Magnitudo Vektor
@@ -166,6 +199,17 @@ for (int i = 0; i < v.size(); i++) {
     magnitude += v[i] * v[i];
 }
 magnitude = sqrt(magnitude);
+```
+== Rust
+```rust
+let v = vec![3, 4];
+let magnitude = (
+    v.iter()
+        .map(|&vi: &i32| vi.pow(2))
+        .sum::<i32>() as f64)
+    .sqrt();
+println!("{}", magnitude); // 5
+
 ```
 :::
 
@@ -203,6 +247,16 @@ int dot_product = 0;
 for (int i = 0; i < v.size(); i++) {
     dot_product += v[i] * w[i];
 }
+```
+== Rust
+```rust
+let v = vec![1, 2];
+let w = vec![3, 4];
+let dot_product: i32 = v.iter()
+    .zip(w.iter())
+    .map(|(vi, wi)| vi * wi)
+    .sum();
+println!("{}", dot_product); // 11
 ```
 :::
 
@@ -254,5 +308,16 @@ std::vector<int> cross_product = {
     v[2] * w[0] - v[0] * w[2],
     v[0] * w[1] - v[1] * w[0]
 };
+```
+== Rust
+```rust
+let v = vec![1, 2, 3];
+let w = vec![4, 5, 6];
+let cross_product = vec![
+    v[1] * w[2] - v[2] * w[1],
+    v[2] * w[0] - v[0] * w[2],
+    v[0] * w[1] - v[1] * w[0]
+];
+println!("{:?}", cross_product); // [-3, 6, -3]
 ```
 :::

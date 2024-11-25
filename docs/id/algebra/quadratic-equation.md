@@ -61,8 +61,7 @@ Yang akhirnya menjadi $x = 4$ atau $x = -1$. Jadi, akar-akar dari persamaan $x^2
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 
 :::tabs
-==Javascript
-
+== Javascript
 ```js
 function cari_akar_persamaan(a, b, c) {
 	// Langkah 1: Hitung b^2 dan 4ac
@@ -100,53 +99,49 @@ cari_akar_persamaan(a, b, c);
 ```
 
 == C++
-
 ```cpp
 #include <iostream>
 #include <cmath>
 
 fun cari_akar_persamaan(a: Double, b: Double, c: Double) {
     // Langkah 1: Hitung bagian-bagian dari rumus
-    val b_squared = b * b
-    val four_ac = 4 * a * c
+    val b_squared = b * b;
+    val four_ac = 4 * a * c;
 
     // Langkah 2: Hitung diskriminan
-    val discriminant = b_squared - four_ac
+    val discriminant = b_squared - four_ac;
 
     if (discriminant >= 0) {
         // Jika diskriminan >= 0, lanjutkan dengan akar real
         // Langkah 3: Hitung akar dari diskriminan
-        val sqrt_discriminant = sqrt(discriminant)
+        val sqrt_discriminant = sqrt(discriminant);
 
         // Langkah 4: Hitung dua kemungkinan nilai untuk x
-        val root1 = (-b + sqrt_discriminant) / (2 * a)
-        val root2 = (-b - sqrt_discriminant) / (2 * a)
-        println("x1 = (-$b + $sqrt_discriminant) / (2 * $a) = $root1")
-        println("x2 = (-$b - $sqrt_discriminant) / (2 * $a) = $root2")
+        val root1 = (-b + sqrt_discriminant) / (2 * a);
+        val root2 = (-b - sqrt_discriminant) / (2 * a);
+        println("x1 = (-$b + $sqrt_discriminant) / (2 * $a) = $root1");
+        println("x2 = (-$b - $sqrt_discriminant) / (2 * $a) = $root2");
 
         // Tampilkan hasil akhirnya
-        println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2")
+        println("Akar-akarnya adalah: x1 = $root1 dan x2 = $root2");
     } else {
         // Jika diskriminan < 0, akar kompleks
-        val real_part = -b / (2 * a)
-        val imaginary_part = sqrt(-discriminant) / (2 * a)
-        println("x1 = $real_part + ${imaginary_part}i")
-        println("x2 = $real_part - ${imaginary_part}i")
+        val real_part = -b / (2 * a);
+        val imaginary_part = sqrt(-discriminant) / (2 * a);
+        println("x1 = $real_part + ${imaginary_part}i");
+        println("x2 = $real_part - ${imaginary_part}i");
     }
 }
 
 fun main() {
     // Contoh untuk persamaan x^2 - 3x - 4 = 0
-    val a = 1.0
-    val b = -3.0
-    val c = -4.0
-    cari_akar_persamaan(a, b, c)
+    val a = 1.0;
+    val b = -3.0;
+    val c = -4.0;
+    cari_akar_persamaan(a, b, c);
 }
-
 ```
-
 == Kotlin
-
 ```kotlin
 import kotlin.math.sqrt
 
@@ -222,3 +217,44 @@ b = -3
 c = -4
 cari_akar_persamaan(a, b, c)
 ```
+== Rust
+```rust
+fn cari_akar_persamaan(a: f64, b: f64, c: f64) {
+    // Langkah 1: Hitung bagian-bagian dari rumus
+    let b_squared = b * b;
+    let four_ac = 4.0 * a * c;
+
+    // Langkah 2: Hitung diskriminan
+    let discriminant = b_squared - four_ac;
+
+    if discriminant >= 0.0 {
+        // Jika diskriminan >= 0, lanjutkan dengan akar real
+        // Langkah 3: Hitung akar dari diskriminan
+        let sqrt_discriminant = discriminant.sqrt();
+
+        // Langkah 4: Hitung dua kemungkinan nilai untuk x
+        let root1 = (-b + sqrt_discriminant) / (2.0 * a);
+        let root2 = (-b - sqrt_discriminant) / (2.0 * a);
+        println!("x1 = (-{} + {}) / (2 * {}) = {}", b.abs(), sqrt_discriminant, a, root1);
+        println!("x2 = (-{} - {}) / (2 * {}) = {}", b.abs(), sqrt_discriminant, a, root2);
+
+        // Tampilkan hasil akhirnya
+        println!("Akar-akarnya adalah: x1 = {} dan x2 = {}", root1, root2);
+    } else {
+        // Jika diskriminan < 0, akar kompleks
+        let real_part: f64 = -b / (2.0 * a);
+        let imaginary_part = -discriminant.sqrt() / (2.0 * a);
+        println!("x1 = {} + {}", real_part, imaginary_part);
+        println!("x2 = {} - {}", real_part, imaginary_part);
+    }
+}
+
+fun main() {
+    // Contoh untuk persamaan x^2 - 3x - 4 = 0
+    let a = 1.0;
+    let b = -3.0;
+    let c = -4.0;
+    cari_akar_persamaan(a, b, c);
+}
+```
+:::

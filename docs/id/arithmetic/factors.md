@@ -52,7 +52,7 @@ Kalo di pemrograman kita bisa pake _loop_ dan [modulo](/arithmetic/operation-on-
 == Javascript
 
 ```js
-function faktorisasi(bilangan) {
+function hitung_faktorisasi(bilangan) {
 	let faktor = 2;
 	let hasil_faktorisasi = [];
 	while (bilangan > 1) {
@@ -66,14 +66,14 @@ function faktorisasi(bilangan) {
 	return hasil_faktorisasi;
 }
 
-let faktorisasi_100 = faktorisasi(100);
+let faktorisasi_100 = hitung_faktorisasi(100);
 console.log(faktorisasi_100); // [2, 2, 5, 5]
 ```
 
 == Kotlin
 
 ```kt
-fun faktorisasi(bilangan: Int): List<Int> {
+fun hitung_faktorisasi(bilangan: Int): List<Int> {
     var faktor = 2
     val hasil_faktorisasi = mutableListOf<Int>()
     var bilangan = bilangan
@@ -88,7 +88,7 @@ fun faktorisasi(bilangan: Int): List<Int> {
     return hasil_faktorisasi
 }
 
-val faktorisasi_100 = faktorisasi(100)
+val faktorisasi_100 = hitung_faktorisasi(100)
 println(faktorisasi_100) // [2, 2, 5, 5]
 
 ```
@@ -99,7 +99,7 @@ println(faktorisasi_100) // [2, 2, 5, 5]
 #include <iostream>
 #include <vector>
 
-std::vector<int> faktorisasi(int bilangan) {
+std::vector<int> hitung_faktorisasi(int bilangan) {
     int faktor = 2;
     std::vector<int> hasil_faktorisasi;
     while (bilangan > 1) {
@@ -114,13 +114,13 @@ std::vector<int> faktorisasi(int bilangan) {
 }
 
 int main() {
-    std::vector<int> faktorisasi_100 = faktorisasi(100); // [2, 2, 5, 5]
+    std::vector<int> faktorisasi_100 = hitung_faktorisasi(100); // [2, 2, 5, 5]
     return 0;
 }
 ```
 == Python
 ```python
-def faktorisasi(bilangan):
+def hitung_faktorisasi(bilangan):
     faktor = 2
     hasil_faktorisasi = []
     while bilangan > 1:
@@ -132,10 +132,31 @@ def faktorisasi(bilangan):
 
     return hasil_faktorisasi
 
-faktorisasi_100 = faktorisasi(100)
+faktorisasi_100 = hitung_faktorisasi(100)
 print (faktorisasi_100) # [2, 2, 5, 5]
 ```
 
+== Rust
+```rust
+fn hitung_faktorisasi(mut bilangan: f64) -> Vec<f64> {
+    let mut faktor = 2.0;
+    let mut hasil_faktorisasi = vec![];
+    while bilangan > 1.0 {
+        if bilangan % faktor == 0.0 {
+            hasil_faktorisasi.push(faktor);
+            bilangan /= faktor;
+        } else {
+            faktor += 1.0;
+        }
+    }
+    hasil_faktorisasi
+}
+
+fn main() {
+    let faktorisasi_100 = hitung_faktorisasi(100);
+    println!("{:?}", faktorisasi_100); // [2.0, 2.0, 5.0, 5.0]
+}
+```
 :::
 
 Btw diatas kita pakai `/=` itu sama aja dengan `bilangan = bilangan / faktor`, sama aja kaya `+= -= *=` yang biasa kita pakai.
@@ -208,6 +229,21 @@ def hitung_kelipatan(a, n):
 hasil = hitung_kelipatan(3, 5)
 print (hasil) # [3, 6, 9, 12, 15]
 ```
+== Rust
+```rust
+fn hitung_kelipatan(a: u64, n: u64) -> Vec<u64> {
+    let mut hasil_kelipatan = vec![];
+    for i in 1..(n + 1) {
+        hasil_kelipatan.push(a * i);
+    }
+    hasil_kelipatan
+}
+
+fn main() {
+    let hasil = hitung_kelipatan(3, 5);
+    println!("{:?}", hasil); // [3, 6, 9, 12, 15]
+}
+```
 :::
 
 ## Faktor Persekutuan Terbesar (FPB)
@@ -238,7 +274,7 @@ Pusing? Tenang, mari jadiin kode aja biar lebih mudah dimengerti kek gini:
 == Javascript
 
 ```javascript
-function fpb(a, b) {
+function hitung_fpb(a, b) {
     while (b !== 0) {
         let t = b;
         b = a % b;
@@ -247,13 +283,13 @@ function fpb(a, b) {
     return a;
 }
 
-let fpb_1218 = fpb(12, 18);
+let fpb_1218 = hitung_fpb(12, 18);
 console.log(fpb_1218); // 6
 ```
 == Kotlin
 
 ```kotlin
-fun fpb(a: Int, b: Int): Int {
+fun hitung_fpb(a: Int, b: Int): Int {
     var a = a
     var b = b
     while (b != 0) {
@@ -264,7 +300,7 @@ fun fpb(a: Int, b: Int): Int {
     return a
 }
 
-val fpb_1218 = fpb(12, 18)
+val fpb_1218 = hitung_fpb(12, 18)
 println(fpb_1218) // 6
 ```
 == C++
@@ -272,7 +308,7 @@ println(fpb_1218) // 6
 ```cpp
 #include<iostream>
 
-std::vector<int> fpb(int a, int b) {
+std::vector<int> hitung_fpb(int a, int b) {
     while (b != 0) {
         int t = b;
         b = a % b;
@@ -282,14 +318,14 @@ std::vector<int> fpb(int a, int b) {
 }
 
 int main() {
-    int fpb_1218 = fpb(12, 18);
+    int fpb_1218 = hitung_fpb(12, 18);
     std::cout << fpb_1218 << std::endl; // 6
     return 0;
 }
 ```
 == Python
 ```python
-def fpb(a, b):
+def hitung_fpb(a, b):
     while b != 0:
         t = b
         b = a % b
@@ -297,8 +333,24 @@ def fpb(a, b):
 
     return a
 
-fpb_1218 = fpb(12, 18)
+fpb_1218 = hitung_fpb(12, 18)
 print (fpb_1218) # 6
+```
+== Rust
+```rust
+fn hitung_fpb(mut a: u64, mut b: u64) -> u64 {
+    while b != 0 {
+        let t = b;
+        b = a % b;
+        a = t
+    }
+    a
+}
+
+fn main() {
+    let fpb_1218 = hitung_fpb(12, 18);
+    println!("{}", fpb_1218); // 6
+}
 ```
 :::
 
@@ -335,21 +387,21 @@ Gampang kan? Mari kita jadiin kode biar lebih mudah dimengerti:
 == Javascript
 
 ```javascript
-function kpk(a, b) {
-    return (a * b) / fpb(a, b);
+function hitung_kpk(a, b) {
+    return (a * b) / hitung_fpb(a, b);
 }
 
-let kpk_1218 = kpk(12, 18);
+let kpk_1218 = hitung_kpk(12, 18);
 console.log(kpk_1218); // 36
 ```
 == Kotlin
 
 ```kotlin
-fun kpk(a: Int, b: Int): Int {
-    return (a * b) / fpb(a, b)
+fun hitung_kpk(a: Int, b: Int): Int {
+    return (a * b) / hitung_fpb(a, b)
 }
 
-val kpk_1218 = kpk(12, 18) // 36
+val kpk_1218 = hitung_kpk(12, 18) // 36
 println(kpk_1218) // 36
 ```
 == C++
@@ -357,23 +409,34 @@ println(kpk_1218) // 36
 ```cpp
 #include <iostream>
 
-int kpk(int a, int b) {
-    return (a * b) / fpb(a, b);
+int hitung_kpk(int a, int b) {
+    return (a * b) / hitung_fpb(a, b);
 }
 
 int main() {
-    int kpk_1218 = kpk(12, 18);
+    int kpk_1218 = hitung_kpk(12, 18);
     std::cout << kpk_1218 << std::endl; // 36
     return 0;
 }
 ```
 == Python
 ```python
-def kpk(a, b):
-    return (a * b) / fpb(a, b)
+def hitung_kpk(a, b):
+    return (a * b) / hitung_fpb(a, b)
 
-kpk_1218 = kpk(12, 18)
+kpk_1218 = hitung_kpk(12, 18)
 print (kpk_1218) # 36.0
+```
+== Rust
+```rust
+fn hitung_kpk(a: u64, b: u64) -> u64 {
+    (a * b) / hitung_fpb(a, b)
+}
+
+fn main() {
+    let kpk_1218 = hitung_kpk(12, 18);
+    println!("{}", kpk_1218); // 36
+}
 ```
 :::
 

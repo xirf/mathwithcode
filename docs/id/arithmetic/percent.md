@@ -38,6 +38,12 @@ harga = 100000
 diskon = 20
 nilai_diskon = (harga / 100) * diskon # 20000.0
 ```
+== Rust
+```rust
+let harga = 100000.0;
+let diskon = 20.0;
+let nilai_diskon = (harga / 100.0) * diskon; // 20000
+```
 :::
 
 ## Mencari Nilai Asli
@@ -73,7 +79,12 @@ int harga = (nilai_diskon / diskon) * 100; // 100000
 nilai_diskon = 20000
 diskon = 20
 harga = (nilai_diskon / diskon) * 100 # 100000.0
-
+```
+== Rust
+```rust
+let nilai_diskon = 20000.0;
+let diskon = 20.0;
+let harga = (nilai_diskon / diskon) * 100.0; // 100000.0
 ```
 :::
 
@@ -109,5 +120,11 @@ int persen = (nilai_diskon / harga) * 100; // 20
 harga = 100000
 nilai_diskon = 20000
 persen = (nilai_diskon / harga) * 100 # 20.0
+```
+== Rust
+```rust
+let harga = 100000.0;
+let nilai_diskon = 20000.0;
+let persen = (nilai_diskon / harga) * 100.0; // 20.0
 ```
 :::

@@ -1,6 +1,6 @@
 # Limit Fungsi
 
-Limit adalah suatu nilai yang didekati oleh suatu fungsi ketika fungsi diberi input yang juga mendekati suatu nilai tertentu. Limit biasa didefinisikan dengan 
+Limit adalah suatu nilai yang didekati oleh suatu fungsi ketika fungsi diberi input yang juga mendekati suatu nilai tertentu. Limit biasa didefinisikan dengan
 
 $$\begin{align*}
     \lim_{x \to a} f(x) = L
@@ -18,7 +18,7 @@ Misalnya terdapat sebuah fungsi $f(x) = x+3$ dan kita ingin mengetahui nilai lim
 |$f(2.9) = 5.9$       | $f(3.1) = 6.1$      |
 |$f(2.99) = 5.99$     | $f(3.01) = 6.01$    |
 |$f(2.99) = 5.999$    | $f(3.001) = 6.001$  |
-| ...                 | ...                 |   
+| ...                 | ...                 |
 
 atau dengan menggunakan kode program:
 :::tabs
@@ -112,7 +112,7 @@ def calculate_limit(point):
     for i in range(1, 11):
         y = f(point + 1 / (10 ** i))
         print(f"f({point + 1 / (10 ** i)}) = {y}")
-    
+
     # dari kiri
     print("Mencari limit dari arah kiri:")
     for i in range(1, 11):
@@ -121,7 +121,32 @@ def calculate_limit(point):
 
 # Run the calculation
 calculate_limit(3)
+```
+== Rust
+```rust
+fn f(x: f64) -> f64 {
+    x + 3.0
+}
 
+fn calculate_limit(point: f64) {
+    // Dari kanan
+    println!("Mencari limit dari arah kanan:");
+    for i in 1..=10 {
+        let y = f(point + 1.0 / 10f64.powi(i));
+        println!("f({}) = {}", point + 1.0 / 10f64.powi(i), y);
+    }
+
+    // Dari kiri
+    println!("Mencari limit dari arah kiri:");
+    for i in 1..=10 {
+        let y = f(point - 1.0 / 10f64.powi(i));
+        println!("f({}) = {}", point - 1.0 / 10f64.powi(i), y);
+    }
+}
+
+fn main() {
+    calculate_limit(3.0);
+}
 ```
 :::
 
@@ -136,7 +161,7 @@ yakni $g(x)=\frac{x^2-9}{x-3}$
 |$f(2.9) = 5.9$       | $f(3.1) = 6.1$      |
 |$f(2.99) = 5.99$     | $f(3.01) = 6.01$    |
 |$f(2.99) = 5.999$    | $f(3.001) = 6.001$  |
-| ...                 | ...                 | 
+| ...                 | ...                 |
 
 kode program:
 :::tabs
@@ -230,7 +255,7 @@ def calculate_limit(point):
     for i in range(1, 11):
         y = f(point + 1 / (10 ** i))
         print(f"f({point + 1 / (10 ** i)}) = {y}")
-    
+
     # dari kiri
     print("Mencari limit dari arah kiri:")
     for i in range(1, 11):
@@ -239,7 +264,32 @@ def calculate_limit(point):
 
 # Run the calculation
 calculate_limit(3)
+```
+== Rust
+```rust
+fn f(x: f64) -> f64 {
+    (x.powi(2) - 9.0) / (x - 3.0)
+}
 
+fn calculate_limit(point: f64) {
+    // Dari kanan
+    println!("Mencari limit dari arah kanan:");
+    for i in 1..=10 {
+        let y = f(point + 1.0 / 10f64.powi(i));
+        println!("f({}) = {}", point + 1.0 / 10f64.powi(i), y);
+    }
+
+    // Dari kiri
+    println!("Mencari limit dari arah kiri:");
+    for i in 1..=10 {
+        let y = f(point - 1.0 / 10f64.powi(i));
+        println!("f({}) = {}", point - 1.0 / 10f64.powi(i), y);
+    }
+}
+
+fn main() {
+    calculate_limit(3.0);
+}
 ```
 :::
-dengan begitu kita bisa mengetahui bahwa nilai limit sebenarnya tidak dipengaruhi oleh nilai suatu fungsi pada titik dimana kita menghitung limitnya. 
+dengan begitu kita bisa mengetahui bahwa nilai limit sebenarnya tidak dipengaruhi oleh nilai suatu fungsi pada titik dimana kita menghitung limitnya.

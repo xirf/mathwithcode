@@ -101,6 +101,44 @@ else:
     hasil_persentil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - int(posisi))  # 20
     print(hasil_persentil)
 ```
+== Rust
+```rust
+fn main() {
+    // Data Tunggal
+    let data_tunggal = vec![25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
+
+    let nilai_persen = 100.0;
+    let nilai_persentil = 50.0; // 1-99
+    let angka_awal = 1;
+    let mut hasil_persentil = 0.0;
+
+    // Mengurutkan data secara ascending
+    let mut data_tersortir = data_tunggal.clone();
+    data_tersortir.sort_unstable();
+    let jumlah_data = data_tersortir.len();
+
+    // Menghitung posisi persentil
+    let posisi = (jumlah_data as f64 + angka_awal as f64) * (nilai_persentil / nilai_persen);
+
+    // Jika posisi adalah bilangan bulat, ambil nilai pada posisi tersebut
+    if posisi.fract() == 0.0 {
+        hasil_persentil = data_tersortir[posisi as usize - angka_awal as usize] as f64;
+    } else {
+        // Jika posisi bukan bilangan bulat, lakukan interpolasi
+        let indeks_bawah = posisi.floor() as usize - angka_awal as usize;
+        let indeks_atas = indeks_bawah + 1;
+
+        // Nilai pada indeks bawah dan atas
+        let nilai_bawah = data_tersortir[indeks_bawah] as f64;
+        let nilai_atas = data_tersortir[indeks_atas] as f64;
+
+        // Interpolasi untuk menghitung nilai persentil
+        hasil_persentil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - posisi.floor());
+    }
+
+    println!("{}", hasil_persentil);
+}
+```
 :::
 
 ### Data Berkelompok
@@ -218,7 +256,62 @@ def hitung_nilai_persentil(data_kelompok, data_kumulatif, persentil):
 hasil_persentil = hitung_nilai_persentil(data_kelompok, hitung_data_kumulatif(data_kelompok), nilai_persentil)  # 17.5
 print(hasil_persentil)
 ```
+== Rust
+```rust
+#[derive(Debug, Clone)]
+struct Interval {
+    batas_bawah: f64,
+    batas_atas: f64,
+    frekuensi: usize,
+}
 
+fn hitung_total_frekuensi(data: &[Interval]) -> usize {
+    data.iter().map(|item| item.frekuensi).sum()
+}
+
+fn hitung_data_kumulatif(data: &[Interval]) -> Vec<(Interval, usize)> {
+    let mut frekuensi_kumulatif = 0;
+    data.iter()
+        .map(|item| {
+            frekuensi_kumulatif += item.frekuensi;
+            (item.clone(), frekuensi_kumulatif)
+        })
+        .collect()
+}
+
+fn hitung_nilai_persentil(data_kelompok: &[Interval], data_kumulatif: &[(Interval, usize)], persentil: f64) -> f64 {
+    let total_frekuensi = hitung_total_frekuensi(data_kelompok);
+    let posisi = (persentil / 100.0) * total_frekuensi as f64;
+
+    if let Some((kelas_interval, kumulatif_bawah)) = data_kumulatif
+        .iter()
+        .find(|(_, kumulatif)| *kumulatif >= posisi as usize)
+    {
+        let (batas_bawah, batas_atas) = (kelas_interval.batas_bawah, kelas_interval.batas_atas);
+        let frekuensi_dalam_kelas = kelas_interval.frekuensi;
+
+        return batas_bawah + ((posisi - *kumulatif_bawah as f64) / frekuensi_dalam_kelas as f64) * (batas_atas - batas_bawah);
+    }
+
+    0.0 // Atau nilai default yang sesuai jika tidak ditemukan kelas_interval
+}
+
+fn main() {
+    let data_kelompok = vec![
+        Interval { batas_bawah: 0.0, batas_atas: 10.0, frekuensi: 5 },
+        Interval { batas_bawah: 10.0, batas_atas: 20.0, frekuensi: 10 },
+        Interval { batas_bawah: 20.0, batas_atas: 30.0, frekuensi: 8 },
+        Interval { batas_bawah: 30.0, batas_atas: 40.0, frekuensi: 2 },
+    ];
+
+    let nilai_persentil = 50.0; // 1-99
+    let data_kumulatif = hitung_data_kumulatif(&data_kelompok);
+
+    let hasil_persentil = hitung_nilai_persentil(&data_kelompok, &data_kumulatif, nilai_persentil);
+    println!("{:.1}", hasil_persentil); // Output: 17.5
+}
+
+```
 :::
 
 ## Desil
@@ -298,7 +391,37 @@ else:
 
 print(total_desil)
 ```
+== Rust
+```rust
+fn main() {
+    // Data Tunggal
+    let data_tunggal = vec![25, 27, 29, 18, 20, 21, 23, 10, 12, 14, 16];
 
+    let nilai_persen = 10.0;
+    let nilai_desil = 5; // 1-9
+    let mut total_desil = 0.0;
+
+    // Mengurutkan data secara ascending
+    let mut data_tersortir = data_tunggal.clone();
+    data_tersortir.sort_unstable();
+    let ukuran_data = data_tunggal.len();
+
+    // Menghitung posisi dari nilai desil
+    let posisi = (nilai_desil as f64 * (ukuran_data as f64 + 1.0)) / nilai_persen;
+
+    if posisi.fract() == 0.0 {
+        total_desil = data_tersortir[posisi as usize - 1] as f64; // Ambil nilai langsung
+    } else {
+        let indeks_bawah = posisi.floor() as usize - 1;
+        let indeks_atas = posisi.ceil() as usize - 1;
+
+        let nilai_bawah = data_tersortir[indeks_bawah] as f64;
+        let nilai_atas = data_tersortir[indeks_atas] as f64;
+
+        // Interpolasi untuk menghitung nilai desil
+        total_desil = nilai_bawah + (nilai_atas - nilai_bawah) * (posisi - posisi.floor());
+
+```
 :::
 
 ### Data Berkelompok

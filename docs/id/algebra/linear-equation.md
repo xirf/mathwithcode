@@ -41,8 +41,7 @@ $$\begin{align*}
 
 Jika diimplementasikan dalam kode, maka hasilnya adalah seperti ini:
 :::tabs
-==javascript
-
+== Javascript
 ```js
 function linear_equation(a, b, c) {
 	// Persamaan: a * x + b = c
@@ -52,8 +51,7 @@ function linear_equation(a, b, c) {
 let x = linear_equation(2, 3, 7);
 console.log(`Nilai x adalah {x}`); // Output: 2
 ```
-
-==kotlin
+== Kotlin
 
 ```kotlin
 val a = 2
@@ -64,7 +62,6 @@ val c = 7
 val x = (c - b) / a
 println("Nilai x adalah: $x")
 ```
-
 == C++
 
 ```cpp
@@ -78,13 +75,13 @@ int main() {
     int a = 2;
     int b = 3;
     int c = 7;
+
     int x = linear_equation(a, b, c);
     cout << "Nilai x adalah: " << x << endl;
     return 0;
 }
 ```
-
-==Python
+== Python
 ```python
 def linear_equation(a, b, c):
     # Persamaan: a * x + b = c
@@ -95,7 +92,22 @@ a, b, c, = 2, 3, 7
 x = linear_equation(a, b, c)
 print(f"Nilai x adalah: {x}")
 ```
+== Rust
+```rust
+fn linear_equation(a: u64, b: u64, c: u64) -> u64 {
+    // Persamaan: a * x + b = c
+    (c - b) / a
+}
 
+fn main() {
+    let a = 2;
+    let b = 3;
+    let c = 7;
+
+    let x = linear_equation(a, b, c);
+    println!("Nilai x adalah: {}", x);
+}
+```
 :::
 
 ## Persamaan Linear Dua Variabel
@@ -185,6 +197,18 @@ def pldv(a, b, c, y):
 # 2x + 3y = 7 dimana y = 1
 print(pldv(2, 3, 7, 1))# Output: (x: 2.0, y: 1)
 ```
+== Rust
+```rust
+fn pldv(a: u64, b: u64, c: u64, y: u64) -> (u64, u64) {
+    let x = (c - b * y) / a;
+    (x, y)
+}
+
+fn main() {
+    let hasil: (u64, u64) = pldv(2, 3, 7, 1);
+    println!("{:?}", hasil); // Output: (2, 1)
+}
+```
 :::
 
 ### Metode Eliminasi
@@ -227,7 +251,7 @@ Jika sudah memiliki dua persamaan kita bisa menghilangkan salah satu variabel de
 
 Bagaimana jika permasalahan ini kita jadikan kode? Berikut contoh implementasinya:
 :::tabs
-==javascript
+== Javascript
 
 ```js
 function eliminasi_pldv(a1, b1, c1, a2, b2, c2) {
@@ -250,8 +274,8 @@ function eliminasi_pldv(a1, b1, c1, a2, b2, c2) {
 // 2x - 3y = 7 dan 3x - 2y = 8
 console.log(eliminasi_pldv(2, 3, 7, 3, -2, 8)); // Output: { x: 2, y: 1 }
 ```
-== kotlin
 
+== Kotlin
 ```kotlin
 fun eliminasi_pldv(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<Int, Int> {
     // Menghitung koefisien untuk eliminasi
@@ -274,7 +298,6 @@ fun eliminasi_pldv(a1: Int, b1: Int, c1: Int, a2: Int, b2: Int, c2: Int): Pair<I
 println(eliminasi_pldv(2, 3, 7, 3, -2, 8)) // Output: (2, 1)
 ```
 == C++
-
 ```cpp
 #include <iostream>
 #include <utility>
@@ -304,8 +327,7 @@ int main() {
 }
 ```
 
-==Python
-
+== Python
 ```python
 def eliminasi_pldv(a1, b1, c1, a2, b2, c2):
     # Menghitung koefisien untuk eliminasi
@@ -327,4 +349,31 @@ def eliminasi_pldv(a1, b1, c1, a2, b2, c2):
 x, y = eliminasi_pldv(2, 3, 7, 3, -2, 8)
 print(f"x: {x}, y: {y}")  # Output: x: 2, y: 1
 ```
+
+== Rust
+```rust
+fn eliminasi_pldv(a1: f64, b1: f64, c1: f64, a2: f64, b2: f64, c2: f64) -> (f64, f64) {
+    // Menghitung koefisien untuk eliminasi
+    let factor = a2 / a1;
+
+    // Membuat persamaan baru dengan mengurangi
+    let new_b2 = b2 - factor * b1;
+    let new_c2 = c2 - factor * c1;
+
+    // Menyelesaikan untuk y
+    let y = new_c2 / new_b2;
+
+    // Menghitung x dengan substitusi y ke dalam persamaan 1
+    let x = (c1 - b1 * y) / a1;
+
+    (x, y)
+}
+
+fn main() {
+    // Contoh: 2x - 3y = 7 dan 3x - 2y = 8
+    let (x, y) = eliminasi_pldv(2.0, 3.0, 7.0, 3.0, -2.0, 8.0);
+    println!("x: {}, y: {}", x, y); // Output: x: 2, y: 1
+}
+```
+
 :::

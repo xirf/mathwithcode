@@ -25,16 +25,19 @@ Dalam situs ini, kita akan menggunakan berbagai bahasa pemrograman untuk menjela
     <div class="flex gap-4 py-2 px-4 border-1px border-gray-400/25 items-center border-solid h-full w-full rounded-lg w-full max-w-xs mt-0!">
         <span class="i-logos-python" data-icon="logos:python" data-inline="false"></span><span>Python</span>
     </div>
+    <div class="flex gap-4 py-2 px-4 border-1px border-gray-400/25 items-center border-solid h-full w-full rounded-lg w-full max-w-xs mt-0!">
+        <span class="i-logos-rust" data-icon="rust-language-logo" data-inline="false"></span><span>Rust</span>
+    </div>
 </div>
 
 Setiap bahasa punya keunikan tersendiri dalam cara mereka menangani matematika. Jadi, siap-siap untuk mengeksplorasi banyak hal baru dalam perjalanan belajar ini!
 
 
-Di beberapa materi, mungkin bahasa pemrograman yang disebutkan tidak tersedia. 
+Di beberapa materi, mungkin bahasa pemrograman yang disebutkan tidak tersedia.
 
-Jangan khawatir, kamu tetap bisa mengikuti konsep yang diajarkan dengan bahasa lain yang ada, konsepnya gak jauh beda kok. Intinya, fokus pada implementasinya, ya! 
+Jangan khawatir, kamu tetap bisa mengikuti konsep yang diajarkan dengan bahasa lain yang ada, konsepnya gak jauh beda kok. Intinya, fokus pada implementasinya, ya!
 
 > [!NOTE]
-> Di beberapa materi, mungkin bahasa pemrograman yang disebutkan tidak tersedia. 
+> Di beberapa materi, mungkin bahasa pemrograman yang disebutkan tidak tersedia.
 >
-> Jangan khawatir, kamu tetap bisa mengikuti konsep yang diajarkan dengan bahasa lain yang ada, konsepnya gak jauh beda kok. Intinya, fokus pada implementasinya, ya! 
+> Jangan khawatir, kamu tetap bisa mengikuti konsep yang diajarkan dengan bahasa lain yang ada, konsepnya gak jauh beda kok. Intinya, fokus pada implementasinya, ya!
