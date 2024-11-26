@@ -67,6 +67,10 @@ function sidebar() {
                   text: "Ukuran Letak",
                   link: "/statistics/measures-concentration-dispersion",
               },
+              {
+                  text: "Regresi Linier Sederhana",
+                  link: "/statistics/simple-linear-regression",
+              },
           ],
       },
       {

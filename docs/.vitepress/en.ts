@@ -78,6 +78,10 @@ function sidebar() {
                   text: "Measures of Location",
                   link: "/en/statistics/measures-concentration-dispersion",
               },
+              {
+                  text: "Simple Linear Regression",
+                  link: "/en/statistics/simple-linear-regression",
+              },
           ],
       },
       {
